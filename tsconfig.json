@@ -8,6 +8,7 @@
     "strict": true
   },
   "include": [
-    "server.ts"
+    "server.ts",
+    "main.ts"
   ]
 }
