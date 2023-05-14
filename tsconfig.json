@@ -4,7 +4,7 @@
     "module": "commonjs",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "outDir": "dist",
+    "outDir": "public/dist",
     "strict": true
   },
   "include": [
