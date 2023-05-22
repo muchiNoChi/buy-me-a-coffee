@@ -63,6 +63,10 @@ def buy_coffee(_name: String[100], _message: String[100]):
         name: _name,
         message: _message
     })
+    self.last_memo_index += 1
+
+    # Log the event
+    log NewMemo(msg.sender, block.timestamp, _name, _message)
 
 @external
 def withdraw_tips():
