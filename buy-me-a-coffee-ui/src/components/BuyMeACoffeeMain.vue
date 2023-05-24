@@ -7,16 +7,29 @@
           <el-button @click="connectWallet">Connect wallet</el-button>
           <el-button @click="sendFunds">Send ETH</el-button>
         </el-row>
+        <el-row>
+          <el-input v-model="tipAmount" placeholder="Enter tip amount" />
+          <el-input
+            v-model="memo"
+            :autosize="{ minRows: 2, maxRows: 4 }"
+            type="textarea"
+            placeholder="Message"
+          />
+        </el-row>
       </el-col>
     </el-main>
   </el-container>
 </template>
 
 <script>
+import { ethers } from 'ethers';
+
 export default {
   data() {
     return {
-      accountAddress: null
+      accountAddress: null,
+      tipAmount: null,
+      memo: null
     }
   },
 
@@ -46,7 +59,7 @@ export default {
               {
                 from: this.accountAddress,
                 to: this.accountAddress, // TODO pass a target address here
-                value: '0x29a2241af62c0000', // Only required to send ether to the recipient from the initiating external account.
+                value: ethers.utils.parseUnits(this.tipAmount, 'ether').toHexString(),
                 gasPrice: '0x09184e72a000', // Customizable by the user during MetaMask confirmation.
                 gas: '0x2710' // Customizable by the user during MetaMask confirmation.
               }
