@@ -17,9 +17,10 @@ struct Memo:
     time: uint256
     name: String[100]
     message: String[100]
+    tip: uint256
 
 # Storage variables
-owner: address
+owner: public(address)
 memos: public(HashMap[uint256, Memo])
 last_memo_index: public(uint256)
 
@@ -61,7 +62,8 @@ def buy_coffee(_name: String[100], _message: String[100]):
         sender: msg.sender,
         time: block.timestamp,
         name: _name,
-        message: _message
+        message: _message,
+        tip: msg.value
     })
     self.last_memo_index += 1
 
