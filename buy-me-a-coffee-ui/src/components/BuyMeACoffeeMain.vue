@@ -28,15 +28,15 @@
       </el-row>
       <el-row justify="center">
         <el-button @click="buyACoffee">Send us ETH pls wi poor</el-button>
-        <el-button v-if="canWithdraw" @click="withdrawTips">Withdraw tips</el-button>
+      </el-row>
+      <el-row v-if="canWithdraw" justify="center">
+        <el-statistic v-if="currentBalance" title="Current tips amount (ETH)" :value="currentBalance" />
+        <el-button @click="withdrawTips">Withdraw tips</el-button>
       </el-row>
       <el-row v-if="txHash" :gutter="20">
         <el-link type="success" :href="txUrl">
           {{ txHash }}<el-icon class="el-icon--right"></el-icon>
         </el-link>
-      </el-row>
-      <el-row v-if="currentBalance" :gutter="20">
-        <el-statistic title="Current tips amount (ETH)" :value="currentBalance" />
       </el-row>
 
       <!-- Memos list -->
@@ -61,7 +61,7 @@ export default {
       contractOwnerAddress: null,
       currentBalance: 0,
 
-      tipAmount: '0.0001',
+      tipAmount: 0.0001,
       name: 'sashlek',
       memo: 'Thank you for being kittens! Let me buy you a coffee.',
       txHash: null,
@@ -98,7 +98,7 @@ export default {
           console.log(this.accountAddress)
           this.contractOwnerAddress = await this.getContractOwner()
           this.currentBalance = await this.getContractBalance()
-          this.memos = await this.getMemos()
+          // this.memos = await this.getMemos()
         } else {
           console.log('Metamask is not installed, consider installing it first.')
         }
@@ -126,35 +126,28 @@ export default {
     async getMemos() {
       if (!this.buyMeACoffeeContract) return
       try {
-        const lastMemoIndex = await this.buyMeACoffeeContract.last_memo_index()
-        // lastMemoIndex is a counter, and getMemos expects an index for a memo -
-        // pass it and decrement the counter.
-        const memoPromises = [];
-        for (let i = lastMemoIndex - 1; i >= 0; i--) {
-          memoPromises.push(this.buyMeACoffeeContract.get_memos(i))
-        }
-        await Promise.all(memoPromises)
-          .then(res => this.memos = res)
-          .catch(err => console.error(err))
+        this.memos = await this.buyMeACoffeeContract.get_memos()
       } catch (err) {
         console.error(err)
       }
     },
 
     async getContractOwner() {
-      console.log(this.buyMeACoffeeContract)
       const contractOwnerAddress = await this.buyMeACoffeeContract.owner()
       console.log(`contract creator is ${contractOwnerAddress}`)
       return contractOwnerAddress
     },
 
     async getContractBalance() {
-      console.log(this.buyMeACoffeeContract)
       const provider = new ethers.providers.Web3Provider(window.ethereum)
       const bigIntBalance = await provider.getBalance(this.contractAddress)
       const balance = ethers.utils.formatEther(bigIntBalance)
-      console.log(`contract balance is ${this.contractOwnerAddress}`)
+      console.log(`contract balance is ${balance}`)
       return balance
+    },
+
+    getParsedEther(row, col) {
+      return ethers.utils.parseEther(row[col])
     },
 
     async withdrawTips() {
