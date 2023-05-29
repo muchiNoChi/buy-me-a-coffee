@@ -11,14 +11,12 @@
         </el-col>
       </el-row>
       <el-row :gutter="20">
-          <el-input v-model="tipAmount" placeholder="Enter tip amount" />
-        <el-col :span="9">
-        </el-col>
+        <el-input v-model="tipAmount" placeholder="Enter tip amount" />
+        <el-col :span="9"> </el-col>
       </el-row>
       <el-row :gutter="20">
-          <el-input v-model="name" placeholder="Enter you name" />
-        <el-col :span="9">
-        </el-col>
+        <el-input v-model="name" placeholder="Enter you name" />
+        <el-col :span="9"> </el-col>
       </el-row>
       <el-row :gutter="20">
         <el-input
@@ -30,8 +28,7 @@
       </el-row>
       <el-row justify="center">
         <el-button @click="buyACoffee">Send us ETH pls wi poor</el-button>
-        <el-button
-          v-if="canWithdraw" @click="withdrawTips">Withdraw tips</el-button>
+        <el-button v-if="canWithdraw" @click="withdrawTips">Withdraw tips</el-button>
       </el-row>
       <el-row v-if="txHash" :gutter="20">
         <el-link type="success" :href="txUrl">
@@ -44,7 +41,7 @@
 
 <script>
 import { ethers } from 'ethers'
-import contractAbi from '../../utils/BuyMeACoffee.json';
+import contractAbi from '../../utils/BuyMeACoffee.json'
 
 export default {
   data() {
@@ -58,26 +55,24 @@ export default {
       memo: 'Thank you for being kittens! Let me buy you a coffee.',
       txHash: null,
 
-      memos: [],
+      memos: []
     }
   },
 
-  async created() {
-
-  },
+  async created() {},
 
   computed: {
     buyMeACoffeeContract() {
-      if (!this.accountAddress) return null;
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
-      const signer = provider.getSigner(this.accountAddress);
-      return new ethers.Contract(this.contractAddress, contractAbi.abi, signer);
+      if (!this.accountAddress) return null
+      const provider = new ethers.providers.Web3Provider(window.ethereum)
+      const signer = provider.getSigner(this.accountAddress)
+      return new ethers.Contract(this.contractAddress, contractAbi.abi, signer)
     },
 
     canWithdraw() {
-      if (!this.contractOwnerAddress) return false;
-      return this.contractOwnerAddress === this.accountAddress; // only creator can withdraw tips
-    },
+      if (!this.contractOwnerAddress) return false
+      return this.contractOwnerAddress === this.accountAddress // only creator can withdraw tips
+    }
   },
 
   methods: {
@@ -86,13 +81,13 @@ export default {
         if (window.ethereum) {
           const accounts = await window.ethereum.request({
             method: 'eth_requestAccounts'
-          });
+          })
 
-          this.accountAddress = ethers.utils.getAddress(accounts[0]);
-          console.log(this.accountAddress);
-          await this.getContractOwner();
+          this.accountAddress = ethers.utils.getAddress(accounts[0])
+          console.log(this.accountAddress)
+          await this.getContractOwner()
         } else {
-          console.log('Metamask is not installed, consider installing it first.');
+          console.log('Metamask is not installed, consider installing it first.')
         }
       } catch (error) {
         console.log(error)
@@ -100,18 +95,14 @@ export default {
     },
 
     async buyACoffee() {
-      if (!this.buyMeACoffeeContract) return;
+      if (!this.buyMeACoffeeContract) return
       try {
-        const coffeeTxn = await this.buyMeACoffeeContract.buy_coffee(
-          this.name,
-          this.memo,
-          {
-            value: ethers.utils.parseEther(this.tipAmount),
-          }
-        );
-        await coffeeTxn.wait();
-        this.txHash = coffeeTxn.hash;
-        this.txUrl = `https://sepolia.etherscan.io/tx/${this.txHash}`;
+        const coffeeTxn = await this.buyMeACoffeeContract.buy_coffee(this.name, this.memo, {
+          value: ethers.utils.parseEther(this.tipAmount)
+        })
+        await coffeeTxn.wait()
+        this.txHash = coffeeTxn.hash
+        this.txUrl = `https://sepolia.etherscan.io/tx/${this.txHash}`
       } catch (error) {
         console.log(error)
       }
@@ -119,23 +110,23 @@ export default {
 
     // fetches all memos from on-chain data
     async getMemos() {
-      if (!this.buyMeACoffeeContract) return;
+      if (!this.buyMeACoffeeContract) return
       try {
-        this.memos = await this.buyMeACoffeeContract.getMemos();
+        this.memos = await this.buyMeACoffeeContract.getMemos()
       } catch (err) {
-        console.error(err);
+        console.error(err)
       }
     },
 
     async getContractOwner() {
-      console.log(this.buyMeACoffeeContract);
-      this.contractOwnerAddress = await this.buyMeACoffeeContract.owner();
-      console.log(`contract creator is ${this.contractOwnerAddress}`);
+      console.log(this.buyMeACoffeeContract)
+      this.contractOwnerAddress = await this.buyMeACoffeeContract.owner()
+      console.log(`contract creator is ${this.contractOwnerAddress}`)
     },
 
     async withdrawTips() {
       // TODO
-    },
+    }
   }
 }
 </script>

@@ -23,6 +23,7 @@ struct Memo:
 owner: public(address)
 memos: public(HashMap[uint256, Memo])
 last_memo_index: public(uint256)
+test: public(DynArray[uint256, 3])
 
 @external
 def __init__():
@@ -31,6 +32,7 @@ def __init__():
     """
     self.owner = msg.sender
     self.last_memo_index = 0
+    self.test = [0,1,2]
 
 @payable    
 @external
@@ -48,7 +50,7 @@ def get_memos(_memo_index: uint256) -> Memo:
     @param _memo_index index of the memo
     @return memo struct
     """
-    return self.memos[_memo_index]
+    return self.memos[_memo_index] # dynamic arrays?
 
 @payable
 @external
