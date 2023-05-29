@@ -70,9 +70,7 @@ export default {
     }
   },
 
-  async created() {
-    // this.currentBalance = await this.getContractBalance();
-  },
+  async created() {},
 
   computed: {
     buyMeACoffeeContract() {
