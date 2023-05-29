@@ -80,6 +80,10 @@
             {
               "name": "message",
               "type": "string"
+            },
+            {
+              "name": "tip",
+              "type": "uint256"
             }
           ],
           "name": "",
@@ -113,6 +117,18 @@
       "type": "function"
     },
     {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
       "inputs": [
         {
           "name": "arg0",
@@ -138,6 +154,10 @@
             {
               "name": "message",
               "type": "string"
+            },
+            {
+              "name": "tip",
+              "type": "uint256"
             }
           ],
           "name": "",
@@ -660,46 +680,77 @@
               "src": "290:7:0"
             },
             "value": null
+          },
+          {
+            "annotation": {
+              "ast_type": "Name",
+              "col_offset": 9,
+              "end_col_offset": 16,
+              "end_lineno": 20,
+              "id": "uint256",
+              "lineno": 20,
+              "node_id": 79,
+              "src": "320:7:0"
+            },
+            "ast_type": "AnnAssign",
+            "col_offset": 4,
+            "end_col_offset": 16,
+            "end_lineno": 20,
+            "lineno": 20,
+            "node_id": 76,
+            "simple": 1,
+            "src": "315:12:0",
+            "target": {
+              "ast_type": "Name",
+              "col_offset": 4,
+              "end_col_offset": 7,
+              "end_lineno": 20,
+              "id": "tip",
+              "lineno": 20,
+              "node_id": 77,
+              "src": "315:3:0"
+            },
+            "value": null
           }
         ],
         "col_offset": 0,
-        "end_col_offset": 24,
-        "end_lineno": 19,
+        "end_col_offset": 16,
+        "end_lineno": 20,
         "lineno": 15,
         "name": "Memo",
         "node_id": 47,
-        "src": "213:97:0"
+        "src": "213:114:0"
       },
       {
         "annotation": {
           "ast_type": "Name",
-          "col_offset": 7,
-          "end_col_offset": 14,
-          "end_lineno": 22,
+          "col_offset": 14,
+          "end_col_offset": 21,
+          "end_lineno": 23,
           "id": "address",
-          "lineno": 22,
-          "node_id": 79,
-          "src": "339:7:0"
+          "lineno": 23,
+          "node_id": 87,
+          "src": "363:7:0"
         },
         "ast_type": "VariableDecl",
         "col_offset": 0,
-        "end_col_offset": 14,
-        "end_lineno": 22,
+        "end_col_offset": 22,
+        "end_lineno": 23,
         "is_constant": false,
         "is_immutable": false,
-        "is_public": false,
-        "lineno": 22,
-        "node_id": 76,
-        "src": "332:14:0",
+        "is_public": true,
+        "lineno": 23,
+        "node_id": 81,
+        "src": "349:22:0",
         "target": {
           "ast_type": "Name",
           "col_offset": 0,
           "end_col_offset": 5,
-          "end_lineno": 22,
+          "end_lineno": 23,
           "id": "owner",
-          "lineno": 22,
-          "node_id": 77,
-          "src": "332:5:0"
+          "lineno": 23,
+          "node_id": 82,
+          "src": "349:5:0"
         },
         "value": null
       },
@@ -708,17 +759,17 @@
           "ast_type": "Subscript",
           "col_offset": 14,
           "end_col_offset": 36,
-          "end_lineno": 23,
-          "lineno": 23,
-          "node_id": 87,
+          "end_lineno": 24,
+          "lineno": 24,
+          "node_id": 95,
           "slice": {
             "ast_type": "Index",
             "col_offset": 14,
             "end_col_offset": 36,
-            "end_lineno": 23,
-            "lineno": 23,
-            "node_id": 97,
-            "src": "361:22:0",
+            "end_lineno": 24,
+            "lineno": 24,
+            "node_id": 105,
+            "src": "386:22:0",
             "value": {
               "ast_type": "Tuple",
               "col_offset": 22,
@@ -727,61 +778,61 @@
                   "ast_type": "Name",
                   "col_offset": 22,
                   "end_col_offset": 29,
-                  "end_lineno": 23,
+                  "end_lineno": 24,
                   "id": "uint256",
-                  "lineno": 23,
-                  "node_id": 91,
-                  "src": "369:7:0"
+                  "lineno": 24,
+                  "node_id": 99,
+                  "src": "394:7:0"
                 },
                 {
                   "ast_type": "Name",
                   "col_offset": 31,
                   "end_col_offset": 35,
-                  "end_lineno": 23,
+                  "end_lineno": 24,
                   "id": "Memo",
-                  "lineno": 23,
-                  "node_id": 93,
-                  "src": "378:4:0"
+                  "lineno": 24,
+                  "node_id": 101,
+                  "src": "403:4:0"
                 }
               ],
               "end_col_offset": 35,
-              "end_lineno": 23,
-              "lineno": 23,
-              "node_id": 90,
-              "src": "369:13:0"
+              "end_lineno": 24,
+              "lineno": 24,
+              "node_id": 98,
+              "src": "394:13:0"
             }
           },
-          "src": "361:22:0",
+          "src": "386:22:0",
           "value": {
             "ast_type": "Name",
             "col_offset": 14,
             "end_col_offset": 21,
-            "end_lineno": 23,
+            "end_lineno": 24,
             "id": "HashMap",
-            "lineno": 23,
-            "node_id": 88,
-            "src": "361:7:0"
+            "lineno": 24,
+            "node_id": 96,
+            "src": "386:7:0"
           }
         },
         "ast_type": "VariableDecl",
         "col_offset": 0,
         "end_col_offset": 37,
-        "end_lineno": 23,
+        "end_lineno": 24,
         "is_constant": false,
         "is_immutable": false,
         "is_public": true,
-        "lineno": 23,
-        "node_id": 81,
-        "src": "347:37:0",
+        "lineno": 24,
+        "node_id": 89,
+        "src": "372:37:0",
         "target": {
           "ast_type": "Name",
           "col_offset": 0,
           "end_col_offset": 5,
-          "end_lineno": 23,
+          "end_lineno": 24,
           "id": "memos",
-          "lineno": 23,
-          "node_id": 82,
-          "src": "347:5:0"
+          "lineno": 24,
+          "node_id": 90,
+          "src": "372:5:0"
         },
         "value": null
       },
@@ -790,31 +841,31 @@
           "ast_type": "Name",
           "col_offset": 24,
           "end_col_offset": 31,
-          "end_lineno": 24,
+          "end_lineno": 25,
           "id": "uint256",
-          "lineno": 24,
-          "node_id": 104,
-          "src": "409:7:0"
+          "lineno": 25,
+          "node_id": 112,
+          "src": "434:7:0"
         },
         "ast_type": "VariableDecl",
         "col_offset": 0,
         "end_col_offset": 32,
-        "end_lineno": 24,
+        "end_lineno": 25,
         "is_constant": false,
         "is_immutable": false,
         "is_public": true,
-        "lineno": 24,
-        "node_id": 98,
-        "src": "385:32:0",
+        "lineno": 25,
+        "node_id": 106,
+        "src": "410:32:0",
         "target": {
           "ast_type": "Name",
           "col_offset": 0,
           "end_col_offset": 15,
-          "end_lineno": 24,
+          "end_lineno": 25,
           "id": "last_memo_index",
-          "lineno": 24,
-          "node_id": 99,
-          "src": "385:15:0"
+          "lineno": 25,
+          "node_id": 107,
+          "src": "410:15:0"
         },
         "value": null
       },
@@ -826,10 +877,10 @@
           "default": null,
           "defaults": [],
           "end_col_offset": 3,
-          "end_lineno": 27,
-          "lineno": 27,
-          "node_id": 107,
-          "src": "429:3:0"
+          "end_lineno": 28,
+          "lineno": 28,
+          "node_id": 115,
+          "src": "454:3:0"
         },
         "ast_type": "FunctionDef",
         "body": [
@@ -837,68 +888,19 @@
             "ast_type": "Assign",
             "col_offset": 4,
             "end_col_offset": 27,
-            "end_lineno": 31,
-            "lineno": 31,
-            "node_id": 110,
-            "src": "498:23:0",
+            "end_lineno": 32,
+            "lineno": 32,
+            "node_id": 118,
+            "src": "523:23:0",
             "target": {
               "ast_type": "Attribute",
               "attr": "owner",
               "col_offset": 4,
               "end_col_offset": 14,
-              "end_lineno": 31,
-              "lineno": 31,
-              "node_id": 111,
-              "src": "498:10:0",
-              "value": {
-                "ast_type": "Name",
-                "col_offset": 4,
-                "end_col_offset": 8,
-                "end_lineno": 31,
-                "id": "self",
-                "lineno": 31,
-                "node_id": 112,
-                "src": "498:4:0"
-              }
-            },
-            "value": {
-              "ast_type": "Attribute",
-              "attr": "sender",
-              "col_offset": 17,
-              "end_col_offset": 27,
-              "end_lineno": 31,
-              "lineno": 31,
-              "node_id": 115,
-              "src": "511:10:0",
-              "value": {
-                "ast_type": "Name",
-                "col_offset": 17,
-                "end_col_offset": 20,
-                "end_lineno": 31,
-                "id": "msg",
-                "lineno": 31,
-                "node_id": 116,
-                "src": "511:3:0"
-              }
-            }
-          },
-          {
-            "ast_type": "Assign",
-            "col_offset": 4,
-            "end_col_offset": 28,
-            "end_lineno": 32,
-            "lineno": 32,
-            "node_id": 119,
-            "src": "526:24:0",
-            "target": {
-              "ast_type": "Attribute",
-              "attr": "last_memo_index",
-              "col_offset": 4,
-              "end_col_offset": 24,
               "end_lineno": 32,
               "lineno": 32,
-              "node_id": 120,
-              "src": "526:20:0",
+              "node_id": 119,
+              "src": "523:10:0",
               "value": {
                 "ast_type": "Name",
                 "col_offset": 4,
@@ -906,18 +908,67 @@
                 "end_lineno": 32,
                 "id": "self",
                 "lineno": 32,
-                "node_id": 121,
-                "src": "526:4:0"
+                "node_id": 120,
+                "src": "523:4:0"
+              }
+            },
+            "value": {
+              "ast_type": "Attribute",
+              "attr": "sender",
+              "col_offset": 17,
+              "end_col_offset": 27,
+              "end_lineno": 32,
+              "lineno": 32,
+              "node_id": 123,
+              "src": "536:10:0",
+              "value": {
+                "ast_type": "Name",
+                "col_offset": 17,
+                "end_col_offset": 20,
+                "end_lineno": 32,
+                "id": "msg",
+                "lineno": 32,
+                "node_id": 124,
+                "src": "536:3:0"
+              }
+            }
+          },
+          {
+            "ast_type": "Assign",
+            "col_offset": 4,
+            "end_col_offset": 28,
+            "end_lineno": 33,
+            "lineno": 33,
+            "node_id": 127,
+            "src": "551:24:0",
+            "target": {
+              "ast_type": "Attribute",
+              "attr": "last_memo_index",
+              "col_offset": 4,
+              "end_col_offset": 24,
+              "end_lineno": 33,
+              "lineno": 33,
+              "node_id": 128,
+              "src": "551:20:0",
+              "value": {
+                "ast_type": "Name",
+                "col_offset": 4,
+                "end_col_offset": 8,
+                "end_lineno": 33,
+                "id": "self",
+                "lineno": 33,
+                "node_id": 129,
+                "src": "551:4:0"
               }
             },
             "value": {
               "ast_type": "Int",
               "col_offset": 27,
               "end_col_offset": 28,
-              "end_lineno": 32,
-              "lineno": 32,
-              "node_id": 124,
-              "src": "549:1:0",
+              "end_lineno": 33,
+              "lineno": 33,
+              "node_id": 132,
+              "src": "574:1:0",
               "value": 0
             }
           }
@@ -928,31 +979,31 @@
             "ast_type": "Name",
             "col_offset": 1,
             "end_col_offset": 9,
-            "end_lineno": 26,
+            "end_lineno": 27,
             "id": "external",
-            "lineno": 26,
-            "node_id": 125,
-            "src": "420:8:0"
+            "lineno": 27,
+            "node_id": 133,
+            "src": "445:8:0"
           }
         ],
         "doc_string": {
           "ast_type": "DocStr",
           "col_offset": 4,
           "end_col_offset": 7,
-          "end_lineno": 30,
-          "lineno": 28,
-          "node_id": 127,
-          "src": "449:44:0",
+          "end_lineno": 31,
+          "lineno": 29,
+          "node_id": 135,
+          "src": "474:44:0",
           "value": "\n    @notice Contract constructor\n    "
         },
         "end_col_offset": 28,
-        "end_lineno": 32,
-        "lineno": 27,
+        "end_lineno": 33,
+        "lineno": 28,
         "name": "__init__",
-        "node_id": 106,
+        "node_id": 114,
         "pos": null,
         "returns": null,
-        "src": "429:121:0"
+        "src": "454:121:0"
       },
       {
         "args": {
@@ -962,10 +1013,10 @@
           "default": null,
           "defaults": [],
           "end_col_offset": 3,
-          "end_lineno": 36,
-          "lineno": 36,
-          "node_id": 129,
-          "src": "575:3:0"
+          "end_lineno": 37,
+          "lineno": 37,
+          "node_id": 137,
+          "src": "600:3:0"
         },
         "ast_type": "FunctionDef",
         "body": [
@@ -973,10 +1024,10 @@
             "ast_type": "Log",
             "col_offset": 4,
             "end_col_offset": 38,
-            "end_lineno": 40,
-            "lineno": 40,
-            "node_id": 133,
-            "src": "702:34:0",
+            "end_lineno": 41,
+            "lineno": 41,
+            "node_id": 141,
+            "src": "727:34:0",
             "value": {
               "args": [
                 {
@@ -984,19 +1035,19 @@
                   "attr": "sender",
                   "col_offset": 16,
                   "end_col_offset": 26,
-                  "end_lineno": 40,
-                  "lineno": 40,
-                  "node_id": 137,
-                  "src": "714:10:0",
+                  "end_lineno": 41,
+                  "lineno": 41,
+                  "node_id": 145,
+                  "src": "739:10:0",
                   "value": {
                     "ast_type": "Name",
                     "col_offset": 16,
                     "end_col_offset": 19,
-                    "end_lineno": 40,
+                    "end_lineno": 41,
                     "id": "msg",
-                    "lineno": 40,
-                    "node_id": 138,
-                    "src": "714:3:0"
+                    "lineno": 41,
+                    "node_id": 146,
+                    "src": "739:3:0"
                   }
                 },
                 {
@@ -1004,41 +1055,41 @@
                   "attr": "value",
                   "col_offset": 28,
                   "end_col_offset": 37,
-                  "end_lineno": 40,
-                  "lineno": 40,
-                  "node_id": 141,
-                  "src": "726:9:0",
+                  "end_lineno": 41,
+                  "lineno": 41,
+                  "node_id": 149,
+                  "src": "751:9:0",
                   "value": {
                     "ast_type": "Name",
                     "col_offset": 28,
                     "end_col_offset": 31,
-                    "end_lineno": 40,
+                    "end_lineno": 41,
                     "id": "msg",
-                    "lineno": 40,
-                    "node_id": 142,
-                    "src": "726:3:0"
+                    "lineno": 41,
+                    "node_id": 150,
+                    "src": "751:3:0"
                   }
                 }
               ],
               "ast_type": "Call",
               "col_offset": 8,
               "end_col_offset": 38,
-              "end_lineno": 40,
+              "end_lineno": 41,
               "func": {
                 "ast_type": "Name",
                 "col_offset": 8,
                 "end_col_offset": 15,
-                "end_lineno": 40,
+                "end_lineno": 41,
                 "id": "Payment",
-                "lineno": 40,
-                "node_id": 135,
-                "src": "706:7:0"
+                "lineno": 41,
+                "node_id": 143,
+                "src": "731:7:0"
               },
               "keyword": null,
               "keywords": [],
-              "lineno": 40,
-              "node_id": 134,
-              "src": "706:30:0"
+              "lineno": 41,
+              "node_id": 142,
+              "src": "731:30:0"
             }
           }
         ],
@@ -1048,41 +1099,41 @@
             "ast_type": "Name",
             "col_offset": 1,
             "end_col_offset": 8,
-            "end_lineno": 34,
+            "end_lineno": 35,
             "id": "payable",
-            "lineno": 34,
-            "node_id": 145,
-            "src": "553:7:0"
+            "lineno": 35,
+            "node_id": 153,
+            "src": "578:7:0"
           },
           {
             "ast_type": "Name",
             "col_offset": 1,
             "end_col_offset": 9,
-            "end_lineno": 35,
+            "end_lineno": 36,
             "id": "external",
-            "lineno": 35,
-            "node_id": 147,
-            "src": "566:8:0"
+            "lineno": 36,
+            "node_id": 155,
+            "src": "591:8:0"
           }
         ],
         "doc_string": {
           "ast_type": "DocStr",
           "col_offset": 4,
           "end_col_offset": 7,
-          "end_lineno": 39,
-          "lineno": 37,
-          "node_id": 149,
-          "src": "598:99:0",
+          "end_lineno": 40,
+          "lineno": 38,
+          "node_id": 157,
+          "src": "623:99:0",
           "value": "\n    @notice Function called when contract receives eth with no or unknown function call\n    "
         },
         "end_col_offset": 38,
-        "end_lineno": 40,
-        "lineno": 36,
+        "end_lineno": 41,
+        "lineno": 37,
         "name": "__default__",
-        "node_id": 128,
+        "node_id": 136,
         "pos": null,
         "returns": null,
-        "src": "575:161:0"
+        "src": "600:161:0"
       },
       {
         "args": {
@@ -1092,20 +1143,20 @@
                 "ast_type": "Name",
                 "col_offset": 27,
                 "end_col_offset": 34,
-                "end_lineno": 44,
+                "end_lineno": 45,
                 "id": "uint256",
-                "lineno": 44,
-                "node_id": 153,
-                "src": "781:7:0"
+                "lineno": 45,
+                "node_id": 161,
+                "src": "806:7:0"
               },
               "arg": "_memo_index",
               "ast_type": "arg",
               "col_offset": 14,
               "end_col_offset": 34,
-              "end_lineno": 44,
-              "lineno": 44,
-              "node_id": 152,
-              "src": "768:20:0"
+              "end_lineno": 45,
+              "lineno": 45,
+              "node_id": 160,
+              "src": "793:20:0"
             }
           ],
           "ast_type": "arguments",
@@ -1113,10 +1164,10 @@
           "default": null,
           "defaults": [],
           "end_col_offset": 34,
-          "end_lineno": 44,
-          "lineno": 44,
-          "node_id": 151,
-          "src": "768:20:0"
+          "end_lineno": 45,
+          "lineno": 45,
+          "node_id": 159,
+          "src": "793:20:0"
         },
         "ast_type": "FunctionDef",
         "body": [
@@ -1124,55 +1175,55 @@
             "ast_type": "Return",
             "col_offset": 4,
             "end_col_offset": 34,
-            "end_lineno": 50,
-            "lineno": 50,
-            "node_id": 157,
-            "src": "917:30:0",
+            "end_lineno": 51,
+            "lineno": 51,
+            "node_id": 165,
+            "src": "942:30:0",
             "value": {
               "ast_type": "Subscript",
               "col_offset": 11,
               "end_col_offset": 34,
-              "end_lineno": 50,
-              "lineno": 50,
-              "node_id": 158,
+              "end_lineno": 51,
+              "lineno": 51,
+              "node_id": 166,
               "slice": {
                 "ast_type": "Index",
                 "col_offset": 11,
                 "end_col_offset": 34,
-                "end_lineno": 50,
-                "lineno": 50,
-                "node_id": 166,
-                "src": "924:23:0",
+                "end_lineno": 51,
+                "lineno": 51,
+                "node_id": 174,
+                "src": "949:23:0",
                 "value": {
                   "ast_type": "Name",
                   "col_offset": 22,
                   "end_col_offset": 33,
-                  "end_lineno": 50,
+                  "end_lineno": 51,
                   "id": "_memo_index",
-                  "lineno": 50,
-                  "node_id": 163,
-                  "src": "935:11:0"
+                  "lineno": 51,
+                  "node_id": 171,
+                  "src": "960:11:0"
                 }
               },
-              "src": "924:23:0",
+              "src": "949:23:0",
               "value": {
                 "ast_type": "Attribute",
                 "attr": "memos",
                 "col_offset": 11,
                 "end_col_offset": 21,
-                "end_lineno": 50,
-                "lineno": 50,
-                "node_id": 159,
-                "src": "924:10:0",
+                "end_lineno": 51,
+                "lineno": 51,
+                "node_id": 167,
+                "src": "949:10:0",
                 "value": {
                   "ast_type": "Name",
                   "col_offset": 11,
                   "end_col_offset": 15,
-                  "end_lineno": 50,
+                  "end_lineno": 51,
                   "id": "self",
-                  "lineno": 50,
-                  "node_id": 160,
-                  "src": "924:4:0"
+                  "lineno": 51,
+                  "node_id": 168,
+                  "src": "949:4:0"
                 }
               }
             }
@@ -1184,50 +1235,50 @@
             "ast_type": "Name",
             "col_offset": 1,
             "end_col_offset": 5,
-            "end_lineno": 42,
+            "end_lineno": 43,
             "id": "view",
-            "lineno": 42,
-            "node_id": 167,
-            "src": "739:4:0"
+            "lineno": 43,
+            "node_id": 175,
+            "src": "764:4:0"
           },
           {
             "ast_type": "Name",
             "col_offset": 1,
             "end_col_offset": 9,
-            "end_lineno": 43,
+            "end_lineno": 44,
             "id": "external",
-            "lineno": 43,
-            "node_id": 169,
-            "src": "745:8:0"
+            "lineno": 44,
+            "node_id": 177,
+            "src": "770:8:0"
           }
         ],
         "doc_string": {
           "ast_type": "DocStr",
           "col_offset": 4,
           "end_col_offset": 7,
-          "end_lineno": 49,
-          "lineno": 45,
-          "node_id": 173,
-          "src": "803:109:0",
+          "end_lineno": 50,
+          "lineno": 46,
+          "node_id": 181,
+          "src": "828:109:0",
           "value": "\n    @notice Find a specific memo\n    @param _memo_index index of the memo\n    @return memo struct\n    "
         },
         "end_col_offset": 34,
-        "end_lineno": 50,
-        "lineno": 44,
+        "end_lineno": 51,
+        "lineno": 45,
         "name": "get_memos",
-        "node_id": 150,
+        "node_id": 158,
         "pos": null,
         "returns": {
           "ast_type": "Name",
           "col_offset": 39,
           "end_col_offset": 43,
-          "end_lineno": 44,
+          "end_lineno": 45,
           "id": "Memo",
-          "lineno": 44,
-          "node_id": 171,
-          "src": "793:4:0"
+          "lineno": 45,
+          "node_id": 179,
+          "src": "818:4:0"
         },
-        "src": "754:193:0"
+        "src": "779:193:0"
       },
       {
         "args": {
@@ -1237,96 +1288,96 @@
                 "ast_type": "Subscript",
                 "col_offset": 22,
                 "end_col_offset": 33,
-                "end_lineno": 54,
-                "lineno": 54,
-                "node_id": 177,
+                "end_lineno": 55,
+                "lineno": 55,
+                "node_id": 185,
                 "slice": {
                   "ast_type": "Index",
                   "col_offset": 22,
                   "end_col_offset": 33,
-                  "end_lineno": 54,
-                  "lineno": 54,
-                  "node_id": 182,
-                  "src": "990:11:0",
+                  "end_lineno": 55,
+                  "lineno": 55,
+                  "node_id": 190,
+                  "src": "1015:11:0",
                   "value": {
                     "ast_type": "Int",
                     "col_offset": 29,
                     "end_col_offset": 32,
-                    "end_lineno": 54,
-                    "lineno": 54,
-                    "node_id": 180,
-                    "src": "997:3:0",
+                    "end_lineno": 55,
+                    "lineno": 55,
+                    "node_id": 188,
+                    "src": "1022:3:0",
                     "value": 100
                   }
                 },
-                "src": "990:11:0",
+                "src": "1015:11:0",
                 "value": {
                   "ast_type": "Name",
                   "col_offset": 22,
                   "end_col_offset": 28,
-                  "end_lineno": 54,
+                  "end_lineno": 55,
                   "id": "String",
-                  "lineno": 54,
-                  "node_id": 178,
-                  "src": "990:6:0"
+                  "lineno": 55,
+                  "node_id": 186,
+                  "src": "1015:6:0"
                 }
               },
               "arg": "_name",
               "ast_type": "arg",
               "col_offset": 15,
               "end_col_offset": 33,
-              "end_lineno": 54,
-              "lineno": 54,
-              "node_id": 176,
-              "src": "983:18:0"
+              "end_lineno": 55,
+              "lineno": 55,
+              "node_id": 184,
+              "src": "1008:18:0"
             },
             {
               "annotation": {
                 "ast_type": "Subscript",
                 "col_offset": 45,
                 "end_col_offset": 56,
-                "end_lineno": 54,
-                "lineno": 54,
-                "node_id": 184,
+                "end_lineno": 55,
+                "lineno": 55,
+                "node_id": 192,
                 "slice": {
                   "ast_type": "Index",
                   "col_offset": 45,
                   "end_col_offset": 56,
-                  "end_lineno": 54,
-                  "lineno": 54,
-                  "node_id": 189,
-                  "src": "1013:11:0",
+                  "end_lineno": 55,
+                  "lineno": 55,
+                  "node_id": 197,
+                  "src": "1038:11:0",
                   "value": {
                     "ast_type": "Int",
                     "col_offset": 52,
                     "end_col_offset": 55,
-                    "end_lineno": 54,
-                    "lineno": 54,
-                    "node_id": 187,
-                    "src": "1020:3:0",
+                    "end_lineno": 55,
+                    "lineno": 55,
+                    "node_id": 195,
+                    "src": "1045:3:0",
                     "value": 100
                   }
                 },
-                "src": "1013:11:0",
+                "src": "1038:11:0",
                 "value": {
                   "ast_type": "Name",
                   "col_offset": 45,
                   "end_col_offset": 51,
-                  "end_lineno": 54,
+                  "end_lineno": 55,
                   "id": "String",
-                  "lineno": 54,
-                  "node_id": 185,
-                  "src": "1013:6:0"
+                  "lineno": 55,
+                  "node_id": 193,
+                  "src": "1038:6:0"
                 }
               },
               "arg": "_message",
               "ast_type": "arg",
               "col_offset": 35,
               "end_col_offset": 56,
-              "end_lineno": 54,
-              "lineno": 54,
-              "node_id": 183,
-              "src": "1003:21:0"
+              "end_lineno": 55,
+              "lineno": 55,
+              "node_id": 191,
+              "src": "1028:21:0"
             }
           ],
           "ast_type": "arguments",
@@ -1334,10 +1385,10 @@
           "default": null,
           "defaults": [],
           "end_col_offset": 56,
-          "end_lineno": 54,
-          "lineno": 54,
-          "node_id": 175,
-          "src": "983:41:0"
+          "end_lineno": 55,
+          "lineno": 55,
+          "node_id": 183,
+          "src": "1008:41:0"
         },
         "ast_type": "FunctionDef",
         "body": [
@@ -1345,132 +1396,132 @@
             "ast_type": "Assert",
             "col_offset": 4,
             "end_col_offset": 54,
-            "end_lineno": 57,
-            "lineno": 57,
+            "end_lineno": 58,
+            "lineno": 58,
             "msg": {
               "ast_type": "Str",
               "col_offset": 26,
               "end_col_offset": 54,
-              "end_lineno": 57,
-              "lineno": 57,
-              "node_id": 198,
-              "src": "1106:28:0",
+              "end_lineno": 58,
+              "lineno": 58,
+              "node_id": 206,
+              "src": "1131:28:0",
               "value": "Can't buy coffee for free!"
             },
-            "node_id": 190,
-            "src": "1084:50:0",
+            "node_id": 198,
+            "src": "1109:50:0",
             "test": {
               "ast_type": "Compare",
               "col_offset": 11,
               "end_col_offset": 24,
-              "end_lineno": 57,
+              "end_lineno": 58,
               "left": {
                 "ast_type": "Attribute",
                 "attr": "value",
                 "col_offset": 11,
                 "end_col_offset": 20,
-                "end_lineno": 57,
-                "lineno": 57,
-                "node_id": 192,
-                "src": "1091:9:0",
+                "end_lineno": 58,
+                "lineno": 58,
+                "node_id": 200,
+                "src": "1116:9:0",
                 "value": {
                   "ast_type": "Name",
                   "col_offset": 11,
                   "end_col_offset": 14,
-                  "end_lineno": 57,
+                  "end_lineno": 58,
                   "id": "msg",
-                  "lineno": 57,
-                  "node_id": 193,
-                  "src": "1091:3:0"
+                  "lineno": 58,
+                  "node_id": 201,
+                  "src": "1116:3:0"
                 }
               },
-              "lineno": 57,
-              "node_id": 191,
+              "lineno": 58,
+              "node_id": 199,
               "op": {
                 "ast_type": "Gt",
                 "col_offset": 11,
                 "end_col_offset": 24,
-                "end_lineno": 57,
-                "lineno": 57,
-                "node_id": 273,
-                "src": "1091:13:0"
+                "end_lineno": 58,
+                "lineno": 58,
+                "node_id": 287,
+                "src": "1116:13:0"
               },
               "right": {
                 "ast_type": "Int",
                 "col_offset": 23,
                 "end_col_offset": 24,
-                "end_lineno": 57,
-                "lineno": 57,
-                "node_id": 197,
-                "src": "1103:1:0",
+                "end_lineno": 58,
+                "lineno": 58,
+                "node_id": 205,
+                "src": "1128:1:0",
                 "value": 0
               },
-              "src": "1091:13:0"
+              "src": "1116:13:0"
             }
           },
           {
             "ast_type": "Assign",
             "col_offset": 4,
             "end_col_offset": 6,
-            "end_lineno": 65,
-            "lineno": 60,
-            "node_id": 199,
-            "src": "1170:154:0",
+            "end_lineno": 67,
+            "lineno": 61,
+            "node_id": 207,
+            "src": "1195:178:0",
             "target": {
               "ast_type": "Subscript",
               "col_offset": 4,
               "end_col_offset": 36,
-              "end_lineno": 60,
-              "lineno": 60,
-              "node_id": 200,
+              "end_lineno": 61,
+              "lineno": 61,
+              "node_id": 208,
               "slice": {
                 "ast_type": "Index",
                 "col_offset": 4,
                 "end_col_offset": 36,
-                "end_lineno": 60,
-                "lineno": 60,
-                "node_id": 210,
-                "src": "1170:32:0",
+                "end_lineno": 61,
+                "lineno": 61,
+                "node_id": 218,
+                "src": "1195:32:0",
                 "value": {
                   "ast_type": "Attribute",
                   "attr": "last_memo_index",
                   "col_offset": 15,
                   "end_col_offset": 35,
-                  "end_lineno": 60,
-                  "lineno": 60,
-                  "node_id": 205,
-                  "src": "1181:20:0",
+                  "end_lineno": 61,
+                  "lineno": 61,
+                  "node_id": 213,
+                  "src": "1206:20:0",
                   "value": {
                     "ast_type": "Name",
                     "col_offset": 15,
                     "end_col_offset": 19,
-                    "end_lineno": 60,
+                    "end_lineno": 61,
                     "id": "self",
-                    "lineno": 60,
-                    "node_id": 206,
-                    "src": "1181:4:0"
+                    "lineno": 61,
+                    "node_id": 214,
+                    "src": "1206:4:0"
                   }
                 }
               },
-              "src": "1170:32:0",
+              "src": "1195:32:0",
               "value": {
                 "ast_type": "Attribute",
                 "attr": "memos",
                 "col_offset": 4,
                 "end_col_offset": 14,
-                "end_lineno": 60,
-                "lineno": 60,
-                "node_id": 201,
-                "src": "1170:10:0",
+                "end_lineno": 61,
+                "lineno": 61,
+                "node_id": 209,
+                "src": "1195:10:0",
                 "value": {
                   "ast_type": "Name",
                   "col_offset": 4,
                   "end_col_offset": 8,
-                  "end_lineno": 60,
+                  "end_lineno": 61,
                   "id": "self",
-                  "lineno": 60,
-                  "node_id": 202,
-                  "src": "1170:4:0"
+                  "lineno": 61,
+                  "node_id": 210,
+                  "src": "1195:4:0"
                 }
               }
             },
@@ -1480,71 +1531,81 @@
                   "ast_type": "Dict",
                   "col_offset": 44,
                   "end_col_offset": 5,
-                  "end_lineno": 65,
+                  "end_lineno": 67,
                   "keys": [
                     {
                       "ast_type": "Name",
                       "col_offset": 8,
                       "end_col_offset": 14,
-                      "end_lineno": 61,
-                      "id": "sender",
-                      "lineno": 61,
-                      "node_id": 215,
-                      "src": "1220:6:0"
-                    },
-                    {
-                      "ast_type": "Name",
-                      "col_offset": 8,
-                      "end_col_offset": 12,
                       "end_lineno": 62,
-                      "id": "time",
+                      "id": "sender",
                       "lineno": 62,
-                      "node_id": 217,
-                      "src": "1248:4:0"
+                      "node_id": 223,
+                      "src": "1245:6:0"
                     },
                     {
                       "ast_type": "Name",
                       "col_offset": 8,
                       "end_col_offset": 12,
                       "end_lineno": 63,
-                      "id": "name",
+                      "id": "time",
                       "lineno": 63,
-                      "node_id": 219,
-                      "src": "1279:4:0"
+                      "node_id": 225,
+                      "src": "1273:4:0"
+                    },
+                    {
+                      "ast_type": "Name",
+                      "col_offset": 8,
+                      "end_col_offset": 12,
+                      "end_lineno": 64,
+                      "id": "name",
+                      "lineno": 64,
+                      "node_id": 227,
+                      "src": "1304:4:0"
                     },
                     {
                       "ast_type": "Name",
                       "col_offset": 8,
                       "end_col_offset": 15,
-                      "end_lineno": 64,
+                      "end_lineno": 65,
                       "id": "message",
-                      "lineno": 64,
-                      "node_id": 221,
-                      "src": "1300:7:0"
+                      "lineno": 65,
+                      "node_id": 229,
+                      "src": "1325:7:0"
+                    },
+                    {
+                      "ast_type": "Name",
+                      "col_offset": 8,
+                      "end_col_offset": 11,
+                      "end_lineno": 66,
+                      "id": "tip",
+                      "lineno": 66,
+                      "node_id": 231,
+                      "src": "1352:3:0"
                     }
                   ],
-                  "lineno": 60,
-                  "node_id": 214,
-                  "src": "1210:113:0",
+                  "lineno": 61,
+                  "node_id": 222,
+                  "src": "1235:137:0",
                   "values": [
                     {
                       "ast_type": "Attribute",
                       "attr": "sender",
                       "col_offset": 16,
                       "end_col_offset": 26,
-                      "end_lineno": 61,
-                      "lineno": 61,
-                      "node_id": 223,
-                      "src": "1228:10:0",
+                      "end_lineno": 62,
+                      "lineno": 62,
+                      "node_id": 233,
+                      "src": "1253:10:0",
                       "value": {
                         "ast_type": "Name",
                         "col_offset": 16,
                         "end_col_offset": 19,
-                        "end_lineno": 61,
+                        "end_lineno": 62,
                         "id": "msg",
-                        "lineno": 61,
-                        "node_id": 224,
-                        "src": "1228:3:0"
+                        "lineno": 62,
+                        "node_id": 234,
+                        "src": "1253:3:0"
                       }
                     },
                     {
@@ -1552,40 +1613,60 @@
                       "attr": "timestamp",
                       "col_offset": 14,
                       "end_col_offset": 29,
-                      "end_lineno": 62,
-                      "lineno": 62,
-                      "node_id": 227,
-                      "src": "1254:15:0",
+                      "end_lineno": 63,
+                      "lineno": 63,
+                      "node_id": 237,
+                      "src": "1279:15:0",
                       "value": {
                         "ast_type": "Name",
                         "col_offset": 14,
                         "end_col_offset": 19,
-                        "end_lineno": 62,
+                        "end_lineno": 63,
                         "id": "block",
-                        "lineno": 62,
-                        "node_id": 228,
-                        "src": "1254:5:0"
+                        "lineno": 63,
+                        "node_id": 238,
+                        "src": "1279:5:0"
                       }
                     },
                     {
                       "ast_type": "Name",
                       "col_offset": 14,
                       "end_col_offset": 19,
-                      "end_lineno": 63,
+                      "end_lineno": 64,
                       "id": "_name",
-                      "lineno": 63,
-                      "node_id": 231,
-                      "src": "1285:5:0"
+                      "lineno": 64,
+                      "node_id": 241,
+                      "src": "1310:5:0"
                     },
                     {
                       "ast_type": "Name",
                       "col_offset": 17,
                       "end_col_offset": 25,
-                      "end_lineno": 64,
+                      "end_lineno": 65,
                       "id": "_message",
-                      "lineno": 64,
-                      "node_id": 233,
-                      "src": "1309:8:0"
+                      "lineno": 65,
+                      "node_id": 243,
+                      "src": "1334:8:0"
+                    },
+                    {
+                      "ast_type": "Attribute",
+                      "attr": "value",
+                      "col_offset": 13,
+                      "end_col_offset": 22,
+                      "end_lineno": 66,
+                      "lineno": 66,
+                      "node_id": 245,
+                      "src": "1357:9:0",
+                      "value": {
+                        "ast_type": "Name",
+                        "col_offset": 13,
+                        "end_col_offset": 16,
+                        "end_lineno": 66,
+                        "id": "msg",
+                        "lineno": 66,
+                        "node_id": 246,
+                        "src": "1357:3:0"
+                      }
                     }
                   ]
                 }
@@ -1593,69 +1674,69 @@
               "ast_type": "Call",
               "col_offset": 39,
               "end_col_offset": 6,
-              "end_lineno": 65,
+              "end_lineno": 67,
               "func": {
                 "ast_type": "Name",
                 "col_offset": 39,
                 "end_col_offset": 43,
-                "end_lineno": 60,
+                "end_lineno": 61,
                 "id": "Memo",
-                "lineno": 60,
-                "node_id": 212,
-                "src": "1205:4:0"
+                "lineno": 61,
+                "node_id": 220,
+                "src": "1230:4:0"
               },
               "keyword": null,
               "keywords": [],
-              "lineno": 60,
-              "node_id": 211,
-              "src": "1205:119:0"
+              "lineno": 61,
+              "node_id": 219,
+              "src": "1230:143:0"
             }
           },
           {
             "ast_type": "AugAssign",
             "col_offset": 4,
             "end_col_offset": 29,
-            "end_lineno": 66,
-            "lineno": 66,
-            "node_id": 235,
+            "end_lineno": 68,
+            "lineno": 68,
+            "node_id": 249,
             "op": {
               "ast_type": "Add",
               "col_offset": 4,
               "end_col_offset": 29,
-              "end_lineno": 66,
-              "lineno": 66,
-              "node_id": 240,
-              "src": "1329:25:0"
+              "end_lineno": 68,
+              "lineno": 68,
+              "node_id": 254,
+              "src": "1378:25:0"
             },
-            "src": "1329:25:0",
+            "src": "1378:25:0",
             "target": {
               "ast_type": "Attribute",
               "attr": "last_memo_index",
               "col_offset": 4,
               "end_col_offset": 24,
-              "end_lineno": 66,
-              "lineno": 66,
-              "node_id": 236,
-              "src": "1329:20:0",
+              "end_lineno": 68,
+              "lineno": 68,
+              "node_id": 250,
+              "src": "1378:20:0",
               "value": {
                 "ast_type": "Name",
                 "col_offset": 4,
                 "end_col_offset": 8,
-                "end_lineno": 66,
+                "end_lineno": 68,
                 "id": "self",
-                "lineno": 66,
-                "node_id": 237,
-                "src": "1329:4:0"
+                "lineno": 68,
+                "node_id": 251,
+                "src": "1378:4:0"
               }
             },
             "value": {
               "ast_type": "Int",
               "col_offset": 28,
               "end_col_offset": 29,
-              "end_lineno": 66,
-              "lineno": 66,
-              "node_id": 241,
-              "src": "1353:1:0",
+              "end_lineno": 68,
+              "lineno": 68,
+              "node_id": 255,
+              "src": "1402:1:0",
               "value": 1
             }
           },
@@ -1663,10 +1744,10 @@
             "ast_type": "Log",
             "col_offset": 4,
             "end_col_offset": 61,
-            "end_lineno": 69,
-            "lineno": 69,
-            "node_id": 243,
-            "src": "1380:57:0",
+            "end_lineno": 71,
+            "lineno": 71,
+            "node_id": 257,
+            "src": "1429:57:0",
             "value": {
               "args": [
                 {
@@ -1674,19 +1755,19 @@
                   "attr": "sender",
                   "col_offset": 16,
                   "end_col_offset": 26,
-                  "end_lineno": 69,
-                  "lineno": 69,
-                  "node_id": 247,
-                  "src": "1392:10:0",
+                  "end_lineno": 71,
+                  "lineno": 71,
+                  "node_id": 261,
+                  "src": "1441:10:0",
                   "value": {
                     "ast_type": "Name",
                     "col_offset": 16,
                     "end_col_offset": 19,
-                    "end_lineno": 69,
+                    "end_lineno": 71,
                     "id": "msg",
-                    "lineno": 69,
-                    "node_id": 248,
-                    "src": "1392:3:0"
+                    "lineno": 71,
+                    "node_id": 262,
+                    "src": "1441:3:0"
                   }
                 },
                 {
@@ -1694,61 +1775,61 @@
                   "attr": "timestamp",
                   "col_offset": 28,
                   "end_col_offset": 43,
-                  "end_lineno": 69,
-                  "lineno": 69,
-                  "node_id": 251,
-                  "src": "1404:15:0",
+                  "end_lineno": 71,
+                  "lineno": 71,
+                  "node_id": 265,
+                  "src": "1453:15:0",
                   "value": {
                     "ast_type": "Name",
                     "col_offset": 28,
                     "end_col_offset": 33,
-                    "end_lineno": 69,
+                    "end_lineno": 71,
                     "id": "block",
-                    "lineno": 69,
-                    "node_id": 252,
-                    "src": "1404:5:0"
+                    "lineno": 71,
+                    "node_id": 266,
+                    "src": "1453:5:0"
                   }
                 },
                 {
                   "ast_type": "Name",
                   "col_offset": 45,
                   "end_col_offset": 50,
-                  "end_lineno": 69,
+                  "end_lineno": 71,
                   "id": "_name",
-                  "lineno": 69,
-                  "node_id": 255,
-                  "src": "1421:5:0"
+                  "lineno": 71,
+                  "node_id": 269,
+                  "src": "1470:5:0"
                 },
                 {
                   "ast_type": "Name",
                   "col_offset": 52,
                   "end_col_offset": 60,
-                  "end_lineno": 69,
+                  "end_lineno": 71,
                   "id": "_message",
-                  "lineno": 69,
-                  "node_id": 257,
-                  "src": "1428:8:0"
+                  "lineno": 71,
+                  "node_id": 271,
+                  "src": "1477:8:0"
                 }
               ],
               "ast_type": "Call",
               "col_offset": 8,
               "end_col_offset": 61,
-              "end_lineno": 69,
+              "end_lineno": 71,
               "func": {
                 "ast_type": "Name",
                 "col_offset": 8,
                 "end_col_offset": 15,
-                "end_lineno": 69,
+                "end_lineno": 71,
                 "id": "NewMemo",
-                "lineno": 69,
-                "node_id": 245,
-                "src": "1384:7:0"
+                "lineno": 71,
+                "node_id": 259,
+                "src": "1433:7:0"
               },
               "keyword": null,
               "keywords": [],
-              "lineno": 69,
-              "node_id": 244,
-              "src": "1384:53:0"
+              "lineno": 71,
+              "node_id": 258,
+              "src": "1433:53:0"
             }
           }
         ],
@@ -1758,32 +1839,32 @@
             "ast_type": "Name",
             "col_offset": 1,
             "end_col_offset": 8,
-            "end_lineno": 52,
+            "end_lineno": 53,
             "id": "payable",
-            "lineno": 52,
-            "node_id": 259,
-            "src": "950:7:0"
+            "lineno": 53,
+            "node_id": 273,
+            "src": "975:7:0"
           },
           {
             "ast_type": "Name",
             "col_offset": 1,
             "end_col_offset": 9,
-            "end_lineno": 53,
+            "end_lineno": 54,
             "id": "external",
-            "lineno": 53,
-            "node_id": 261,
-            "src": "959:8:0"
+            "lineno": 54,
+            "node_id": 275,
+            "src": "984:8:0"
           }
         ],
         "doc_string": null,
         "end_col_offset": 61,
-        "end_lineno": 69,
-        "lineno": 54,
+        "end_lineno": 71,
+        "lineno": 55,
         "name": "buy_coffee",
-        "node_id": 174,
+        "node_id": 182,
         "pos": null,
         "returns": null,
-        "src": "968:469:0"
+        "src": "993:493:0"
       },
       {
         "args": {
@@ -1793,10 +1874,10 @@
           "default": null,
           "defaults": [],
           "end_col_offset": 3,
-          "end_lineno": 72,
-          "lineno": 72,
-          "node_id": 264,
-          "src": "1449:3:0"
+          "end_lineno": 74,
+          "lineno": 74,
+          "node_id": 278,
+          "src": "1498:3:0"
         },
         "ast_type": "FunctionDef",
         "body": [
@@ -1804,77 +1885,77 @@
             "ast_type": "Assert",
             "col_offset": 4,
             "end_col_offset": 44,
-            "end_lineno": 76,
-            "lineno": 76,
+            "end_lineno": 78,
+            "lineno": 78,
             "msg": {
               "ast_type": "Str",
               "col_offset": 29,
               "end_col_offset": 44,
-              "end_lineno": 76,
-              "lineno": 76,
-              "node_id": 275,
-              "src": "1573:15:0",
+              "end_lineno": 78,
+              "lineno": 78,
+              "node_id": 289,
+              "src": "1622:15:0",
               "value": "Empty balance"
             },
-            "node_id": 267,
-            "src": "1548:40:0",
+            "node_id": 281,
+            "src": "1597:40:0",
             "test": {
               "ast_type": "Compare",
               "col_offset": 11,
               "end_col_offset": 27,
-              "end_lineno": 76,
+              "end_lineno": 78,
               "left": {
                 "ast_type": "Attribute",
                 "attr": "balance",
                 "col_offset": 11,
                 "end_col_offset": 23,
-                "end_lineno": 76,
-                "lineno": 76,
-                "node_id": 269,
-                "src": "1555:12:0",
+                "end_lineno": 78,
+                "lineno": 78,
+                "node_id": 283,
+                "src": "1604:12:0",
                 "value": {
                   "ast_type": "Name",
                   "col_offset": 11,
                   "end_col_offset": 15,
-                  "end_lineno": 76,
+                  "end_lineno": 78,
                   "id": "self",
-                  "lineno": 76,
-                  "node_id": 270,
-                  "src": "1555:4:0"
+                  "lineno": 78,
+                  "node_id": 284,
+                  "src": "1604:4:0"
                 }
               },
-              "lineno": 76,
-              "node_id": 268,
+              "lineno": 78,
+              "node_id": 282,
               "op": {
                 "ast_type": "Gt",
                 "col_offset": 11,
                 "end_col_offset": 27,
-                "end_lineno": 76,
-                "lineno": 76,
-                "node_id": 273,
-                "src": "1555:16:0"
+                "end_lineno": 78,
+                "lineno": 78,
+                "node_id": 287,
+                "src": "1604:16:0"
               },
               "right": {
                 "ast_type": "Int",
                 "col_offset": 26,
                 "end_col_offset": 27,
-                "end_lineno": 76,
-                "lineno": 76,
-                "node_id": 274,
-                "src": "1570:1:0",
+                "end_lineno": 78,
+                "lineno": 78,
+                "node_id": 288,
+                "src": "1619:1:0",
                 "value": 0
               },
-              "src": "1555:16:0"
+              "src": "1604:16:0"
             }
           },
           {
             "ast_type": "Expr",
             "col_offset": 4,
             "end_col_offset": 34,
-            "end_lineno": 77,
-            "lineno": 77,
-            "node_id": 276,
-            "src": "1593:30:0",
+            "end_lineno": 79,
+            "lineno": 79,
+            "node_id": 290,
+            "src": "1642:30:0",
             "value": {
               "args": [
                 {
@@ -1882,19 +1963,19 @@
                   "attr": "owner",
                   "col_offset": 9,
                   "end_col_offset": 19,
-                  "end_lineno": 77,
-                  "lineno": 77,
-                  "node_id": 280,
-                  "src": "1598:10:0",
+                  "end_lineno": 79,
+                  "lineno": 79,
+                  "node_id": 294,
+                  "src": "1647:10:0",
                   "value": {
                     "ast_type": "Name",
                     "col_offset": 9,
                     "end_col_offset": 13,
-                    "end_lineno": 77,
+                    "end_lineno": 79,
                     "id": "self",
-                    "lineno": 77,
-                    "node_id": 281,
-                    "src": "1598:4:0"
+                    "lineno": 79,
+                    "node_id": 295,
+                    "src": "1647:4:0"
                   }
                 },
                 {
@@ -1902,41 +1983,41 @@
                   "attr": "balance",
                   "col_offset": 21,
                   "end_col_offset": 33,
-                  "end_lineno": 77,
-                  "lineno": 77,
-                  "node_id": 284,
-                  "src": "1610:12:0",
+                  "end_lineno": 79,
+                  "lineno": 79,
+                  "node_id": 298,
+                  "src": "1659:12:0",
                   "value": {
                     "ast_type": "Name",
                     "col_offset": 21,
                     "end_col_offset": 25,
-                    "end_lineno": 77,
+                    "end_lineno": 79,
                     "id": "self",
-                    "lineno": 77,
-                    "node_id": 285,
-                    "src": "1610:4:0"
+                    "lineno": 79,
+                    "node_id": 299,
+                    "src": "1659:4:0"
                   }
                 }
               ],
               "ast_type": "Call",
               "col_offset": 4,
               "end_col_offset": 34,
-              "end_lineno": 77,
+              "end_lineno": 79,
               "func": {
                 "ast_type": "Name",
                 "col_offset": 4,
                 "end_col_offset": 8,
-                "end_lineno": 77,
+                "end_lineno": 79,
                 "id": "send",
-                "lineno": 77,
-                "node_id": 278,
-                "src": "1593:4:0"
+                "lineno": 79,
+                "node_id": 292,
+                "src": "1642:4:0"
               },
               "keyword": null,
               "keywords": [],
-              "lineno": 77,
-              "node_id": 277,
-              "src": "1593:30:0"
+              "lineno": 79,
+              "node_id": 291,
+              "src": "1642:30:0"
             }
           }
         ],
@@ -1946,44 +2027,44 @@
             "ast_type": "Name",
             "col_offset": 1,
             "end_col_offset": 9,
-            "end_lineno": 71,
+            "end_lineno": 73,
             "id": "external",
-            "lineno": 71,
-            "node_id": 288,
-            "src": "1440:8:0"
+            "lineno": 73,
+            "node_id": 302,
+            "src": "1489:8:0"
           }
         ],
         "doc_string": {
           "ast_type": "DocStr",
           "col_offset": 4,
           "end_col_offset": 7,
-          "end_lineno": 75,
-          "lineno": 73,
-          "node_id": 290,
-          "src": "1474:69:0",
+          "end_lineno": 77,
+          "lineno": 75,
+          "node_id": 304,
+          "src": "1523:69:0",
           "value": "\n    @notice Withdraw the contract's balance to an address\n    "
         },
         "end_col_offset": 34,
-        "end_lineno": 77,
-        "lineno": 72,
+        "end_lineno": 79,
+        "lineno": 74,
         "name": "withdraw_tips",
-        "node_id": 263,
+        "node_id": 277,
         "pos": null,
         "returns": null,
-        "src": "1449:174:0"
+        "src": "1498:174:0"
       }
     ],
     "col_offset": 0,
     "doc_string": null,
     "end_col_offset": 34,
-    "end_lineno": 77,
+    "end_lineno": 79,
     "lineno": 1,
     "name": "contracts/contracts/BuyMeACoffee.vy",
     "node_id": 0,
-    "src": "0:1623:0"
+    "src": "0:1672:0"
   },
-  "bytecode": "0x346105ce573360005560006002556105ae61001f610000396105ae610000f36003361161000c5761056f565b60003560e01c63f495ae4a8118610245576084361061059c57600435600401606481351161059c57803580604052602082018181606037505050602435600401606481351161059c5780358060e05260208201818161010037505050346100d357601a610180527f43616e27742062757920636f6666656520666f722066726565210000000000006101a0526101805061018051806101a001601f826000031636823750506308c379a061014052602061016052601f19601f61018051011660440161015cfd5b6001600254602052600052604060002033815542600182015560405180600283015560016002830101600082601f0160051c6004811161059c57801561012c57905b8060051b6060015181840155600101818118610115575b5050505060e05180600783015560016007830101600082601f0160051c6004811161059c57801561017157905b8060051b610100015181840155600101818118610159575b50505050506002546001810181811061059c579050600255337fc56140e05f516509ae28110e0f72e17558a7561630dad2647c3ae87d986e365c60604261018052806101a052806101800160405180825260208201818183606060045afa5050508051806020830101601f82600003163682375050601f19601f82516020010116905081019050806101c052806101800160e0518082526020820181818361010060045afa5050508051806020830101601f82600003163682375050601f19601f82516020010116905081019050610180a2005b63ae6d8ab1811861037f576024361061059c573461059c576020806040526001600435602052600052604060002081604001608082548252600183015460208301528060408301526002830181830181548082526001830160208301600083601f0160051c6004811161059c5780156102d057905b808401548160051b8401526001018181186102ba575b50505050508051806020830101601f82600003163682375050601f19601f8251602001011690509050810190508060608301526007830181830181548082526001830160208301600083601f0160051c6004811161059c57801561034657905b808401548160051b840152600101818118610330575b50505050508051806020830101601f82600003163682375050601f19601f82516020010116905090508101905090509050810190506040f35b63a159054a811861040f576004361061059c573461059c57476103f957600d6040527f456d7074792062616c616e63650000000000000000000000000000000000000060605260405060405180606001601f826000031636823750506308c379a06000526020602052601f19601f6040510116604401601cfd5b6000600060006000476000546000f11561059c57005b63e8dfdf048118610549576024361061059c573461059c576020806040526001600435602052600052604060002081604001608082548252600183015460208301528060408301526002830181830181548082526001830160208301600083601f0160051c6004811161059c57801561049a57905b808401548160051b840152600101818118610484575b50505050508051806020830101601f82600003163682375050601f19601f8251602001011690509050810190508060608301526007830181830181548082526001830160208301600083601f0160051c6004811161059c57801561051057905b808401548160051b8401526001018181186104fa575b50505050508051806020830101601f82600003163682375050601f19601f82516020010116905090508101905090509050810190506040f35b6346216106811861056d576004361061059c573461059c5760025460405260206040f35b505b337fd4f43975feb89f48dd30cabbb32011045be187d1e11c8ea9faa43efc352825193460405260206040a2005b600080fda165767970657283000307000b005b600080fd",
-  "bytecodeSha1": "c19faaaba61b27f93395d5b72c0d5ac4417fe324",
+  "bytecode": "0x3461060c573360005560006002556105ec61001f610000396105ec610000f36003361161000c576105ad565b60003560e01c63f495ae4a811861024b57608436106105da5760043560040160648135116105da5780358060405260208201818160603750505060243560040160648135116105da5780358060e05260208201818161010037505050346100d357601a610180527f43616e27742062757920636f6666656520666f722066726565210000000000006101a0526101805061018051806101a001601f826000031636823750506308c379a061014052602061016052601f19601f61018051011660440161015cfd5b6001600254602052600052604060002033815542600182015560405180600283015560016002830101600082601f0160051c600481116105da57801561012c57905b8060051b6060015181840155600101818118610115575b5050505060e05180600783015560016007830101600082601f0160051c600481116105da57801561017157905b8060051b610100015181840155600101818118610159575b5050505034600c82015550600254600181018181106105da579050600255337fc56140e05f516509ae28110e0f72e17558a7561630dad2647c3ae87d986e365c60604261018052806101a052806101800160405180825260208201818183606060045afa5050508051806020830101601f82600003163682375050601f19601f82516020010116905081019050806101c052806101800160e0518082526020820181818361010060045afa5050508051806020830101601f82600003163682375050601f19601f82516020010116905081019050610180a2005b63ae6d8ab1811861038f57602436106105da57346105da57602080604052600160043560205260005260406000208160400160a082548252600183015460208301528060408301526002830181830181548082526001830160208301600083601f0160051c600481116105da5780156102d657905b808401548160051b8401526001018181186102c0575b50505050508051806020830101601f82600003163682375050601f19601f8251602001011690509050810190508060608301526007830181830181548082526001830160208301600083601f0160051c600481116105da57801561034c57905b808401548160051b840152600101818118610336575b50505050508051806020830101601f82600003163682375050601f19601f825160200101169050905081019050600c830154608083015290509050810190506040f35b63a159054a811861041f57600436106105da57346105da574761040957600d6040527f456d7074792062616c616e63650000000000000000000000000000000000000060605260405060405180606001601f826000031636823750506308c379a06000526020602052601f19601f6040510116604401601cfd5b6000600060006000476000546000f1156105da57005b638da5cb5b811861044357600436106105da57346105da5760005460405260206040f35b63e8dfdf04811861058757602436106105da57346105da57602080604052600160043560205260005260406000208160400160a082548252600183015460208301528060408301526002830181830181548082526001830160208301600083601f0160051c600481116105da5780156104ce57905b808401548160051b8401526001018181186104b8575b50505050508051806020830101601f82600003163682375050601f19601f8251602001011690509050810190508060608301526007830181830181548082526001830160208301600083601f0160051c600481116105da57801561054457905b808401548160051b84015260010181811861052e575b50505050508051806020830101601f82600003163682375050601f19601f825160200101169050905081019050600c830154608083015290509050810190506040f35b634621610681186105ab57600436106105da57346105da5760025460405260206040f35b505b337fd4f43975feb89f48dd30cabbb32011045be187d1e11c8ea9faa43efc352825193460405260206040a2005b600080fda165767970657283000307000b005b600080fd",
+  "bytecodeSha1": "720edd57b406f1d16ae3cb7a80448f6d21a0f4f1",
   "compiler": {
     "evm_version": "istanbul",
     "version": "0.3.7"
@@ -1994,15 +2075,15 @@
       "0": {
         "BuyMeACoffee.buy_coffee": {
           "1": [
-            1084,
-            1134,
+            1109,
+            1159,
             true
           ]
         },
         "BuyMeACoffee.withdraw_tips": {
           "7": [
-            1548,
-            1588,
+            1597,
+            1637,
             true
           ]
         }
@@ -2012,50 +2093,50 @@
       "0": {
         "BuyMeACoffee.__default__": {
           "9": [
-            702,
-            736
+            727,
+            761
           ]
         },
         "BuyMeACoffee.buy_coffee": {
           "0": [
-            1084,
-            1134
+            1109,
+            1159
           ],
           "2": [
-            1170,
-            1324
+            1195,
+            1373
           ],
           "3": [
-            1329,
-            1354
+            1378,
+            1403
           ],
           "4": [
-            1380,
-            1437
+            1429,
+            1486
           ]
         },
         "BuyMeACoffee.get_memos": {
           "5": [
-            917,
-            947
+            942,
+            972
           ]
         },
         "BuyMeACoffee.withdraw_tips": {
           "6": [
-            1548,
-            1588
+            1597,
+            1637
           ],
           "8": [
-            1593,
-            1623
+            1642,
+            1672
           ]
         }
       }
     }
   },
   "dependencies": [],
-  "deployedBytecode": "0x6003361161000c5761056f565b60003560e01c63f495ae4a8118610245576084361061059c57600435600401606481351161059c57803580604052602082018181606037505050602435600401606481351161059c5780358060e05260208201818161010037505050346100d357601a610180527f43616e27742062757920636f6666656520666f722066726565210000000000006101a0526101805061018051806101a001601f826000031636823750506308c379a061014052602061016052601f19601f61018051011660440161015cfd5b6001600254602052600052604060002033815542600182015560405180600283015560016002830101600082601f0160051c6004811161059c57801561012c57905b8060051b6060015181840155600101818118610115575b5050505060e05180600783015560016007830101600082601f0160051c6004811161059c57801561017157905b8060051b610100015181840155600101818118610159575b50505050506002546001810181811061059c579050600255337fc56140e05f516509ae28110e0f72e17558a7561630dad2647c3ae87d986e365c60604261018052806101a052806101800160405180825260208201818183606060045afa5050508051806020830101601f82600003163682375050601f19601f82516020010116905081019050806101c052806101800160e0518082526020820181818361010060045afa5050508051806020830101601f82600003163682375050601f19601f82516020010116905081019050610180a2005b63ae6d8ab1811861037f576024361061059c573461059c576020806040526001600435602052600052604060002081604001608082548252600183015460208301528060408301526002830181830181548082526001830160208301600083601f0160051c6004811161059c5780156102d057905b808401548160051b8401526001018181186102ba575b50505050508051806020830101601f82600003163682375050601f19601f8251602001011690509050810190508060608301526007830181830181548082526001830160208301600083601f0160051c6004811161059c57801561034657905b808401548160051b840152600101818118610330575b50505050508051806020830101601f82600003163682375050601f19601f82516020010116905090508101905090509050810190506040f35b63a159054a811861040f576004361061059c573461059c57476103f957600d6040527f456d7074792062616c616e63650000000000000000000000000000000000000060605260405060405180606001601f826000031636823750506308c379a06000526020602052601f19601f6040510116604401601cfd5b6000600060006000476000546000f11561059c57005b63e8dfdf048118610549576024361061059c573461059c576020806040526001600435602052600052604060002081604001608082548252600183015460208301528060408301526002830181830181548082526001830160208301600083601f0160051c6004811161059c57801561049a57905b808401548160051b840152600101818118610484575b50505050508051806020830101601f82600003163682375050601f19601f8251602001011690509050810190508060608301526007830181830181548082526001830160208301600083601f0160051c6004811161059c57801561051057905b808401548160051b8401526001018181186104fa575b50505050508051806020830101601f82600003163682375050601f19601f82516020010116905090508101905090509050810190506040f35b6346216106811861056d576004361061059c573461059c5760025460405260206040f35b505b337fd4f43975feb89f48dd30cabbb32011045be187d1e11c8ea9faa43efc352825193460405260206040a2005b600080fda165767970657283000307000b",
-  "deployedSourceMap": "-1:-1:0:-;;;;:::-;575:161;-1:-1::-;:::-;;;;;;;;;:::-;;;;;:::-;;;;983:18;-1:-1;983:18;-1:-1;;;:::-;983:18;-1:-1;;;;;983:18;-1:-1;;;;;;;983:18;-1:-1;;;1003:21;-1:-1;1003:21;-1:-1;;;:::-;1003:21;-1:-1;;;;;1003:21;-1:-1;;;;;;;1003:21;1091:9;1084:50;:::-;-1:-1;;1106:28;-1:-1;;1106:28;;1084:50;-1:-1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1084:50::-;1170:10;1181:20;-1:-1;1170:32;;;;;;;1228:10;1170:154;-1:-1;1254:15;-1:-1;1170:154;-1:-1;;1285:5;-1:-1;;;1170:154;-1:-1;;;;1170:154;-1:-1;;;;;;;;;;;;:::-;;;;:::-;;:::-;;;;;;;;;;;;;;;;;:::-;:::-;;;;;1309:8;-1:-1;;;1170:154;-1:-1;;;;1170:154;-1:-1;;;;;;;;;;;;:::-;;;;:::-;;:::-;;;;;;;;;;;;;;;;;:::-;:::-;;;;;1170:154;1329:20;-1:-1;1353:1;-1:-1;;;;;;:::-;1329:25;;:20;-1:-1;1392:10;1380:57;-1:-1;1404:15;-1:-1;;;;;;;;1421:5;-1:-1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1428:8;-1:-1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1380:57;;-1:-1;:::-;;;;;:::-;;;;;:::-;;;:::-;;;;;924:10;935:11;924:23;;;;;;;;-1:-1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::-;;;;:::-;;:::-;;;;;;;;;;;;;;;;;:::-;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::-;;;;:::-;;:::-;;;;;;;;;;;;;;;;;:::-;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::-;;;;;:::-;;;;;:::-;;;:::-;1555:12;1548:40;:::-;-1:-1;;1573:15;-1:-1;;1573:15;;1548:40;-1:-1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1548:40::-;-1:-1;;;;1610:12;1598:10;-1:-1;;;1593:30;;:::-;-1:-1;:::-;;;;;:::-;;;;;:::-;;;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::-;;;;:::-;;:::-;;;;;;;;;;;;;;;;;:::-;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::-;;;;:::-;;:::-;;;;;;;;;;;;;;;;;:::-;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::-;;;;;:::-;;;;;:::-;;;:::-;;;;;;;;:::-;;:::-;714:10;702:34;726:9;-1:-1;;;702:34;;-1:-1;:::-;;;",
+  "deployedBytecode": "0x6003361161000c576105ad565b60003560e01c63f495ae4a811861024b57608436106105da5760043560040160648135116105da5780358060405260208201818160603750505060243560040160648135116105da5780358060e05260208201818161010037505050346100d357601a610180527f43616e27742062757920636f6666656520666f722066726565210000000000006101a0526101805061018051806101a001601f826000031636823750506308c379a061014052602061016052601f19601f61018051011660440161015cfd5b6001600254602052600052604060002033815542600182015560405180600283015560016002830101600082601f0160051c600481116105da57801561012c57905b8060051b6060015181840155600101818118610115575b5050505060e05180600783015560016007830101600082601f0160051c600481116105da57801561017157905b8060051b610100015181840155600101818118610159575b5050505034600c82015550600254600181018181106105da579050600255337fc56140e05f516509ae28110e0f72e17558a7561630dad2647c3ae87d986e365c60604261018052806101a052806101800160405180825260208201818183606060045afa5050508051806020830101601f82600003163682375050601f19601f82516020010116905081019050806101c052806101800160e0518082526020820181818361010060045afa5050508051806020830101601f82600003163682375050601f19601f82516020010116905081019050610180a2005b63ae6d8ab1811861038f57602436106105da57346105da57602080604052600160043560205260005260406000208160400160a082548252600183015460208301528060408301526002830181830181548082526001830160208301600083601f0160051c600481116105da5780156102d657905b808401548160051b8401526001018181186102c0575b50505050508051806020830101601f82600003163682375050601f19601f8251602001011690509050810190508060608301526007830181830181548082526001830160208301600083601f0160051c600481116105da57801561034c57905b808401548160051b840152600101818118610336575b50505050508051806020830101601f82600003163682375050601f19601f825160200101169050905081019050600c830154608083015290509050810190506040f35b63a159054a811861041f57600436106105da57346105da574761040957600d6040527f456d7074792062616c616e63650000000000000000000000000000000000000060605260405060405180606001601f826000031636823750506308c379a06000526020602052601f19601f6040510116604401601cfd5b6000600060006000476000546000f1156105da57005b638da5cb5b811861044357600436106105da57346105da5760005460405260206040f35b63e8dfdf04811861058757602436106105da57346105da57602080604052600160043560205260005260406000208160400160a082548252600183015460208301528060408301526002830181830181548082526001830160208301600083601f0160051c600481116105da5780156104ce57905b808401548160051b8401526001018181186104b8575b50505050508051806020830101601f82600003163682375050601f19601f8251602001011690509050810190508060608301526007830181830181548082526001830160208301600083601f0160051c600481116105da57801561054457905b808401548160051b84015260010181811861052e575b50505050508051806020830101601f82600003163682375050601f19601f825160200101169050905081019050600c830154608083015290509050810190506040f35b634621610681186105ab57600436106105da57346105da5760025460405260206040f35b505b337fd4f43975feb89f48dd30cabbb32011045be187d1e11c8ea9faa43efc352825193460405260206040a2005b600080fda165767970657283000307000b",
+  "deployedSourceMap": "-1:-1:0:-;;;;:::-;600:161;-1:-1::-;:::-;;;;;;;;;:::-;;;;;:::-;;;;1008:18;-1:-1;1008:18;-1:-1;;;:::-;1008:18;-1:-1;;;;;1008:18;-1:-1;;;;;;;1008:18;-1:-1;;;1028:21;-1:-1;1028:21;-1:-1;;;:::-;1028:21;-1:-1;;;;;1028:21;-1:-1;;;;;;;1028:21;1116:9;1109:50;:::-;-1:-1;;1131:28;-1:-1;;1131:28;;1109:50;-1:-1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1109:50::-;1195:10;1206:20;-1:-1;1195:32;;;;;;;1253:10;1195:178;-1:-1;1279:15;-1:-1;1195:178;-1:-1;;1310:5;-1:-1;;;1195:178;-1:-1;;;;1195:178;-1:-1;;;;;;;;;;;;:::-;;;;:::-;;:::-;;;;;;;;;;;;;;;;;:::-;:::-;;;;;1334:8;-1:-1;;;1195:178;-1:-1;;;;1195:178;-1:-1;;;;;;;;;;;;:::-;;;;:::-;;:::-;;;;;;;;;;;;;;;;;:::-;:::-;;;;;1357:9;-1:-1;1195:178;-1:-1;;1195:178;1378:20;-1:-1;1402:1;-1:-1;;;;;;:::-;1378:25;;:20;-1:-1;1441:10;1429:57;-1:-1;1453:15;-1:-1;;;;;;;;1470:5;-1:-1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1477:8;-1:-1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1429:57;;-1:-1;:::-;;;;;:::-;;;;;:::-;;;:::-;;;;;949:10;960:11;949:23;;;;;;;;-1:-1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::-;;;;:::-;;:::-;;;;;;;;;;;;;;;;;:::-;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::-;;;;:::-;;:::-;;;;;;;;;;;;;;;;;:::-;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::-;;;;;:::-;;;;;:::-;;;:::-;1604:12;1597:40;:::-;-1:-1;;1622:15;-1:-1;;1622:15;;1597:40;-1:-1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1597:40::-;-1:-1;;;;1659:12;1647:10;-1:-1;;;1642:30;;:::-;-1:-1;:::-;;;;;:::-;;;;;:::-;;;:::-;;;;;;;;:::-;;;;;:::-;;;;;:::-;;;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::-;;;;:::-;;:::-;;;;;;;;;;;;;;;;;:::-;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::-;;;;:::-;;:::-;;;;;;;;;;;;;;;;;:::-;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::-;;;;;:::-;;;;;:::-;;;:::-;;;;;;;;:::-;;:::-;739:10;727:34;751:9;-1:-1;;;727:34;;-1:-1;:::-;;;",
   "language": "Vyper",
   "natspec": {
     "methods": {
@@ -2081,14 +2162,14 @@
   },
   "offset": [
     0,
-    1629
+    1678
   ],
-  "opcodes": "PUSH1 0x3 CALLDATASIZE GT PUSH2 0x0C JUMPI PUSH2 0x56F JUMP JUMPDEST PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR PUSH4 0xF495AE4A DUP2 XOR PUSH2 0x245 JUMPI PUSH1 0x84 CALLDATASIZE LT PUSH2 0x59C JUMPI PUSH1 0x4 CALLDATALOAD PUSH1 0x4 ADD PUSH1 0x64 DUP2 CALLDATALOAD GT PUSH2 0x59C JUMPI DUP1 CALLDATALOAD DUP1 PUSH1 0x40 MSTORE PUSH1 0x20 DUP3 ADD DUP2 DUP2 PUSH1 0x60 CALLDATACOPY POP POP POP PUSH1 0x24 CALLDATALOAD PUSH1 0x4 ADD PUSH1 0x64 DUP2 CALLDATALOAD GT PUSH2 0x59C JUMPI DUP1 CALLDATALOAD DUP1 PUSH1 0xE0 MSTORE PUSH1 0x20 DUP3 ADD DUP2 DUP2 PUSH2 0x10 CALLDATACOPY POP POP POP CALLVALUE PUSH2 0x0D3 JUMPI PUSH1 0x1A PUSH2 0x180 MSTORE PUSH32 0x43616E27742062757920636F6666656520666F72206672656521000000 PUSH2 0x1A0 MSTORE PUSH2 0x180 POP PUSH2 0x180 MLOAD DUP1 PUSH2 0x1A0 ADD PUSH1 0x1F DUP3 PUSH1 0x0 SUB AND CALLDATASIZE DUP3 CALLDATACOPY POP POP PUSH4 0x8C379A0 PUSH2 0x140 MSTORE PUSH1 0x20 PUSH2 0x160 MSTORE PUSH1 0x1F NOT PUSH1 0x1F PUSH2 0x180 MLOAD ADD AND PUSH1 0x44 ADD PUSH2 0x15C REVERT JUMPDEST PUSH1 0x1 PUSH1 0x2 SLOAD PUSH1 0x20 MSTORE PUSH1 0x0 MSTORE PUSH1 0x40 PUSH1 0x0 SHA3 CALLER DUP2 SSTORE TIMESTAMP PUSH1 0x1 DUP3 ADD SSTORE PUSH1 0x40 MLOAD DUP1 PUSH1 0x2 DUP4 ADD SSTORE PUSH1 0x1 PUSH1 0x2 DUP4 ADD ADD PUSH1 0x0 DUP3 PUSH1 0x1F ADD PUSH1 0x5 SHR PUSH1 0x4 DUP2 GT PUSH2 0x59C JUMPI DUP1 ISZERO PUSH2 0x12C JUMPI SWAP1 JUMPDEST DUP1 PUSH1 0x5 SHL PUSH1 0x60 ADD MLOAD DUP2 DUP5 ADD SSTORE PUSH1 0x1 ADD DUP2 DUP2 XOR PUSH2 0x115 JUMPI JUMPDEST POP POP POP POP PUSH1 0xE0 MLOAD DUP1 PUSH1 0x7 DUP4 ADD SSTORE PUSH1 0x1 PUSH1 0x7 DUP4 ADD ADD PUSH1 0x0 DUP3 PUSH1 0x1F ADD PUSH1 0x5 SHR PUSH1 0x4 DUP2 GT PUSH2 0x59C JUMPI DUP1 ISZERO PUSH2 0x171 JUMPI SWAP1 JUMPDEST DUP1 PUSH1 0x5 SHL PUSH2 0x10 ADD MLOAD DUP2 DUP5 ADD SSTORE PUSH1 0x1 ADD DUP2 DUP2 XOR PUSH2 0x159 JUMPI JUMPDEST POP POP POP POP POP PUSH1 0x2 SLOAD PUSH1 0x1 DUP2 ADD DUP2 DUP2 LT PUSH2 0x59C JUMPI SWAP1 POP PUSH1 0x2 SSTORE CALLER PUSH32 0xC56140E05F51659AE2811EF72E17558A7561630DAD2647C3AE87D986E365C PUSH1 0x60 TIMESTAMP PUSH2 0x180 MSTORE DUP1 PUSH2 0x1A0 MSTORE DUP1 PUSH2 0x180 ADD PUSH1 0x40 MLOAD DUP1 DUP3 MSTORE PUSH1 0x20 DUP3 ADD DUP2 DUP2 DUP4 PUSH1 0x60 PUSH1 0x4 GAS STATICCALL POP POP POP DUP1 MLOAD DUP1 PUSH1 0x20 DUP4 ADD ADD PUSH1 0x1F DUP3 PUSH1 0x0 SUB AND CALLDATASIZE DUP3 CALLDATACOPY POP POP PUSH1 0x1F NOT PUSH1 0x1F DUP3 MLOAD PUSH1 0x20 ADD ADD AND SWAP1 POP DUP2 ADD SWAP1 POP DUP1 PUSH2 0x1C0 MSTORE DUP1 PUSH2 0x180 ADD PUSH1 0xE0 MLOAD DUP1 DUP3 MSTORE PUSH1 0x20 DUP3 ADD DUP2 DUP2 DUP4 PUSH2 0x10 PUSH1 0x4 GAS STATICCALL POP POP POP DUP1 MLOAD DUP1 PUSH1 0x20 DUP4 ADD ADD PUSH1 0x1F DUP3 PUSH1 0x0 SUB AND CALLDATASIZE DUP3 CALLDATACOPY POP POP PUSH1 0x1F NOT PUSH1 0x1F DUP3 MLOAD PUSH1 0x20 ADD ADD AND SWAP1 POP DUP2 ADD SWAP1 POP PUSH2 0x180 LOG2 STOP JUMPDEST PUSH4 0xAE6D8AB1 DUP2 XOR PUSH2 0x37F JUMPI PUSH1 0x24 CALLDATASIZE LT PUSH2 0x59C JUMPI CALLVALUE PUSH2 0x59C JUMPI PUSH1 0x20 DUP1 PUSH1 0x40 MSTORE PUSH1 0x1 PUSH1 0x4 CALLDATALOAD PUSH1 0x20 MSTORE PUSH1 0x0 MSTORE PUSH1 0x40 PUSH1 0x0 SHA3 DUP2 PUSH1 0x40 ADD PUSH1 0x80 DUP3 SLOAD DUP3 MSTORE PUSH1 0x1 DUP4 ADD SLOAD PUSH1 0x20 DUP4 ADD MSTORE DUP1 PUSH1 0x40 DUP4 ADD MSTORE PUSH1 0x2 DUP4 ADD DUP2 DUP4 ADD DUP2 SLOAD DUP1 DUP3 MSTORE PUSH1 0x1 DUP4 ADD PUSH1 0x20 DUP4 ADD PUSH1 0x0 DUP4 PUSH1 0x1F ADD PUSH1 0x5 SHR PUSH1 0x4 DUP2 GT PUSH2 0x59C JUMPI DUP1 ISZERO PUSH2 0x2D0 JUMPI SWAP1 JUMPDEST DUP1 DUP5 ADD SLOAD DUP2 PUSH1 0x5 SHL DUP5 ADD MSTORE PUSH1 0x1 ADD DUP2 DUP2 XOR PUSH2 0x2BA JUMPI JUMPDEST POP POP POP POP POP DUP1 MLOAD DUP1 PUSH1 0x20 DUP4 ADD ADD PUSH1 0x1F DUP3 PUSH1 0x0 SUB AND CALLDATASIZE DUP3 CALLDATACOPY POP POP PUSH1 0x1F NOT PUSH1 0x1F DUP3 MLOAD PUSH1 0x20 ADD ADD AND SWAP1 POP SWAP1 POP DUP2 ADD SWAP1 POP DUP1 PUSH1 0x60 DUP4 ADD MSTORE PUSH1 0x7 DUP4 ADD DUP2 DUP4 ADD DUP2 SLOAD DUP1 DUP3 MSTORE PUSH1 0x1 DUP4 ADD PUSH1 0x20 DUP4 ADD PUSH1 0x0 DUP4 PUSH1 0x1F ADD PUSH1 0x5 SHR PUSH1 0x4 DUP2 GT PUSH2 0x59C JUMPI DUP1 ISZERO PUSH2 0x346 JUMPI SWAP1 JUMPDEST DUP1 DUP5 ADD SLOAD DUP2 PUSH1 0x5 SHL DUP5 ADD MSTORE PUSH1 0x1 ADD DUP2 DUP2 XOR PUSH2 0x330 JUMPI JUMPDEST POP POP POP POP POP DUP1 MLOAD DUP1 PUSH1 0x20 DUP4 ADD ADD PUSH1 0x1F DUP3 PUSH1 0x0 SUB AND CALLDATASIZE DUP3 CALLDATACOPY POP POP PUSH1 0x1F NOT PUSH1 0x1F DUP3 MLOAD PUSH1 0x20 ADD ADD AND SWAP1 POP SWAP1 POP DUP2 ADD SWAP1 POP SWAP1 POP SWAP1 POP DUP2 ADD SWAP1 POP PUSH1 0x40 RETURN JUMPDEST PUSH4 0xA15954A DUP2 XOR PUSH2 0x4F JUMPI PUSH1 0x4 CALLDATASIZE LT PUSH2 0x59C JUMPI CALLVALUE PUSH2 0x59C JUMPI SELFBALANCE PUSH2 0x3F9 JUMPI PUSH1 0xD PUSH1 0x40 MSTORE PUSH32 0x456D7074792062616C616E63650000000000000000000 PUSH1 0x60 MSTORE PUSH1 0x40 POP PUSH1 0x40 MLOAD DUP1 PUSH1 0x60 ADD PUSH1 0x1F DUP3 PUSH1 0x0 SUB AND CALLDATASIZE DUP3 CALLDATACOPY POP POP PUSH4 0x8C379A0 PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x20 MSTORE PUSH1 0x1F NOT PUSH1 0x1F PUSH1 0x40 MLOAD ADD AND PUSH1 0x44 ADD PUSH1 0x1C REVERT JUMPDEST PUSH1 0x0 PUSH1 0x0 PUSH1 0x0 PUSH1 0x0 SELFBALANCE PUSH1 0x0 SLOAD PUSH1 0x0 CALL ISZERO PUSH2 0x59C JUMPI STOP JUMPDEST PUSH4 0xE8DFDF4 DUP2 XOR PUSH2 0x549 JUMPI PUSH1 0x24 CALLDATASIZE LT PUSH2 0x59C JUMPI CALLVALUE PUSH2 0x59C JUMPI PUSH1 0x20 DUP1 PUSH1 0x40 MSTORE PUSH1 0x1 PUSH1 0x4 CALLDATALOAD PUSH1 0x20 MSTORE PUSH1 0x0 MSTORE PUSH1 0x40 PUSH1 0x0 SHA3 DUP2 PUSH1 0x40 ADD PUSH1 0x80 DUP3 SLOAD DUP3 MSTORE PUSH1 0x1 DUP4 ADD SLOAD PUSH1 0x20 DUP4 ADD MSTORE DUP1 PUSH1 0x40 DUP4 ADD MSTORE PUSH1 0x2 DUP4 ADD DUP2 DUP4 ADD DUP2 SLOAD DUP1 DUP3 MSTORE PUSH1 0x1 DUP4 ADD PUSH1 0x20 DUP4 ADD PUSH1 0x0 DUP4 PUSH1 0x1F ADD PUSH1 0x5 SHR PUSH1 0x4 DUP2 GT PUSH2 0x59C JUMPI DUP1 ISZERO PUSH2 0x49A JUMPI SWAP1 JUMPDEST DUP1 DUP5 ADD SLOAD DUP2 PUSH1 0x5 SHL DUP5 ADD MSTORE PUSH1 0x1 ADD DUP2 DUP2 XOR PUSH2 0x484 JUMPI JUMPDEST POP POP POP POP POP DUP1 MLOAD DUP1 PUSH1 0x20 DUP4 ADD ADD PUSH1 0x1F DUP3 PUSH1 0x0 SUB AND CALLDATASIZE DUP3 CALLDATACOPY POP POP PUSH1 0x1F NOT PUSH1 0x1F DUP3 MLOAD PUSH1 0x20 ADD ADD AND SWAP1 POP SWAP1 POP DUP2 ADD SWAP1 POP DUP1 PUSH1 0x60 DUP4 ADD MSTORE PUSH1 0x7 DUP4 ADD DUP2 DUP4 ADD DUP2 SLOAD DUP1 DUP3 MSTORE PUSH1 0x1 DUP4 ADD PUSH1 0x20 DUP4 ADD PUSH1 0x0 DUP4 PUSH1 0x1F ADD PUSH1 0x5 SHR PUSH1 0x4 DUP2 GT PUSH2 0x59C JUMPI DUP1 ISZERO PUSH2 0x510 JUMPI SWAP1 JUMPDEST DUP1 DUP5 ADD SLOAD DUP2 PUSH1 0x5 SHL DUP5 ADD MSTORE PUSH1 0x1 ADD DUP2 DUP2 XOR PUSH2 0x4FA JUMPI JUMPDEST POP POP POP POP POP DUP1 MLOAD DUP1 PUSH1 0x20 DUP4 ADD ADD PUSH1 0x1F DUP3 PUSH1 0x0 SUB AND CALLDATASIZE DUP3 CALLDATACOPY POP POP PUSH1 0x1F NOT PUSH1 0x1F DUP3 MLOAD PUSH1 0x20 ADD ADD AND SWAP1 POP SWAP1 POP DUP2 ADD SWAP1 POP SWAP1 POP SWAP1 POP DUP2 ADD SWAP1 POP PUSH1 0x40 RETURN JUMPDEST PUSH4 0x4621616 DUP2 XOR PUSH2 0x56D JUMPI PUSH1 0x4 CALLDATASIZE LT PUSH2 0x59C JUMPI CALLVALUE PUSH2 0x59C JUMPI PUSH1 0x2 SLOAD PUSH1 0x40 MSTORE PUSH1 0x20 PUSH1 0x40 RETURN JUMPDEST POP JUMPDEST CALLER PUSH32 0xD4F43975FEB89F48DD30CABBB3201145BE187D1E11C8EA9FAA43EFC35282519 CALLVALUE PUSH1 0x40 MSTORE PUSH1 0x20 PUSH1 0x40 LOG2 STOP JUMPDEST PUSH1 0x0 DUP1 REVERT LOG1 PUSH6 0x767970657283 STOP SUB SMOD STOP SIGNEXTEND",
+  "opcodes": "PUSH1 0x3 CALLDATASIZE GT PUSH2 0x0C JUMPI PUSH2 0x5AD JUMP JUMPDEST PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR PUSH4 0xF495AE4A DUP2 XOR PUSH2 0x24B JUMPI PUSH1 0x84 CALLDATASIZE LT PUSH2 0x5DA JUMPI PUSH1 0x4 CALLDATALOAD PUSH1 0x4 ADD PUSH1 0x64 DUP2 CALLDATALOAD GT PUSH2 0x5DA JUMPI DUP1 CALLDATALOAD DUP1 PUSH1 0x40 MSTORE PUSH1 0x20 DUP3 ADD DUP2 DUP2 PUSH1 0x60 CALLDATACOPY POP POP POP PUSH1 0x24 CALLDATALOAD PUSH1 0x4 ADD PUSH1 0x64 DUP2 CALLDATALOAD GT PUSH2 0x5DA JUMPI DUP1 CALLDATALOAD DUP1 PUSH1 0xE0 MSTORE PUSH1 0x20 DUP3 ADD DUP2 DUP2 PUSH2 0x10 CALLDATACOPY POP POP POP CALLVALUE PUSH2 0x0D3 JUMPI PUSH1 0x1A PUSH2 0x180 MSTORE PUSH32 0x43616E27742062757920636F6666656520666F72206672656521000000 PUSH2 0x1A0 MSTORE PUSH2 0x180 POP PUSH2 0x180 MLOAD DUP1 PUSH2 0x1A0 ADD PUSH1 0x1F DUP3 PUSH1 0x0 SUB AND CALLDATASIZE DUP3 CALLDATACOPY POP POP PUSH4 0x8C379A0 PUSH2 0x140 MSTORE PUSH1 0x20 PUSH2 0x160 MSTORE PUSH1 0x1F NOT PUSH1 0x1F PUSH2 0x180 MLOAD ADD AND PUSH1 0x44 ADD PUSH2 0x15C REVERT JUMPDEST PUSH1 0x1 PUSH1 0x2 SLOAD PUSH1 0x20 MSTORE PUSH1 0x0 MSTORE PUSH1 0x40 PUSH1 0x0 SHA3 CALLER DUP2 SSTORE TIMESTAMP PUSH1 0x1 DUP3 ADD SSTORE PUSH1 0x40 MLOAD DUP1 PUSH1 0x2 DUP4 ADD SSTORE PUSH1 0x1 PUSH1 0x2 DUP4 ADD ADD PUSH1 0x0 DUP3 PUSH1 0x1F ADD PUSH1 0x5 SHR PUSH1 0x4 DUP2 GT PUSH2 0x5DA JUMPI DUP1 ISZERO PUSH2 0x12C JUMPI SWAP1 JUMPDEST DUP1 PUSH1 0x5 SHL PUSH1 0x60 ADD MLOAD DUP2 DUP5 ADD SSTORE PUSH1 0x1 ADD DUP2 DUP2 XOR PUSH2 0x115 JUMPI JUMPDEST POP POP POP POP PUSH1 0xE0 MLOAD DUP1 PUSH1 0x7 DUP4 ADD SSTORE PUSH1 0x1 PUSH1 0x7 DUP4 ADD ADD PUSH1 0x0 DUP3 PUSH1 0x1F ADD PUSH1 0x5 SHR PUSH1 0x4 DUP2 GT PUSH2 0x5DA JUMPI DUP1 ISZERO PUSH2 0x171 JUMPI SWAP1 JUMPDEST DUP1 PUSH1 0x5 SHL PUSH2 0x10 ADD MLOAD DUP2 DUP5 ADD SSTORE PUSH1 0x1 ADD DUP2 DUP2 XOR PUSH2 0x159 JUMPI JUMPDEST POP POP POP POP CALLVALUE PUSH1 0xC DUP3 ADD SSTORE POP PUSH1 0x2 SLOAD PUSH1 0x1 DUP2 ADD DUP2 DUP2 LT PUSH2 0x5DA JUMPI SWAP1 POP PUSH1 0x2 SSTORE CALLER PUSH32 0xC56140E05F51659AE2811EF72E17558A7561630DAD2647C3AE87D986E365C PUSH1 0x60 TIMESTAMP PUSH2 0x180 MSTORE DUP1 PUSH2 0x1A0 MSTORE DUP1 PUSH2 0x180 ADD PUSH1 0x40 MLOAD DUP1 DUP3 MSTORE PUSH1 0x20 DUP3 ADD DUP2 DUP2 DUP4 PUSH1 0x60 PUSH1 0x4 GAS STATICCALL POP POP POP DUP1 MLOAD DUP1 PUSH1 0x20 DUP4 ADD ADD PUSH1 0x1F DUP3 PUSH1 0x0 SUB AND CALLDATASIZE DUP3 CALLDATACOPY POP POP PUSH1 0x1F NOT PUSH1 0x1F DUP3 MLOAD PUSH1 0x20 ADD ADD AND SWAP1 POP DUP2 ADD SWAP1 POP DUP1 PUSH2 0x1C0 MSTORE DUP1 PUSH2 0x180 ADD PUSH1 0xE0 MLOAD DUP1 DUP3 MSTORE PUSH1 0x20 DUP3 ADD DUP2 DUP2 DUP4 PUSH2 0x10 PUSH1 0x4 GAS STATICCALL POP POP POP DUP1 MLOAD DUP1 PUSH1 0x20 DUP4 ADD ADD PUSH1 0x1F DUP3 PUSH1 0x0 SUB AND CALLDATASIZE DUP3 CALLDATACOPY POP POP PUSH1 0x1F NOT PUSH1 0x1F DUP3 MLOAD PUSH1 0x20 ADD ADD AND SWAP1 POP DUP2 ADD SWAP1 POP PUSH2 0x180 LOG2 STOP JUMPDEST PUSH4 0xAE6D8AB1 DUP2 XOR PUSH2 0x38F JUMPI PUSH1 0x24 CALLDATASIZE LT PUSH2 0x5DA JUMPI CALLVALUE PUSH2 0x5DA JUMPI PUSH1 0x20 DUP1 PUSH1 0x40 MSTORE PUSH1 0x1 PUSH1 0x4 CALLDATALOAD PUSH1 0x20 MSTORE PUSH1 0x0 MSTORE PUSH1 0x40 PUSH1 0x0 SHA3 DUP2 PUSH1 0x40 ADD PUSH1 0xA0 DUP3 SLOAD DUP3 MSTORE PUSH1 0x1 DUP4 ADD SLOAD PUSH1 0x20 DUP4 ADD MSTORE DUP1 PUSH1 0x40 DUP4 ADD MSTORE PUSH1 0x2 DUP4 ADD DUP2 DUP4 ADD DUP2 SLOAD DUP1 DUP3 MSTORE PUSH1 0x1 DUP4 ADD PUSH1 0x20 DUP4 ADD PUSH1 0x0 DUP4 PUSH1 0x1F ADD PUSH1 0x5 SHR PUSH1 0x4 DUP2 GT PUSH2 0x5DA JUMPI DUP1 ISZERO PUSH2 0x2D6 JUMPI SWAP1 JUMPDEST DUP1 DUP5 ADD SLOAD DUP2 PUSH1 0x5 SHL DUP5 ADD MSTORE PUSH1 0x1 ADD DUP2 DUP2 XOR PUSH2 0x2C0 JUMPI JUMPDEST POP POP POP POP POP DUP1 MLOAD DUP1 PUSH1 0x20 DUP4 ADD ADD PUSH1 0x1F DUP3 PUSH1 0x0 SUB AND CALLDATASIZE DUP3 CALLDATACOPY POP POP PUSH1 0x1F NOT PUSH1 0x1F DUP3 MLOAD PUSH1 0x20 ADD ADD AND SWAP1 POP SWAP1 POP DUP2 ADD SWAP1 POP DUP1 PUSH1 0x60 DUP4 ADD MSTORE PUSH1 0x7 DUP4 ADD DUP2 DUP4 ADD DUP2 SLOAD DUP1 DUP3 MSTORE PUSH1 0x1 DUP4 ADD PUSH1 0x20 DUP4 ADD PUSH1 0x0 DUP4 PUSH1 0x1F ADD PUSH1 0x5 SHR PUSH1 0x4 DUP2 GT PUSH2 0x5DA JUMPI DUP1 ISZERO PUSH2 0x34C JUMPI SWAP1 JUMPDEST DUP1 DUP5 ADD SLOAD DUP2 PUSH1 0x5 SHL DUP5 ADD MSTORE PUSH1 0x1 ADD DUP2 DUP2 XOR PUSH2 0x336 JUMPI JUMPDEST POP POP POP POP POP DUP1 MLOAD DUP1 PUSH1 0x20 DUP4 ADD ADD PUSH1 0x1F DUP3 PUSH1 0x0 SUB AND CALLDATASIZE DUP3 CALLDATACOPY POP POP PUSH1 0x1F NOT PUSH1 0x1F DUP3 MLOAD PUSH1 0x20 ADD ADD AND SWAP1 POP SWAP1 POP DUP2 ADD SWAP1 POP PUSH1 0xC DUP4 ADD SLOAD PUSH1 0x80 DUP4 ADD MSTORE SWAP1 POP SWAP1 POP DUP2 ADD SWAP1 POP PUSH1 0x40 RETURN JUMPDEST PUSH4 0xA15954A DUP2 XOR PUSH2 0x41F JUMPI PUSH1 0x4 CALLDATASIZE LT PUSH2 0x5DA JUMPI CALLVALUE PUSH2 0x5DA JUMPI SELFBALANCE PUSH2 0x49 JUMPI PUSH1 0xD PUSH1 0x40 MSTORE PUSH32 0x456D7074792062616C616E63650000000000000000000 PUSH1 0x60 MSTORE PUSH1 0x40 POP PUSH1 0x40 MLOAD DUP1 PUSH1 0x60 ADD PUSH1 0x1F DUP3 PUSH1 0x0 SUB AND CALLDATASIZE DUP3 CALLDATACOPY POP POP PUSH4 0x8C379A0 PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x20 MSTORE PUSH1 0x1F NOT PUSH1 0x1F PUSH1 0x40 MLOAD ADD AND PUSH1 0x44 ADD PUSH1 0x1C REVERT JUMPDEST PUSH1 0x0 PUSH1 0x0 PUSH1 0x0 PUSH1 0x0 SELFBALANCE PUSH1 0x0 SLOAD PUSH1 0x0 CALL ISZERO PUSH2 0x5DA JUMPI STOP JUMPDEST PUSH4 0x8DA5CB5B DUP2 XOR PUSH2 0x443 JUMPI PUSH1 0x4 CALLDATASIZE LT PUSH2 0x5DA JUMPI CALLVALUE PUSH2 0x5DA JUMPI PUSH1 0x0 SLOAD PUSH1 0x40 MSTORE PUSH1 0x20 PUSH1 0x40 RETURN JUMPDEST PUSH4 0xE8DFDF4 DUP2 XOR PUSH2 0x587 JUMPI PUSH1 0x24 CALLDATASIZE LT PUSH2 0x5DA JUMPI CALLVALUE PUSH2 0x5DA JUMPI PUSH1 0x20 DUP1 PUSH1 0x40 MSTORE PUSH1 0x1 PUSH1 0x4 CALLDATALOAD PUSH1 0x20 MSTORE PUSH1 0x0 MSTORE PUSH1 0x40 PUSH1 0x0 SHA3 DUP2 PUSH1 0x40 ADD PUSH1 0xA0 DUP3 SLOAD DUP3 MSTORE PUSH1 0x1 DUP4 ADD SLOAD PUSH1 0x20 DUP4 ADD MSTORE DUP1 PUSH1 0x40 DUP4 ADD MSTORE PUSH1 0x2 DUP4 ADD DUP2 DUP4 ADD DUP2 SLOAD DUP1 DUP3 MSTORE PUSH1 0x1 DUP4 ADD PUSH1 0x20 DUP4 ADD PUSH1 0x0 DUP4 PUSH1 0x1F ADD PUSH1 0x5 SHR PUSH1 0x4 DUP2 GT PUSH2 0x5DA JUMPI DUP1 ISZERO PUSH2 0x4CE JUMPI SWAP1 JUMPDEST DUP1 DUP5 ADD SLOAD DUP2 PUSH1 0x5 SHL DUP5 ADD MSTORE PUSH1 0x1 ADD DUP2 DUP2 XOR PUSH2 0x4B8 JUMPI JUMPDEST POP POP POP POP POP DUP1 MLOAD DUP1 PUSH1 0x20 DUP4 ADD ADD PUSH1 0x1F DUP3 PUSH1 0x0 SUB AND CALLDATASIZE DUP3 CALLDATACOPY POP POP PUSH1 0x1F NOT PUSH1 0x1F DUP3 MLOAD PUSH1 0x20 ADD ADD AND SWAP1 POP SWAP1 POP DUP2 ADD SWAP1 POP DUP1 PUSH1 0x60 DUP4 ADD MSTORE PUSH1 0x7 DUP4 ADD DUP2 DUP4 ADD DUP2 SLOAD DUP1 DUP3 MSTORE PUSH1 0x1 DUP4 ADD PUSH1 0x20 DUP4 ADD PUSH1 0x0 DUP4 PUSH1 0x1F ADD PUSH1 0x5 SHR PUSH1 0x4 DUP2 GT PUSH2 0x5DA JUMPI DUP1 ISZERO PUSH2 0x544 JUMPI SWAP1 JUMPDEST DUP1 DUP5 ADD SLOAD DUP2 PUSH1 0x5 SHL DUP5 ADD MSTORE PUSH1 0x1 ADD DUP2 DUP2 XOR PUSH2 0x52E JUMPI JUMPDEST POP POP POP POP POP DUP1 MLOAD DUP1 PUSH1 0x20 DUP4 ADD ADD PUSH1 0x1F DUP3 PUSH1 0x0 SUB AND CALLDATASIZE DUP3 CALLDATACOPY POP POP PUSH1 0x1F NOT PUSH1 0x1F DUP3 MLOAD PUSH1 0x20 ADD ADD AND SWAP1 POP SWAP1 POP DUP2 ADD SWAP1 POP PUSH1 0xC DUP4 ADD SLOAD PUSH1 0x80 DUP4 ADD MSTORE SWAP1 POP SWAP1 POP DUP2 ADD SWAP1 POP PUSH1 0x40 RETURN JUMPDEST PUSH4 0x4621616 DUP2 XOR PUSH2 0x5AB JUMPI PUSH1 0x4 CALLDATASIZE LT PUSH2 0x5DA JUMPI CALLVALUE PUSH2 0x5DA JUMPI PUSH1 0x2 SLOAD PUSH1 0x40 MSTORE PUSH1 0x20 PUSH1 0x40 RETURN JUMPDEST POP JUMPDEST CALLER PUSH32 0xD4F43975FEB89F48DD30CABBB3201145BE187D1E11C8EA9FAA43EFC35282519 CALLVALUE PUSH1 0x40 MSTORE PUSH1 0x20 PUSH1 0x40 LOG2 STOP JUMPDEST PUSH1 0x0 DUP1 REVERT LOG1 PUSH6 0x767970657283 STOP SUB SMOD STOP SIGNEXTEND",
   "pcMap": {
     "0": {
       "offset": [
         0,
-        1623
+        1672
       ],
       "op": "PUSH1",
       "path": "0",
@@ -2110,12 +2191,12 @@
     "8": {
       "fn": "BuyMeACoffee.__default__",
       "offset": [
-        575,
-        736
+        600,
+        761
       ],
       "op": "PUSH2",
       "path": "0",
-      "value": "0x56F"
+      "value": "0x5AD"
     },
     "11": {
       "op": "JUMP"
@@ -2149,7 +2230,7 @@
     },
     "26": {
       "op": "PUSH2",
-      "value": "0x245"
+      "value": "0x24B"
     },
     "29": {
       "op": "JUMPI"
@@ -2166,7 +2247,7 @@
     },
     "34": {
       "op": "PUSH2",
-      "value": "0x59C"
+      "value": "0x5DA"
     },
     "37": {
       "op": "JUMPI"
@@ -2185,8 +2266,8 @@
     "43": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        983,
-        1001
+        1008,
+        1026
       ],
       "op": "ADD",
       "path": "0"
@@ -2198,8 +2279,8 @@
     "46": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        983,
-        1001
+        1008,
+        1026
       ],
       "op": "DUP2",
       "path": "0"
@@ -2212,7 +2293,7 @@
     },
     "49": {
       "op": "PUSH2",
-      "value": "0x59C"
+      "value": "0x5DA"
     },
     "52": {
       "op": "JUMPI"
@@ -2220,8 +2301,8 @@
     "53": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        983,
-        1001
+        1008,
+        1026
       ],
       "op": "DUP1",
       "path": "0"
@@ -2246,8 +2327,8 @@
     "61": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        983,
-        1001
+        1008,
+        1026
       ],
       "op": "DUP3",
       "path": "0"
@@ -2277,8 +2358,8 @@
     "70": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        983,
-        1001
+        1008,
+        1026
       ],
       "op": "POP",
       "path": "0"
@@ -2297,8 +2378,8 @@
     "76": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1003,
-        1024
+        1028,
+        1049
       ],
       "op": "ADD",
       "path": "0"
@@ -2310,8 +2391,8 @@
     "79": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1003,
-        1024
+        1028,
+        1049
       ],
       "op": "DUP2",
       "path": "0"
@@ -2324,7 +2405,7 @@
     },
     "82": {
       "op": "PUSH2",
-      "value": "0x59C"
+      "value": "0x5DA"
     },
     "85": {
       "op": "JUMPI"
@@ -2332,8 +2413,8 @@
     "86": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1003,
-        1024
+        1028,
+        1049
       ],
       "op": "DUP1",
       "path": "0"
@@ -2358,8 +2439,8 @@
     "94": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1003,
-        1024
+        1028,
+        1049
       ],
       "op": "DUP3",
       "path": "0"
@@ -2389,8 +2470,8 @@
     "104": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1003,
-        1024
+        1028,
+        1049
       ],
       "op": "POP",
       "path": "0"
@@ -2398,8 +2479,8 @@
     "105": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1091,
-        1100
+        1116,
+        1125
       ],
       "op": "CALLVALUE",
       "path": "0",
@@ -2408,8 +2489,8 @@
     "106": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1084,
-        1134
+        1109,
+        1159
       ],
       "op": "PUSH2",
       "path": "0",
@@ -2419,8 +2500,8 @@
       "branch": 1,
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1084,
-        1134
+        1109,
+        1159
       ],
       "op": "JUMPI",
       "path": "0"
@@ -2436,8 +2517,8 @@
     "115": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1106,
-        1134
+        1131,
+        1159
       ],
       "op": "MSTORE",
       "path": "0"
@@ -2453,8 +2534,8 @@
     "152": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1106,
-        1134
+        1131,
+        1159
       ],
       "op": "MSTORE",
       "path": "0"
@@ -2462,8 +2543,8 @@
     "153": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1106,
-        1134
+        1131,
+        1159
       ],
       "op": "PUSH2",
       "path": "0",
@@ -2472,8 +2553,8 @@
     "156": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1084,
-        1134
+        1109,
+        1159
       ],
       "op": "POP",
       "path": "0"
@@ -2590,8 +2671,8 @@
     "211": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1084,
-        1134
+        1109,
+        1159
       ],
       "op": "JUMPDEST",
       "path": "0"
@@ -2599,8 +2680,8 @@
     "212": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1170,
-        1180
+        1195,
+        1205
       ],
       "op": "PUSH1",
       "path": "0",
@@ -2610,8 +2691,8 @@
     "214": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1181,
-        1201
+        1206,
+        1226
       ],
       "op": "PUSH1",
       "path": "0",
@@ -2623,8 +2704,8 @@
     "217": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1170,
-        1202
+        1195,
+        1227
       ],
       "op": "PUSH1",
       "path": "0",
@@ -2633,8 +2714,8 @@
     "219": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1170,
-        1202
+        1195,
+        1227
       ],
       "op": "MSTORE",
       "path": "0"
@@ -2642,8 +2723,8 @@
     "220": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1170,
-        1202
+        1195,
+        1227
       ],
       "op": "PUSH1",
       "path": "0",
@@ -2652,8 +2733,8 @@
     "222": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1170,
-        1202
+        1195,
+        1227
       ],
       "op": "MSTORE",
       "path": "0"
@@ -2661,8 +2742,8 @@
     "223": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1170,
-        1202
+        1195,
+        1227
       ],
       "op": "PUSH1",
       "path": "0",
@@ -2671,8 +2752,8 @@
     "225": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1170,
-        1202
+        1195,
+        1227
       ],
       "op": "PUSH1",
       "path": "0",
@@ -2681,8 +2762,8 @@
     "227": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1170,
-        1202
+        1195,
+        1227
       ],
       "op": "SHA3",
       "path": "0"
@@ -2690,8 +2771,8 @@
     "228": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1228,
-        1238
+        1253,
+        1263
       ],
       "op": "CALLER",
       "path": "0"
@@ -2699,8 +2780,8 @@
     "229": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1170,
-        1324
+        1195,
+        1373
       ],
       "op": "DUP2",
       "path": "0"
@@ -2711,8 +2792,8 @@
     "231": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1254,
-        1269
+        1279,
+        1294
       ],
       "op": "TIMESTAMP",
       "path": "0"
@@ -2724,8 +2805,8 @@
     "234": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1170,
-        1324
+        1195,
+        1373
       ],
       "op": "DUP3",
       "path": "0"
@@ -2739,8 +2820,8 @@
     "237": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1285,
-        1290
+        1310,
+        1315
       ],
       "op": "PUSH1",
       "path": "0",
@@ -2759,8 +2840,8 @@
     "243": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1170,
-        1324
+        1195,
+        1373
       ],
       "op": "DUP4",
       "path": "0"
@@ -2782,8 +2863,8 @@
     "250": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1170,
-        1324
+        1195,
+        1373
       ],
       "op": "DUP4",
       "path": "0"
@@ -2827,7 +2908,7 @@
     },
     "266": {
       "op": "PUSH2",
-      "value": "0x59C"
+      "value": "0x5DA"
     },
     "269": {
       "op": "JUMPI"
@@ -2924,8 +3005,8 @@
     "305": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1309,
-        1317
+        1334,
+        1342
       ],
       "op": "PUSH1",
       "path": "0",
@@ -2944,8 +3025,8 @@
     "311": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1170,
-        1324
+        1195,
+        1373
       ],
       "op": "DUP4",
       "path": "0"
@@ -2967,8 +3048,8 @@
     "318": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1170,
-        1324
+        1195,
+        1373
       ],
       "op": "DUP4",
       "path": "0"
@@ -3012,7 +3093,7 @@
     },
     "334": {
       "op": "PUSH2",
-      "value": "0x59C"
+      "value": "0x5DA"
     },
     "337": {
       "op": "JUMPI"
@@ -3109,739 +3190,751 @@
     "374": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1170,
-        1324
+        1357,
+        1366
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "375": {
+      "op": "PUSH1",
+      "value": "0xC"
+    },
+    "377": {
+      "fn": "BuyMeACoffee.buy_coffee",
+      "offset": [
+        1195,
+        1373
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "378": {
+      "op": "ADD"
+    },
+    "379": {
+      "op": "SSTORE"
+    },
+    "380": {
+      "fn": "BuyMeACoffee.buy_coffee",
+      "offset": [
+        1195,
+        1373
       ],
       "op": "POP",
       "path": "0"
     },
-    "375": {
+    "381": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1329,
-        1349
+        1378,
+        1398
       ],
       "op": "PUSH1",
       "path": "0",
       "statement": 3,
       "value": "0x2"
     },
-    "377": {
+    "383": {
       "op": "SLOAD"
     },
-    "378": {
+    "384": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1353,
-        1354
+        1402,
+        1403
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x1"
     },
-    "380": {
+    "386": {
       "op": "DUP2"
     },
-    "381": {
+    "387": {
       "op": "ADD"
     },
-    "382": {
-      "op": "DUP2"
-    },
-    "383": {
-      "op": "DUP2"
-    },
-    "384": {
-      "op": "LT"
-    },
-    "385": {
-      "op": "PUSH2",
-      "value": "0x59C"
-    },
     "388": {
-      "op": "JUMPI"
+      "op": "DUP2"
     },
     "389": {
+      "op": "DUP2"
+    },
+    "390": {
+      "op": "LT"
+    },
+    "391": {
+      "op": "PUSH2",
+      "value": "0x5DA"
+    },
+    "394": {
+      "op": "JUMPI"
+    },
+    "395": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1329,
-        1354
+        1378,
+        1403
       ],
       "op": "SWAP1",
       "path": "0"
     },
-    "390": {
+    "396": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1329,
-        1354
+        1378,
+        1403
       ],
       "op": "POP",
       "path": "0"
     },
-    "391": {
+    "397": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1329,
-        1349
+        1378,
+        1398
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x2"
     },
-    "393": {
+    "399": {
       "op": "SSTORE"
     },
-    "394": {
+    "400": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1392,
-        1402
+        1441,
+        1451
       ],
       "op": "CALLER",
       "path": "0",
       "statement": 4
     },
-    "395": {
+    "401": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1380,
-        1437
+        1429,
+        1486
       ],
       "op": "PUSH32",
       "path": "0",
       "value": "0xC56140E05F51659AE2811EF72E17558A7561630DAD2647C3AE87D986E365C"
     },
-    "428": {
+    "434": {
       "op": "PUSH1",
       "value": "0x60"
     },
-    "430": {
+    "436": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1404,
-        1419
+        1453,
+        1468
       ],
       "op": "TIMESTAMP",
       "path": "0"
     },
-    "431": {
+    "437": {
       "op": "PUSH2",
       "value": "0x180"
     },
-    "434": {
+    "440": {
       "op": "MSTORE"
     },
-    "435": {
+    "441": {
       "op": "DUP1"
     },
-    "436": {
+    "442": {
       "op": "PUSH2",
       "value": "0x1A0"
     },
-    "439": {
+    "445": {
       "op": "MSTORE"
     },
-    "440": {
+    "446": {
       "op": "DUP1"
     },
-    "441": {
+    "447": {
       "op": "PUSH2",
       "value": "0x180"
     },
-    "444": {
+    "450": {
       "op": "ADD"
     },
-    "445": {
+    "451": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1421,
-        1426
+        1470,
+        1475
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x40"
     },
-    "447": {
+    "453": {
       "op": "MLOAD"
     },
-    "448": {
+    "454": {
       "op": "DUP1"
     },
-    "449": {
+    "455": {
       "op": "DUP3"
     },
-    "450": {
+    "456": {
       "op": "MSTORE"
     },
-    "451": {
+    "457": {
       "op": "PUSH1",
       "value": "0x20"
     },
-    "453": {
+    "459": {
       "op": "DUP3"
     },
-    "454": {
+    "460": {
       "op": "ADD"
     },
-    "455": {
+    "461": {
       "op": "DUP2"
     },
-    "456": {
+    "462": {
       "op": "DUP2"
     },
-    "457": {
+    "463": {
       "op": "DUP4"
     },
-    "458": {
+    "464": {
       "op": "PUSH1",
       "value": "0x60"
     },
-    "460": {
+    "466": {
       "op": "PUSH1",
       "value": "0x4"
     },
-    "462": {
+    "468": {
       "op": "GAS"
     },
-    "463": {
+    "469": {
       "op": "STATICCALL"
     },
-    "464": {
+    "470": {
       "op": "POP"
     },
-    "465": {
+    "471": {
       "op": "POP"
     },
-    "466": {
+    "472": {
       "op": "POP"
     },
-    "467": {
+    "473": {
       "op": "DUP1"
     },
-    "468": {
+    "474": {
       "op": "MLOAD"
     },
-    "469": {
+    "475": {
       "op": "DUP1"
     },
-    "470": {
+    "476": {
       "op": "PUSH1",
       "value": "0x20"
     },
-    "472": {
+    "478": {
       "op": "DUP4"
     },
-    "473": {
+    "479": {
       "op": "ADD"
-    },
-    "474": {
-      "op": "ADD"
-    },
-    "475": {
-      "op": "PUSH1",
-      "value": "0x1F"
-    },
-    "477": {
-      "op": "DUP3"
-    },
-    "478": {
-      "op": "PUSH1",
-      "value": "0x0"
     },
     "480": {
-      "op": "SUB"
+      "op": "ADD"
     },
     "481": {
-      "op": "AND"
-    },
-    "482": {
-      "op": "CALLDATASIZE"
+      "op": "PUSH1",
+      "value": "0x1F"
     },
     "483": {
       "op": "DUP3"
     },
     "484": {
-      "op": "CALLDATACOPY"
-    },
-    "485": {
-      "op": "POP"
+      "op": "PUSH1",
+      "value": "0x0"
     },
     "486": {
-      "op": "POP"
+      "op": "SUB"
     },
     "487": {
-      "op": "PUSH1",
-      "value": "0x1F"
-    },
-    "489": {
-      "op": "NOT"
-    },
-    "490": {
-      "op": "PUSH1",
-      "value": "0x1F"
-    },
-    "492": {
-      "op": "DUP3"
-    },
-    "493": {
-      "op": "MLOAD"
-    },
-    "494": {
-      "op": "PUSH1",
-      "value": "0x20"
-    },
-    "496": {
-      "op": "ADD"
-    },
-    "497": {
-      "op": "ADD"
-    },
-    "498": {
       "op": "AND"
     },
-    "499": {
-      "op": "SWAP1"
+    "488": {
+      "op": "CALLDATASIZE"
     },
-    "500": {
+    "489": {
+      "op": "DUP3"
+    },
+    "490": {
+      "op": "CALLDATACOPY"
+    },
+    "491": {
       "op": "POP"
     },
-    "501": {
-      "op": "DUP2"
+    "492": {
+      "op": "POP"
+    },
+    "493": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "495": {
+      "op": "NOT"
+    },
+    "496": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "498": {
+      "op": "DUP3"
+    },
+    "499": {
+      "op": "MLOAD"
+    },
+    "500": {
+      "op": "PUSH1",
+      "value": "0x20"
     },
     "502": {
       "op": "ADD"
     },
     "503": {
-      "op": "SWAP1"
+      "op": "ADD"
     },
     "504": {
-      "op": "POP"
+      "op": "AND"
     },
     "505": {
-      "op": "DUP1"
+      "op": "SWAP1"
     },
     "506": {
+      "op": "POP"
+    },
+    "507": {
+      "op": "DUP2"
+    },
+    "508": {
+      "op": "ADD"
+    },
+    "509": {
+      "op": "SWAP1"
+    },
+    "510": {
+      "op": "POP"
+    },
+    "511": {
+      "op": "DUP1"
+    },
+    "512": {
       "op": "PUSH2",
       "value": "0x1C0"
     },
-    "509": {
+    "515": {
       "op": "MSTORE"
     },
-    "510": {
+    "516": {
       "op": "DUP1"
     },
-    "511": {
+    "517": {
       "op": "PUSH2",
       "value": "0x180"
     },
-    "514": {
+    "520": {
       "op": "ADD"
     },
-    "515": {
+    "521": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1428,
-        1436
+        1477,
+        1485
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0xE0"
     },
-    "517": {
+    "523": {
       "op": "MLOAD"
     },
-    "518": {
+    "524": {
       "op": "DUP1"
     },
-    "519": {
+    "525": {
       "op": "DUP3"
     },
-    "520": {
+    "526": {
       "op": "MSTORE"
     },
-    "521": {
+    "527": {
       "op": "PUSH1",
       "value": "0x20"
     },
-    "523": {
+    "529": {
       "op": "DUP3"
     },
-    "524": {
+    "530": {
       "op": "ADD"
     },
-    "525": {
+    "531": {
       "op": "DUP2"
     },
-    "526": {
+    "532": {
       "op": "DUP2"
     },
-    "527": {
+    "533": {
       "op": "DUP4"
     },
-    "528": {
+    "534": {
       "op": "PUSH2",
       "value": "0x10"
     },
-    "531": {
+    "537": {
       "op": "PUSH1",
       "value": "0x4"
     },
-    "533": {
+    "539": {
       "op": "GAS"
     },
-    "534": {
+    "540": {
       "op": "STATICCALL"
     },
-    "535": {
+    "541": {
       "op": "POP"
     },
-    "536": {
+    "542": {
       "op": "POP"
     },
-    "537": {
+    "543": {
       "op": "POP"
     },
-    "538": {
+    "544": {
       "op": "DUP1"
     },
-    "539": {
+    "545": {
       "op": "MLOAD"
     },
-    "540": {
+    "546": {
       "op": "DUP1"
     },
-    "541": {
+    "547": {
       "op": "PUSH1",
       "value": "0x20"
     },
-    "543": {
+    "549": {
       "op": "DUP4"
     },
-    "544": {
+    "550": {
       "op": "ADD"
-    },
-    "545": {
-      "op": "ADD"
-    },
-    "546": {
-      "op": "PUSH1",
-      "value": "0x1F"
-    },
-    "548": {
-      "op": "DUP3"
-    },
-    "549": {
-      "op": "PUSH1",
-      "value": "0x0"
     },
     "551": {
-      "op": "SUB"
+      "op": "ADD"
     },
     "552": {
-      "op": "AND"
-    },
-    "553": {
-      "op": "CALLDATASIZE"
+      "op": "PUSH1",
+      "value": "0x1F"
     },
     "554": {
       "op": "DUP3"
     },
     "555": {
-      "op": "CALLDATACOPY"
-    },
-    "556": {
-      "op": "POP"
+      "op": "PUSH1",
+      "value": "0x0"
     },
     "557": {
-      "op": "POP"
+      "op": "SUB"
     },
     "558": {
-      "op": "PUSH1",
-      "value": "0x1F"
-    },
-    "560": {
-      "op": "NOT"
-    },
-    "561": {
-      "op": "PUSH1",
-      "value": "0x1F"
-    },
-    "563": {
-      "op": "DUP3"
-    },
-    "564": {
-      "op": "MLOAD"
-    },
-    "565": {
-      "op": "PUSH1",
-      "value": "0x20"
-    },
-    "567": {
-      "op": "ADD"
-    },
-    "568": {
-      "op": "ADD"
-    },
-    "569": {
       "op": "AND"
     },
-    "570": {
-      "op": "SWAP1"
+    "559": {
+      "op": "CALLDATASIZE"
     },
-    "571": {
+    "560": {
+      "op": "DUP3"
+    },
+    "561": {
+      "op": "CALLDATACOPY"
+    },
+    "562": {
       "op": "POP"
     },
-    "572": {
-      "op": "DUP2"
+    "563": {
+      "op": "POP"
+    },
+    "564": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "566": {
+      "op": "NOT"
+    },
+    "567": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "569": {
+      "op": "DUP3"
+    },
+    "570": {
+      "op": "MLOAD"
+    },
+    "571": {
+      "op": "PUSH1",
+      "value": "0x20"
     },
     "573": {
       "op": "ADD"
     },
     "574": {
-      "op": "SWAP1"
+      "op": "ADD"
     },
     "575": {
-      "op": "POP"
+      "op": "AND"
     },
     "576": {
+      "op": "SWAP1"
+    },
+    "577": {
+      "op": "POP"
+    },
+    "578": {
+      "op": "DUP2"
+    },
+    "579": {
+      "op": "ADD"
+    },
+    "580": {
+      "op": "SWAP1"
+    },
+    "581": {
+      "op": "POP"
+    },
+    "582": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1380,
-        1437
+        1429,
+        1486
       ],
       "op": "PUSH2",
       "path": "0",
       "value": "0x180"
     },
-    "579": {
+    "585": {
       "fn": "BuyMeACoffee.buy_coffee",
       "offset": [
-        1380,
-        1437
+        1429,
+        1486
       ],
       "op": "LOG2",
       "path": "0"
     },
-    "580": {
+    "586": {
       "op": "STOP"
     },
-    "581": {
+    "587": {
       "op": "JUMPDEST"
     },
-    "582": {
+    "588": {
       "op": "PUSH4",
       "value": "0xAE6D8AB1"
     },
-    "587": {
+    "593": {
       "op": "DUP2"
     },
-    "588": {
+    "594": {
       "op": "XOR"
     },
-    "589": {
+    "595": {
       "op": "PUSH2",
-      "value": "0x37F"
+      "value": "0x38F"
     },
-    "592": {
+    "598": {
       "op": "JUMPI"
     },
-    "593": {
+    "599": {
       "op": "PUSH1",
       "value": "0x24"
     },
-    "595": {
+    "601": {
       "op": "CALLDATASIZE"
     },
-    "596": {
+    "602": {
       "op": "LT"
     },
-    "597": {
+    "603": {
       "op": "PUSH2",
-      "value": "0x59C"
-    },
-    "600": {
-      "op": "JUMPI"
-    },
-    "601": {
-      "op": "CALLVALUE"
-    },
-    "602": {
-      "op": "PUSH2",
-      "value": "0x59C"
-    },
-    "605": {
-      "op": "JUMPI"
+      "value": "0x5DA"
     },
     "606": {
+      "op": "JUMPI"
+    },
+    "607": {
+      "op": "CALLVALUE"
+    },
+    "608": {
+      "op": "PUSH2",
+      "value": "0x5DA"
+    },
+    "611": {
+      "op": "JUMPI"
+    },
+    "612": {
       "op": "PUSH1",
       "value": "0x20"
     },
-    "608": {
+    "614": {
       "op": "DUP1"
     },
-    "609": {
+    "615": {
       "op": "PUSH1",
       "value": "0x40"
     },
-    "611": {
+    "617": {
       "op": "MSTORE"
     },
-    "612": {
+    "618": {
       "fn": "BuyMeACoffee.get_memos",
       "offset": [
-        924,
-        934
+        949,
+        959
       ],
       "op": "PUSH1",
       "path": "0",
       "statement": 5,
       "value": "0x1"
     },
-    "614": {
+    "620": {
       "fn": "BuyMeACoffee.get_memos",
       "offset": [
-        935,
-        946
+        960,
+        971
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x4"
     },
-    "616": {
-      "fn": "BuyMeACoffee.get_memos",
-      "offset": [
-        924,
-        947
-      ],
-      "op": "CALLDATALOAD",
-      "path": "0"
-    },
-    "617": {
-      "fn": "BuyMeACoffee.get_memos",
-      "offset": [
-        924,
-        947
-      ],
-      "op": "PUSH1",
-      "path": "0",
-      "value": "0x20"
-    },
-    "619": {
-      "fn": "BuyMeACoffee.get_memos",
-      "offset": [
-        924,
-        947
-      ],
-      "op": "MSTORE",
-      "path": "0"
-    },
-    "620": {
-      "fn": "BuyMeACoffee.get_memos",
-      "offset": [
-        924,
-        947
-      ],
-      "op": "PUSH1",
-      "path": "0",
-      "value": "0x0"
-    },
     "622": {
       "fn": "BuyMeACoffee.get_memos",
       "offset": [
-        924,
-        947
+        949,
+        972
       ],
-      "op": "MSTORE",
+      "op": "CALLDATALOAD",
       "path": "0"
     },
     "623": {
       "fn": "BuyMeACoffee.get_memos",
       "offset": [
-        924,
-        947
+        949,
+        972
       ],
       "op": "PUSH1",
       "path": "0",
-      "value": "0x40"
+      "value": "0x20"
     },
     "625": {
       "fn": "BuyMeACoffee.get_memos",
       "offset": [
-        924,
-        947
+        949,
+        972
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "626": {
+      "fn": "BuyMeACoffee.get_memos",
+      "offset": [
+        949,
+        972
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x0"
     },
-    "627": {
+    "628": {
       "fn": "BuyMeACoffee.get_memos",
       "offset": [
-        924,
-        947
+        949,
+        972
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "629": {
+      "fn": "BuyMeACoffee.get_memos",
+      "offset": [
+        949,
+        972
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "631": {
+      "fn": "BuyMeACoffee.get_memos",
+      "offset": [
+        949,
+        972
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "633": {
+      "fn": "BuyMeACoffee.get_memos",
+      "offset": [
+        949,
+        972
       ],
       "op": "SHA3",
       "path": "0"
     },
-    "628": {
+    "634": {
       "op": "DUP2"
     },
-    "629": {
+    "635": {
       "op": "PUSH1",
       "value": "0x40"
     },
-    "631": {
-      "op": "ADD"
-    },
-    "632": {
-      "op": "PUSH1",
-      "value": "0x80"
-    },
-    "634": {
-      "op": "DUP3"
-    },
-    "635": {
-      "op": "SLOAD"
-    },
-    "636": {
-      "op": "DUP3"
-    },
     "637": {
-      "op": "MSTORE"
+      "op": "ADD"
     },
     "638": {
       "op": "PUSH1",
-      "value": "0x1"
+      "value": "0xA0"
     },
     "640": {
-      "op": "DUP4"
+      "op": "DUP3"
     },
     "641": {
-      "op": "ADD"
-    },
-    "642": {
       "op": "SLOAD"
     },
+    "642": {
+      "op": "DUP3"
+    },
     "643": {
-      "op": "PUSH1",
-      "value": "0x20"
-    },
-    "645": {
-      "op": "DUP4"
-    },
-    "646": {
-      "op": "ADD"
-    },
-    "647": {
       "op": "MSTORE"
     },
+    "644": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "646": {
+      "op": "DUP4"
+    },
+    "647": {
+      "op": "ADD"
+    },
     "648": {
-      "op": "DUP1"
+      "op": "SLOAD"
     },
     "649": {
       "op": "PUSH1",
-      "value": "0x40"
+      "value": "0x20"
     },
     "651": {
       "op": "DUP4"
@@ -3853,289 +3946,287 @@
       "op": "MSTORE"
     },
     "654": {
+      "op": "DUP1"
+    },
+    "655": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "657": {
+      "op": "DUP4"
+    },
+    "658": {
+      "op": "ADD"
+    },
+    "659": {
+      "op": "MSTORE"
+    },
+    "660": {
       "op": "PUSH1",
       "value": "0x2"
     },
-    "656": {
-      "op": "DUP4"
-    },
-    "657": {
-      "op": "ADD"
-    },
-    "658": {
-      "op": "DUP2"
-    },
-    "659": {
-      "op": "DUP4"
-    },
-    "660": {
-      "op": "ADD"
-    },
-    "661": {
-      "op": "DUP2"
-    },
     "662": {
-      "op": "SLOAD"
+      "op": "DUP4"
     },
     "663": {
-      "op": "DUP1"
+      "op": "ADD"
     },
     "664": {
-      "op": "DUP3"
+      "op": "DUP2"
     },
     "665": {
-      "op": "MSTORE"
+      "op": "DUP4"
     },
     "666": {
+      "op": "ADD"
+    },
+    "667": {
+      "op": "DUP2"
+    },
+    "668": {
+      "op": "SLOAD"
+    },
+    "669": {
+      "op": "DUP1"
+    },
+    "670": {
+      "op": "DUP3"
+    },
+    "671": {
+      "op": "MSTORE"
+    },
+    "672": {
       "op": "PUSH1",
       "value": "0x1"
     },
-    "668": {
+    "674": {
       "op": "DUP4"
     },
-    "669": {
+    "675": {
       "op": "ADD"
     },
-    "670": {
+    "676": {
       "op": "PUSH1",
       "value": "0x20"
     },
-    "672": {
+    "678": {
       "op": "DUP4"
-    },
-    "673": {
-      "op": "ADD"
-    },
-    "674": {
-      "op": "PUSH1",
-      "value": "0x0"
-    },
-    "676": {
-      "op": "DUP4"
-    },
-    "677": {
-      "op": "PUSH1",
-      "value": "0x1F"
     },
     "679": {
       "op": "ADD"
     },
     "680": {
       "op": "PUSH1",
-      "value": "0x5"
+      "value": "0x0"
     },
     "682": {
-      "op": "SHR"
+      "op": "DUP4"
     },
     "683": {
       "op": "PUSH1",
-      "value": "0x4"
+      "value": "0x1F"
     },
     "685": {
-      "op": "DUP2"
+      "op": "ADD"
     },
     "686": {
-      "op": "GT"
+      "op": "PUSH1",
+      "value": "0x5"
     },
-    "687": {
-      "op": "PUSH2",
-      "value": "0x59C"
+    "688": {
+      "op": "SHR"
     },
-    "690": {
-      "op": "JUMPI"
+    "689": {
+      "op": "PUSH1",
+      "value": "0x4"
     },
     "691": {
-      "op": "DUP1"
+      "op": "DUP2"
     },
     "692": {
-      "op": "ISZERO"
+      "op": "GT"
     },
     "693": {
       "op": "PUSH2",
-      "value": "0x2D0"
+      "value": "0x5DA"
     },
     "696": {
       "op": "JUMPI"
     },
     "697": {
-      "op": "SWAP1"
-    },
-    "698": {
-      "op": "JUMPDEST"
-    },
-    "699": {
       "op": "DUP1"
     },
-    "700": {
-      "op": "DUP5"
+    "698": {
+      "op": "ISZERO"
     },
-    "701": {
-      "op": "ADD"
+    "699": {
+      "op": "PUSH2",
+      "value": "0x2D6"
     },
     "702": {
-      "op": "SLOAD"
+      "op": "JUMPI"
     },
     "703": {
-      "op": "DUP2"
+      "op": "SWAP1"
     },
     "704": {
-      "op": "PUSH1",
-      "value": "0x5"
+      "op": "JUMPDEST"
+    },
+    "705": {
+      "op": "DUP1"
     },
     "706": {
-      "op": "SHL"
-    },
-    "707": {
       "op": "DUP5"
     },
-    "708": {
+    "707": {
       "op": "ADD"
     },
+    "708": {
+      "op": "SLOAD"
+    },
     "709": {
-      "op": "MSTORE"
+      "op": "DUP2"
     },
     "710": {
       "op": "PUSH1",
-      "value": "0x1"
+      "value": "0x5"
     },
     "712": {
-      "op": "ADD"
+      "op": "SHL"
     },
     "713": {
-      "op": "DUP2"
+      "op": "DUP5"
     },
     "714": {
-      "op": "DUP2"
+      "op": "ADD"
     },
     "715": {
-      "op": "XOR"
+      "op": "MSTORE"
     },
     "716": {
-      "op": "PUSH2",
-      "value": "0x2BA"
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "718": {
+      "op": "ADD"
     },
     "719": {
-      "op": "JUMPI"
+      "op": "DUP2"
     },
     "720": {
-      "op": "JUMPDEST"
+      "op": "DUP2"
     },
     "721": {
-      "op": "POP"
+      "op": "XOR"
     },
     "722": {
-      "op": "POP"
-    },
-    "723": {
-      "op": "POP"
-    },
-    "724": {
-      "op": "POP"
+      "op": "PUSH2",
+      "value": "0x2C0"
     },
     "725": {
-      "op": "POP"
+      "op": "JUMPI"
     },
     "726": {
-      "op": "DUP1"
+      "op": "JUMPDEST"
     },
     "727": {
-      "op": "MLOAD"
+      "op": "POP"
     },
     "728": {
-      "op": "DUP1"
+      "op": "POP"
     },
     "729": {
+      "op": "POP"
+    },
+    "730": {
+      "op": "POP"
+    },
+    "731": {
+      "op": "POP"
+    },
+    "732": {
+      "op": "DUP1"
+    },
+    "733": {
+      "op": "MLOAD"
+    },
+    "734": {
+      "op": "DUP1"
+    },
+    "735": {
       "op": "PUSH1",
       "value": "0x20"
     },
-    "731": {
+    "737": {
       "op": "DUP4"
     },
-    "732": {
+    "738": {
       "op": "ADD"
-    },
-    "733": {
-      "op": "ADD"
-    },
-    "734": {
-      "op": "PUSH1",
-      "value": "0x1F"
-    },
-    "736": {
-      "op": "DUP3"
-    },
-    "737": {
-      "op": "PUSH1",
-      "value": "0x0"
     },
     "739": {
-      "op": "SUB"
+      "op": "ADD"
     },
     "740": {
-      "op": "AND"
-    },
-    "741": {
-      "op": "CALLDATASIZE"
+      "op": "PUSH1",
+      "value": "0x1F"
     },
     "742": {
       "op": "DUP3"
     },
     "743": {
-      "op": "CALLDATACOPY"
-    },
-    "744": {
-      "op": "POP"
+      "op": "PUSH1",
+      "value": "0x0"
     },
     "745": {
-      "op": "POP"
+      "op": "SUB"
     },
     "746": {
-      "op": "PUSH1",
-      "value": "0x1F"
+      "op": "AND"
+    },
+    "747": {
+      "op": "CALLDATASIZE"
     },
     "748": {
-      "op": "NOT"
+      "op": "DUP3"
     },
     "749": {
+      "op": "CALLDATACOPY"
+    },
+    "750": {
+      "op": "POP"
+    },
+    "751": {
+      "op": "POP"
+    },
+    "752": {
       "op": "PUSH1",
       "value": "0x1F"
     },
-    "751": {
+    "754": {
+      "op": "NOT"
+    },
+    "755": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "757": {
       "op": "DUP3"
     },
-    "752": {
+    "758": {
       "op": "MLOAD"
     },
-    "753": {
+    "759": {
       "op": "PUSH1",
       "value": "0x20"
     },
-    "755": {
-      "op": "ADD"
-    },
-    "756": {
-      "op": "ADD"
-    },
-    "757": {
-      "op": "AND"
-    },
-    "758": {
-      "op": "SWAP1"
-    },
-    "759": {
-      "op": "POP"
-    },
-    "760": {
-      "op": "SWAP1"
-    },
     "761": {
-      "op": "POP"
+      "op": "ADD"
     },
     "762": {
-      "op": "DUP2"
+      "op": "ADD"
     },
     "763": {
-      "op": "ADD"
+      "op": "AND"
     },
     "764": {
       "op": "SWAP1"
@@ -4144,305 +4235,305 @@
       "op": "POP"
     },
     "766": {
-      "op": "DUP1"
+      "op": "SWAP1"
     },
     "767": {
+      "op": "POP"
+    },
+    "768": {
+      "op": "DUP2"
+    },
+    "769": {
+      "op": "ADD"
+    },
+    "770": {
+      "op": "SWAP1"
+    },
+    "771": {
+      "op": "POP"
+    },
+    "772": {
+      "op": "DUP1"
+    },
+    "773": {
       "op": "PUSH1",
       "value": "0x60"
     },
-    "769": {
+    "775": {
       "op": "DUP4"
     },
-    "770": {
+    "776": {
       "op": "ADD"
     },
-    "771": {
+    "777": {
       "op": "MSTORE"
     },
-    "772": {
+    "778": {
       "op": "PUSH1",
       "value": "0x7"
     },
-    "774": {
-      "op": "DUP4"
-    },
-    "775": {
-      "op": "ADD"
-    },
-    "776": {
-      "op": "DUP2"
-    },
-    "777": {
-      "op": "DUP4"
-    },
-    "778": {
-      "op": "ADD"
-    },
-    "779": {
-      "op": "DUP2"
-    },
     "780": {
-      "op": "SLOAD"
+      "op": "DUP4"
     },
     "781": {
-      "op": "DUP1"
+      "op": "ADD"
     },
     "782": {
-      "op": "DUP3"
+      "op": "DUP2"
     },
     "783": {
-      "op": "MSTORE"
+      "op": "DUP4"
     },
     "784": {
+      "op": "ADD"
+    },
+    "785": {
+      "op": "DUP2"
+    },
+    "786": {
+      "op": "SLOAD"
+    },
+    "787": {
+      "op": "DUP1"
+    },
+    "788": {
+      "op": "DUP3"
+    },
+    "789": {
+      "op": "MSTORE"
+    },
+    "790": {
       "op": "PUSH1",
       "value": "0x1"
     },
-    "786": {
+    "792": {
       "op": "DUP4"
     },
-    "787": {
+    "793": {
       "op": "ADD"
     },
-    "788": {
+    "794": {
       "op": "PUSH1",
       "value": "0x20"
     },
-    "790": {
+    "796": {
       "op": "DUP4"
-    },
-    "791": {
-      "op": "ADD"
-    },
-    "792": {
-      "op": "PUSH1",
-      "value": "0x0"
-    },
-    "794": {
-      "op": "DUP4"
-    },
-    "795": {
-      "op": "PUSH1",
-      "value": "0x1F"
     },
     "797": {
       "op": "ADD"
     },
     "798": {
       "op": "PUSH1",
-      "value": "0x5"
+      "value": "0x0"
     },
     "800": {
-      "op": "SHR"
+      "op": "DUP4"
     },
     "801": {
       "op": "PUSH1",
-      "value": "0x4"
+      "value": "0x1F"
     },
     "803": {
-      "op": "DUP2"
+      "op": "ADD"
     },
     "804": {
-      "op": "GT"
+      "op": "PUSH1",
+      "value": "0x5"
     },
-    "805": {
-      "op": "PUSH2",
-      "value": "0x59C"
+    "806": {
+      "op": "SHR"
     },
-    "808": {
-      "op": "JUMPI"
+    "807": {
+      "op": "PUSH1",
+      "value": "0x4"
     },
     "809": {
-      "op": "DUP1"
+      "op": "DUP2"
     },
     "810": {
-      "op": "ISZERO"
+      "op": "GT"
     },
     "811": {
       "op": "PUSH2",
-      "value": "0x346"
+      "value": "0x5DA"
     },
     "814": {
       "op": "JUMPI"
     },
     "815": {
-      "op": "SWAP1"
-    },
-    "816": {
-      "op": "JUMPDEST"
-    },
-    "817": {
       "op": "DUP1"
     },
-    "818": {
-      "op": "DUP5"
+    "816": {
+      "op": "ISZERO"
     },
-    "819": {
-      "op": "ADD"
+    "817": {
+      "op": "PUSH2",
+      "value": "0x34C"
     },
     "820": {
-      "op": "SLOAD"
+      "op": "JUMPI"
     },
     "821": {
-      "op": "DUP2"
+      "op": "SWAP1"
     },
     "822": {
-      "op": "PUSH1",
-      "value": "0x5"
+      "op": "JUMPDEST"
+    },
+    "823": {
+      "op": "DUP1"
     },
     "824": {
-      "op": "SHL"
-    },
-    "825": {
       "op": "DUP5"
     },
-    "826": {
+    "825": {
       "op": "ADD"
     },
+    "826": {
+      "op": "SLOAD"
+    },
     "827": {
-      "op": "MSTORE"
+      "op": "DUP2"
     },
     "828": {
       "op": "PUSH1",
-      "value": "0x1"
+      "value": "0x5"
     },
     "830": {
-      "op": "ADD"
+      "op": "SHL"
     },
     "831": {
-      "op": "DUP2"
+      "op": "DUP5"
     },
     "832": {
-      "op": "DUP2"
+      "op": "ADD"
     },
     "833": {
-      "op": "XOR"
+      "op": "MSTORE"
     },
     "834": {
-      "op": "PUSH2",
-      "value": "0x330"
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "836": {
+      "op": "ADD"
     },
     "837": {
-      "op": "JUMPI"
+      "op": "DUP2"
     },
     "838": {
-      "op": "JUMPDEST"
+      "op": "DUP2"
     },
     "839": {
-      "op": "POP"
+      "op": "XOR"
     },
     "840": {
-      "op": "POP"
-    },
-    "841": {
-      "op": "POP"
-    },
-    "842": {
-      "op": "POP"
+      "op": "PUSH2",
+      "value": "0x336"
     },
     "843": {
-      "op": "POP"
+      "op": "JUMPI"
     },
     "844": {
-      "op": "DUP1"
+      "op": "JUMPDEST"
     },
     "845": {
-      "op": "MLOAD"
+      "op": "POP"
     },
     "846": {
-      "op": "DUP1"
+      "op": "POP"
     },
     "847": {
+      "op": "POP"
+    },
+    "848": {
+      "op": "POP"
+    },
+    "849": {
+      "op": "POP"
+    },
+    "850": {
+      "op": "DUP1"
+    },
+    "851": {
+      "op": "MLOAD"
+    },
+    "852": {
+      "op": "DUP1"
+    },
+    "853": {
       "op": "PUSH1",
       "value": "0x20"
     },
-    "849": {
+    "855": {
       "op": "DUP4"
     },
-    "850": {
+    "856": {
       "op": "ADD"
-    },
-    "851": {
-      "op": "ADD"
-    },
-    "852": {
-      "op": "PUSH1",
-      "value": "0x1F"
-    },
-    "854": {
-      "op": "DUP3"
-    },
-    "855": {
-      "op": "PUSH1",
-      "value": "0x0"
     },
     "857": {
-      "op": "SUB"
+      "op": "ADD"
     },
     "858": {
-      "op": "AND"
-    },
-    "859": {
-      "op": "CALLDATASIZE"
+      "op": "PUSH1",
+      "value": "0x1F"
     },
     "860": {
       "op": "DUP3"
     },
     "861": {
-      "op": "CALLDATACOPY"
-    },
-    "862": {
-      "op": "POP"
+      "op": "PUSH1",
+      "value": "0x0"
     },
     "863": {
-      "op": "POP"
+      "op": "SUB"
     },
     "864": {
-      "op": "PUSH1",
-      "value": "0x1F"
+      "op": "AND"
+    },
+    "865": {
+      "op": "CALLDATASIZE"
     },
     "866": {
-      "op": "NOT"
+      "op": "DUP3"
     },
     "867": {
+      "op": "CALLDATACOPY"
+    },
+    "868": {
+      "op": "POP"
+    },
+    "869": {
+      "op": "POP"
+    },
+    "870": {
       "op": "PUSH1",
       "value": "0x1F"
     },
-    "869": {
+    "872": {
+      "op": "NOT"
+    },
+    "873": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "875": {
       "op": "DUP3"
     },
-    "870": {
+    "876": {
       "op": "MLOAD"
     },
-    "871": {
+    "877": {
       "op": "PUSH1",
       "value": "0x20"
     },
-    "873": {
-      "op": "ADD"
-    },
-    "874": {
-      "op": "ADD"
-    },
-    "875": {
-      "op": "AND"
-    },
-    "876": {
-      "op": "SWAP1"
-    },
-    "877": {
-      "op": "POP"
-    },
-    "878": {
-      "op": "SWAP1"
-    },
     "879": {
-      "op": "POP"
+      "op": "ADD"
     },
     "880": {
-      "op": "DUP2"
+      "op": "ADD"
     },
     "881": {
-      "op": "ADD"
+      "op": "AND"
     },
     "882": {
       "op": "SWAP1"
@@ -4457,665 +4548,651 @@
       "op": "POP"
     },
     "886": {
-      "op": "SWAP1"
-    },
-    "887": {
-      "op": "POP"
-    },
-    "888": {
       "op": "DUP2"
     },
-    "889": {
+    "887": {
       "op": "ADD"
     },
-    "890": {
+    "888": {
       "op": "SWAP1"
     },
-    "891": {
+    "889": {
       "op": "POP"
     },
+    "890": {
+      "op": "PUSH1",
+      "value": "0xC"
+    },
     "892": {
+      "op": "DUP4"
+    },
+    "893": {
+      "op": "ADD"
+    },
+    "894": {
+      "op": "SLOAD"
+    },
+    "895": {
+      "op": "PUSH1",
+      "value": "0x80"
+    },
+    "897": {
+      "op": "DUP4"
+    },
+    "898": {
+      "op": "ADD"
+    },
+    "899": {
+      "op": "MSTORE"
+    },
+    "900": {
+      "op": "SWAP1"
+    },
+    "901": {
+      "op": "POP"
+    },
+    "902": {
+      "op": "SWAP1"
+    },
+    "903": {
+      "op": "POP"
+    },
+    "904": {
+      "op": "DUP2"
+    },
+    "905": {
+      "op": "ADD"
+    },
+    "906": {
+      "op": "SWAP1"
+    },
+    "907": {
+      "op": "POP"
+    },
+    "908": {
       "op": "PUSH1",
       "value": "0x40"
     },
-    "894": {
+    "910": {
       "op": "RETURN"
     },
-    "895": {
+    "911": {
       "op": "JUMPDEST"
     },
-    "896": {
+    "912": {
       "op": "PUSH4",
       "value": "0xA15954A"
     },
-    "901": {
+    "917": {
       "op": "DUP2"
     },
-    "902": {
+    "918": {
       "op": "XOR"
     },
-    "903": {
+    "919": {
       "op": "PUSH2",
-      "value": "0x4F"
+      "value": "0x41F"
     },
-    "906": {
+    "922": {
       "op": "JUMPI"
     },
-    "907": {
+    "923": {
       "op": "PUSH1",
       "value": "0x4"
     },
-    "909": {
+    "925": {
       "op": "CALLDATASIZE"
     },
-    "910": {
+    "926": {
       "op": "LT"
     },
-    "911": {
+    "927": {
       "op": "PUSH2",
-      "value": "0x59C"
+      "value": "0x5DA"
     },
-    "914": {
+    "930": {
       "op": "JUMPI"
     },
-    "915": {
+    "931": {
       "op": "CALLVALUE"
     },
-    "916": {
+    "932": {
       "op": "PUSH2",
-      "value": "0x59C"
+      "value": "0x5DA"
     },
-    "919": {
+    "935": {
       "op": "JUMPI"
     },
-    "920": {
+    "936": {
       "fn": "BuyMeACoffee.withdraw_tips",
       "offset": [
-        1555,
-        1567
+        1604,
+        1616
       ],
       "op": "SELFBALANCE",
       "path": "0",
       "statement": 6
     },
-    "921": {
+    "937": {
       "fn": "BuyMeACoffee.withdraw_tips",
       "offset": [
-        1548,
-        1588
+        1597,
+        1637
       ],
       "op": "PUSH2",
       "path": "0",
-      "value": "0x3F9"
+      "value": "0x49"
     },
-    "924": {
+    "940": {
       "branch": 7,
       "fn": "BuyMeACoffee.withdraw_tips",
       "offset": [
-        1548,
-        1588
+        1597,
+        1637
       ],
       "op": "JUMPI",
       "path": "0"
     },
-    "925": {
+    "941": {
       "op": "PUSH1",
       "value": "0xD"
     },
-    "927": {
+    "943": {
       "op": "PUSH1",
       "value": "0x40"
     },
-    "929": {
+    "945": {
       "fn": "BuyMeACoffee.withdraw_tips",
       "offset": [
-        1573,
-        1588
+        1622,
+        1637
       ],
       "op": "MSTORE",
       "path": "0"
     },
-    "930": {
+    "946": {
       "op": "PUSH32",
       "value": "0x456D7074792062616C616E63650000000000000000000"
     },
-    "963": {
+    "979": {
       "op": "PUSH1",
       "value": "0x60"
     },
-    "965": {
+    "981": {
       "fn": "BuyMeACoffee.withdraw_tips",
       "offset": [
-        1573,
-        1588
+        1622,
+        1637
       ],
       "op": "MSTORE",
       "path": "0"
     },
-    "966": {
+    "982": {
       "fn": "BuyMeACoffee.withdraw_tips",
       "offset": [
-        1573,
-        1588
+        1622,
+        1637
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x40"
     },
-    "968": {
+    "984": {
       "fn": "BuyMeACoffee.withdraw_tips",
       "offset": [
-        1548,
-        1588
+        1597,
+        1637
       ],
       "op": "POP",
       "path": "0"
     },
-    "969": {
+    "985": {
       "op": "PUSH1",
       "value": "0x40"
     },
-    "971": {
+    "987": {
       "op": "MLOAD"
     },
-    "972": {
+    "988": {
       "op": "DUP1"
     },
-    "973": {
+    "989": {
       "op": "PUSH1",
       "value": "0x60"
     },
-    "975": {
+    "991": {
       "op": "ADD"
     },
-    "976": {
+    "992": {
       "op": "PUSH1",
       "value": "0x1F"
     },
-    "978": {
+    "994": {
       "op": "DUP3"
     },
-    "979": {
+    "995": {
       "op": "PUSH1",
       "value": "0x0"
     },
-    "981": {
+    "997": {
       "op": "SUB"
     },
-    "982": {
+    "998": {
       "op": "AND"
     },
-    "983": {
+    "999": {
       "op": "CALLDATASIZE"
     },
-    "984": {
+    "1000": {
       "op": "DUP3"
     },
-    "985": {
+    "1001": {
       "op": "CALLDATACOPY"
     },
-    "986": {
+    "1002": {
       "op": "POP"
     },
-    "987": {
+    "1003": {
       "op": "POP"
     },
-    "988": {
+    "1004": {
       "op": "PUSH4",
       "value": "0x8C379A0"
     },
-    "993": {
+    "1009": {
       "op": "PUSH1",
       "value": "0x0"
     },
-    "995": {
-      "op": "MSTORE"
-    },
-    "996": {
-      "op": "PUSH1",
-      "value": "0x20"
-    },
-    "998": {
-      "op": "PUSH1",
-      "value": "0x20"
-    },
-    "1000": {
-      "op": "MSTORE"
-    },
-    "1001": {
-      "op": "PUSH1",
-      "value": "0x1F"
-    },
-    "1003": {
-      "op": "NOT"
-    },
-    "1004": {
-      "op": "PUSH1",
-      "value": "0x1F"
-    },
-    "1006": {
-      "op": "PUSH1",
-      "value": "0x40"
-    },
-    "1008": {
-      "op": "MLOAD"
-    },
-    "1009": {
-      "op": "ADD"
-    },
-    "1010": {
-      "op": "AND"
-    },
     "1011": {
-      "op": "PUSH1",
-      "value": "0x44"
+      "op": "MSTORE"
     },
-    "1013": {
-      "op": "ADD"
+    "1012": {
+      "op": "PUSH1",
+      "value": "0x20"
     },
     "1014": {
       "op": "PUSH1",
-      "value": "0x1C"
+      "value": "0x20"
     },
     "1016": {
-      "op": "REVERT"
+      "op": "MSTORE"
     },
     "1017": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "1019": {
+      "op": "NOT"
+    },
+    "1020": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "1022": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "1024": {
+      "op": "MLOAD"
+    },
+    "1025": {
+      "op": "ADD"
+    },
+    "1026": {
+      "op": "AND"
+    },
+    "1027": {
+      "op": "PUSH1",
+      "value": "0x44"
+    },
+    "1029": {
+      "op": "ADD"
+    },
+    "1030": {
+      "op": "PUSH1",
+      "value": "0x1C"
+    },
+    "1032": {
+      "op": "REVERT"
+    },
+    "1033": {
       "fn": "BuyMeACoffee.withdraw_tips",
       "offset": [
-        1548,
-        1588
+        1597,
+        1637
       ],
       "op": "JUMPDEST",
       "path": "0"
     },
-    "1018": {
+    "1034": {
       "op": "PUSH1",
       "value": "0x0"
     },
-    "1020": {
+    "1036": {
       "op": "PUSH1",
       "value": "0x0"
     },
-    "1022": {
+    "1038": {
       "op": "PUSH1",
       "value": "0x0"
     },
-    "1024": {
+    "1040": {
       "op": "PUSH1",
       "value": "0x0"
     },
-    "1026": {
+    "1042": {
       "fn": "BuyMeACoffee.withdraw_tips",
       "offset": [
-        1610,
-        1622
+        1659,
+        1671
       ],
       "op": "SELFBALANCE",
       "path": "0",
       "statement": 8
     },
-    "1027": {
+    "1043": {
       "fn": "BuyMeACoffee.withdraw_tips",
       "offset": [
-        1598,
-        1608
+        1647,
+        1657
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x0"
     },
-    "1029": {
+    "1045": {
       "op": "SLOAD"
     },
-    "1030": {
+    "1046": {
       "op": "PUSH1",
       "value": "0x0"
     },
-    "1032": {
+    "1048": {
       "op": "CALL"
     },
-    "1033": {
+    "1049": {
       "fn": "BuyMeACoffee.withdraw_tips",
       "offset": [
-        1593,
-        1623
+        1642,
+        1672
       ],
       "op": "ISZERO",
       "path": "0"
     },
-    "1034": {
+    "1050": {
       "fn": "BuyMeACoffee.withdraw_tips",
       "offset": [
-        1593,
-        1623
+        1642,
+        1672
       ],
       "op": "PUSH2",
       "path": "0",
-      "value": "0x59C"
+      "value": "0x5DA"
     },
-    "1037": {
+    "1053": {
       "fn": "BuyMeACoffee.withdraw_tips",
       "offset": [
-        1593,
-        1623
+        1642,
+        1672
       ],
       "op": "JUMPI",
       "path": "0"
     },
-    "1038": {
+    "1054": {
       "op": "STOP"
     },
-    "1039": {
+    "1055": {
       "op": "JUMPDEST"
     },
-    "1040": {
+    "1056": {
       "op": "PUSH4",
-      "value": "0xE8DFDF4"
+      "value": "0x8DA5CB5B"
     },
-    "1045": {
+    "1061": {
       "op": "DUP2"
     },
-    "1046": {
+    "1062": {
       "op": "XOR"
     },
-    "1047": {
-      "op": "PUSH2",
-      "value": "0x549"
-    },
-    "1050": {
-      "op": "JUMPI"
-    },
-    "1051": {
-      "op": "PUSH1",
-      "value": "0x24"
-    },
-    "1053": {
-      "op": "CALLDATASIZE"
-    },
-    "1054": {
-      "op": "LT"
-    },
-    "1055": {
-      "op": "PUSH2",
-      "value": "0x59C"
-    },
-    "1058": {
-      "op": "JUMPI"
-    },
-    "1059": {
-      "op": "CALLVALUE"
-    },
-    "1060": {
-      "op": "PUSH2",
-      "value": "0x59C"
-    },
     "1063": {
-      "op": "JUMPI"
-    },
-    "1064": {
-      "op": "PUSH1",
-      "value": "0x20"
+      "op": "PUSH2",
+      "value": "0x443"
     },
     "1066": {
-      "op": "DUP1"
+      "op": "JUMPI"
     },
     "1067": {
       "op": "PUSH1",
-      "value": "0x40"
-    },
-    "1069": {
-      "op": "MSTORE"
-    },
-    "1070": {
-      "op": "PUSH1",
-      "value": "0x1"
-    },
-    "1072": {
-      "op": "PUSH1",
       "value": "0x4"
     },
+    "1069": {
+      "op": "CALLDATASIZE"
+    },
+    "1070": {
+      "op": "LT"
+    },
+    "1071": {
+      "op": "PUSH2",
+      "value": "0x5DA"
+    },
     "1074": {
-      "op": "CALLDATALOAD"
+      "op": "JUMPI"
     },
     "1075": {
-      "op": "PUSH1",
-      "value": "0x20"
+      "op": "CALLVALUE"
     },
-    "1077": {
-      "op": "MSTORE"
+    "1076": {
+      "op": "PUSH2",
+      "value": "0x5DA"
     },
-    "1078": {
+    "1079": {
+      "op": "JUMPI"
+    },
+    "1080": {
       "op": "PUSH1",
       "value": "0x0"
     },
-    "1080": {
-      "op": "MSTORE"
-    },
-    "1081": {
-      "op": "PUSH1",
-      "value": "0x40"
+    "1082": {
+      "op": "SLOAD"
     },
     "1083": {
       "op": "PUSH1",
-      "value": "0x0"
-    },
-    "1085": {
-      "op": "SHA3"
-    },
-    "1086": {
-      "op": "DUP2"
-    },
-    "1087": {
-      "op": "PUSH1",
       "value": "0x40"
     },
-    "1089": {
-      "op": "ADD"
-    },
-    "1090": {
-      "op": "PUSH1",
-      "value": "0x80"
-    },
-    "1092": {
-      "op": "DUP3"
-    },
-    "1093": {
-      "op": "SLOAD"
-    },
-    "1094": {
-      "op": "DUP3"
-    },
-    "1095": {
+    "1085": {
       "op": "MSTORE"
     },
-    "1096": {
-      "op": "PUSH1",
-      "value": "0x1"
-    },
-    "1098": {
-      "op": "DUP4"
-    },
-    "1099": {
-      "op": "ADD"
-    },
-    "1100": {
-      "op": "SLOAD"
-    },
-    "1101": {
+    "1086": {
       "op": "PUSH1",
       "value": "0x20"
     },
-    "1103": {
-      "op": "DUP4"
-    },
-    "1104": {
-      "op": "ADD"
-    },
-    "1105": {
-      "op": "MSTORE"
-    },
-    "1106": {
-      "op": "DUP1"
-    },
-    "1107": {
+    "1088": {
       "op": "PUSH1",
       "value": "0x40"
     },
-    "1109": {
-      "op": "DUP4"
+    "1090": {
+      "op": "RETURN"
+    },
+    "1091": {
+      "op": "JUMPDEST"
+    },
+    "1092": {
+      "op": "PUSH4",
+      "value": "0xE8DFDF4"
+    },
+    "1097": {
+      "op": "DUP2"
+    },
+    "1098": {
+      "op": "XOR"
+    },
+    "1099": {
+      "op": "PUSH2",
+      "value": "0x587"
+    },
+    "1102": {
+      "op": "JUMPI"
+    },
+    "1103": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "1105": {
+      "op": "CALLDATASIZE"
+    },
+    "1106": {
+      "op": "LT"
+    },
+    "1107": {
+      "op": "PUSH2",
+      "value": "0x5DA"
     },
     "1110": {
-      "op": "ADD"
+      "op": "JUMPI"
     },
     "1111": {
-      "op": "MSTORE"
+      "op": "CALLVALUE"
     },
     "1112": {
-      "op": "PUSH1",
-      "value": "0x2"
-    },
-    "1114": {
-      "op": "DUP4"
+      "op": "PUSH2",
+      "value": "0x5DA"
     },
     "1115": {
-      "op": "ADD"
+      "op": "JUMPI"
     },
     "1116": {
-      "op": "DUP2"
-    },
-    "1117": {
-      "op": "DUP4"
+      "op": "PUSH1",
+      "value": "0x20"
     },
     "1118": {
-      "op": "ADD"
-    },
-    "1119": {
-      "op": "DUP2"
-    },
-    "1120": {
-      "op": "SLOAD"
-    },
-    "1121": {
       "op": "DUP1"
     },
-    "1122": {
-      "op": "DUP3"
+    "1119": {
+      "op": "PUSH1",
+      "value": "0x40"
     },
-    "1123": {
+    "1121": {
       "op": "MSTORE"
+    },
+    "1122": {
+      "op": "PUSH1",
+      "value": "0x1"
     },
     "1124": {
       "op": "PUSH1",
-      "value": "0x1"
+      "value": "0x4"
     },
     "1126": {
-      "op": "DUP4"
+      "op": "CALLDATALOAD"
     },
     "1127": {
-      "op": "ADD"
-    },
-    "1128": {
       "op": "PUSH1",
       "value": "0x20"
     },
+    "1129": {
+      "op": "MSTORE"
+    },
     "1130": {
-      "op": "DUP4"
-    },
-    "1131": {
-      "op": "ADD"
-    },
-    "1132": {
       "op": "PUSH1",
       "value": "0x0"
     },
-    "1134": {
-      "op": "DUP4"
+    "1132": {
+      "op": "MSTORE"
+    },
+    "1133": {
+      "op": "PUSH1",
+      "value": "0x40"
     },
     "1135": {
       "op": "PUSH1",
-      "value": "0x1F"
+      "value": "0x0"
     },
     "1137": {
-      "op": "ADD"
+      "op": "SHA3"
     },
     "1138": {
-      "op": "PUSH1",
-      "value": "0x5"
+      "op": "DUP2"
     },
-    "1140": {
-      "op": "SHR"
+    "1139": {
+      "op": "PUSH1",
+      "value": "0x40"
     },
     "1141": {
-      "op": "PUSH1",
-      "value": "0x4"
+      "op": "ADD"
     },
-    "1143": {
-      "op": "DUP2"
+    "1142": {
+      "op": "PUSH1",
+      "value": "0xA0"
     },
     "1144": {
-      "op": "GT"
+      "op": "DUP3"
     },
     "1145": {
-      "op": "PUSH2",
-      "value": "0x59C"
-    },
-    "1148": {
-      "op": "JUMPI"
-    },
-    "1149": {
-      "op": "DUP1"
-    },
-    "1150": {
-      "op": "ISZERO"
-    },
-    "1151": {
-      "op": "PUSH2",
-      "value": "0x49A"
-    },
-    "1154": {
-      "op": "JUMPI"
-    },
-    "1155": {
-      "op": "SWAP1"
-    },
-    "1156": {
-      "op": "JUMPDEST"
-    },
-    "1157": {
-      "op": "DUP1"
-    },
-    "1158": {
-      "op": "DUP5"
-    },
-    "1159": {
-      "op": "ADD"
-    },
-    "1160": {
       "op": "SLOAD"
     },
-    "1161": {
-      "op": "DUP2"
+    "1146": {
+      "op": "DUP3"
     },
-    "1162": {
-      "op": "PUSH1",
-      "value": "0x5"
-    },
-    "1164": {
-      "op": "SHL"
-    },
-    "1165": {
-      "op": "DUP5"
-    },
-    "1166": {
-      "op": "ADD"
-    },
-    "1167": {
+    "1147": {
       "op": "MSTORE"
     },
-    "1168": {
+    "1148": {
       "op": "PUSH1",
       "value": "0x1"
+    },
+    "1150": {
+      "op": "DUP4"
+    },
+    "1151": {
+      "op": "ADD"
+    },
+    "1152": {
+      "op": "SLOAD"
+    },
+    "1153": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "1155": {
+      "op": "DUP4"
+    },
+    "1156": {
+      "op": "ADD"
+    },
+    "1157": {
+      "op": "MSTORE"
+    },
+    "1158": {
+      "op": "DUP1"
+    },
+    "1159": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "1161": {
+      "op": "DUP4"
+    },
+    "1162": {
+      "op": "ADD"
+    },
+    "1163": {
+      "op": "MSTORE"
+    },
+    "1164": {
+      "op": "PUSH1",
+      "value": "0x2"
+    },
+    "1166": {
+      "op": "DUP4"
+    },
+    "1167": {
+      "op": "ADD"
+    },
+    "1168": {
+      "op": "DUP2"
+    },
+    "1169": {
+      "op": "DUP4"
     },
     "1170": {
       "op": "ADD"
@@ -5124,305 +5201,305 @@
       "op": "DUP2"
     },
     "1172": {
-      "op": "DUP2"
+      "op": "SLOAD"
     },
     "1173": {
-      "op": "XOR"
+      "op": "DUP1"
     },
     "1174": {
-      "op": "PUSH2",
-      "value": "0x484"
+      "op": "DUP3"
     },
-    "1177": {
-      "op": "JUMPI"
+    "1175": {
+      "op": "MSTORE"
+    },
+    "1176": {
+      "op": "PUSH1",
+      "value": "0x1"
     },
     "1178": {
-      "op": "JUMPDEST"
+      "op": "DUP4"
     },
     "1179": {
-      "op": "POP"
+      "op": "ADD"
     },
     "1180": {
-      "op": "POP"
-    },
-    "1181": {
-      "op": "POP"
+      "op": "PUSH1",
+      "value": "0x20"
     },
     "1182": {
-      "op": "POP"
+      "op": "DUP4"
     },
     "1183": {
-      "op": "POP"
+      "op": "ADD"
     },
     "1184": {
-      "op": "DUP1"
-    },
-    "1185": {
-      "op": "MLOAD"
+      "op": "PUSH1",
+      "value": "0x0"
     },
     "1186": {
-      "op": "DUP1"
+      "op": "DUP4"
     },
     "1187": {
       "op": "PUSH1",
-      "value": "0x20"
+      "value": "0x1F"
     },
     "1189": {
-      "op": "DUP4"
+      "op": "ADD"
     },
     "1190": {
-      "op": "ADD"
-    },
-    "1191": {
-      "op": "ADD"
-    },
-    "1192": {
-      "op": "PUSH1",
-      "value": "0x1F"
-    },
-    "1194": {
-      "op": "DUP3"
-    },
-    "1195": {
-      "op": "PUSH1",
-      "value": "0x0"
-    },
-    "1197": {
-      "op": "SUB"
-    },
-    "1198": {
-      "op": "AND"
-    },
-    "1199": {
-      "op": "CALLDATASIZE"
-    },
-    "1200": {
-      "op": "DUP3"
-    },
-    "1201": {
-      "op": "CALLDATACOPY"
-    },
-    "1202": {
-      "op": "POP"
-    },
-    "1203": {
-      "op": "POP"
-    },
-    "1204": {
-      "op": "PUSH1",
-      "value": "0x1F"
-    },
-    "1206": {
-      "op": "NOT"
-    },
-    "1207": {
-      "op": "PUSH1",
-      "value": "0x1F"
-    },
-    "1209": {
-      "op": "DUP3"
-    },
-    "1210": {
-      "op": "MLOAD"
-    },
-    "1211": {
-      "op": "PUSH1",
-      "value": "0x20"
-    },
-    "1213": {
-      "op": "ADD"
-    },
-    "1214": {
-      "op": "ADD"
-    },
-    "1215": {
-      "op": "AND"
-    },
-    "1216": {
-      "op": "SWAP1"
-    },
-    "1217": {
-      "op": "POP"
-    },
-    "1218": {
-      "op": "SWAP1"
-    },
-    "1219": {
-      "op": "POP"
-    },
-    "1220": {
-      "op": "DUP2"
-    },
-    "1221": {
-      "op": "ADD"
-    },
-    "1222": {
-      "op": "SWAP1"
-    },
-    "1223": {
-      "op": "POP"
-    },
-    "1224": {
-      "op": "DUP1"
-    },
-    "1225": {
-      "op": "PUSH1",
-      "value": "0x60"
-    },
-    "1227": {
-      "op": "DUP4"
-    },
-    "1228": {
-      "op": "ADD"
-    },
-    "1229": {
-      "op": "MSTORE"
-    },
-    "1230": {
-      "op": "PUSH1",
-      "value": "0x7"
-    },
-    "1232": {
-      "op": "DUP4"
-    },
-    "1233": {
-      "op": "ADD"
-    },
-    "1234": {
-      "op": "DUP2"
-    },
-    "1235": {
-      "op": "DUP4"
-    },
-    "1236": {
-      "op": "ADD"
-    },
-    "1237": {
-      "op": "DUP2"
-    },
-    "1238": {
-      "op": "SLOAD"
-    },
-    "1239": {
-      "op": "DUP1"
-    },
-    "1240": {
-      "op": "DUP3"
-    },
-    "1241": {
-      "op": "MSTORE"
-    },
-    "1242": {
-      "op": "PUSH1",
-      "value": "0x1"
-    },
-    "1244": {
-      "op": "DUP4"
-    },
-    "1245": {
-      "op": "ADD"
-    },
-    "1246": {
-      "op": "PUSH1",
-      "value": "0x20"
-    },
-    "1248": {
-      "op": "DUP4"
-    },
-    "1249": {
-      "op": "ADD"
-    },
-    "1250": {
-      "op": "PUSH1",
-      "value": "0x0"
-    },
-    "1252": {
-      "op": "DUP4"
-    },
-    "1253": {
-      "op": "PUSH1",
-      "value": "0x1F"
-    },
-    "1255": {
-      "op": "ADD"
-    },
-    "1256": {
       "op": "PUSH1",
       "value": "0x5"
     },
-    "1258": {
+    "1192": {
       "op": "SHR"
     },
-    "1259": {
+    "1193": {
       "op": "PUSH1",
       "value": "0x4"
     },
-    "1261": {
+    "1195": {
       "op": "DUP2"
     },
-    "1262": {
+    "1196": {
       "op": "GT"
     },
-    "1263": {
+    "1197": {
       "op": "PUSH2",
-      "value": "0x59C"
+      "value": "0x5DA"
     },
-    "1266": {
+    "1200": {
       "op": "JUMPI"
     },
-    "1267": {
+    "1201": {
       "op": "DUP1"
     },
-    "1268": {
+    "1202": {
       "op": "ISZERO"
     },
-    "1269": {
+    "1203": {
       "op": "PUSH2",
-      "value": "0x510"
+      "value": "0x4CE"
     },
-    "1272": {
+    "1206": {
       "op": "JUMPI"
     },
-    "1273": {
+    "1207": {
       "op": "SWAP1"
     },
-    "1274": {
+    "1208": {
       "op": "JUMPDEST"
     },
-    "1275": {
+    "1209": {
       "op": "DUP1"
     },
-    "1276": {
+    "1210": {
       "op": "DUP5"
     },
-    "1277": {
+    "1211": {
       "op": "ADD"
     },
-    "1278": {
+    "1212": {
       "op": "SLOAD"
     },
-    "1279": {
+    "1213": {
       "op": "DUP2"
     },
-    "1280": {
+    "1214": {
       "op": "PUSH1",
       "value": "0x5"
     },
-    "1282": {
+    "1216": {
       "op": "SHL"
     },
-    "1283": {
+    "1217": {
       "op": "DUP5"
     },
-    "1284": {
+    "1218": {
       "op": "ADD"
     },
-    "1285": {
+    "1219": {
       "op": "MSTORE"
     },
-    "1286": {
+    "1220": {
       "op": "PUSH1",
       "value": "0x1"
+    },
+    "1222": {
+      "op": "ADD"
+    },
+    "1223": {
+      "op": "DUP2"
+    },
+    "1224": {
+      "op": "DUP2"
+    },
+    "1225": {
+      "op": "XOR"
+    },
+    "1226": {
+      "op": "PUSH2",
+      "value": "0x4B8"
+    },
+    "1229": {
+      "op": "JUMPI"
+    },
+    "1230": {
+      "op": "JUMPDEST"
+    },
+    "1231": {
+      "op": "POP"
+    },
+    "1232": {
+      "op": "POP"
+    },
+    "1233": {
+      "op": "POP"
+    },
+    "1234": {
+      "op": "POP"
+    },
+    "1235": {
+      "op": "POP"
+    },
+    "1236": {
+      "op": "DUP1"
+    },
+    "1237": {
+      "op": "MLOAD"
+    },
+    "1238": {
+      "op": "DUP1"
+    },
+    "1239": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "1241": {
+      "op": "DUP4"
+    },
+    "1242": {
+      "op": "ADD"
+    },
+    "1243": {
+      "op": "ADD"
+    },
+    "1244": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "1246": {
+      "op": "DUP3"
+    },
+    "1247": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1249": {
+      "op": "SUB"
+    },
+    "1250": {
+      "op": "AND"
+    },
+    "1251": {
+      "op": "CALLDATASIZE"
+    },
+    "1252": {
+      "op": "DUP3"
+    },
+    "1253": {
+      "op": "CALLDATACOPY"
+    },
+    "1254": {
+      "op": "POP"
+    },
+    "1255": {
+      "op": "POP"
+    },
+    "1256": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "1258": {
+      "op": "NOT"
+    },
+    "1259": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "1261": {
+      "op": "DUP3"
+    },
+    "1262": {
+      "op": "MLOAD"
+    },
+    "1263": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "1265": {
+      "op": "ADD"
+    },
+    "1266": {
+      "op": "ADD"
+    },
+    "1267": {
+      "op": "AND"
+    },
+    "1268": {
+      "op": "SWAP1"
+    },
+    "1269": {
+      "op": "POP"
+    },
+    "1270": {
+      "op": "SWAP1"
+    },
+    "1271": {
+      "op": "POP"
+    },
+    "1272": {
+      "op": "DUP2"
+    },
+    "1273": {
+      "op": "ADD"
+    },
+    "1274": {
+      "op": "SWAP1"
+    },
+    "1275": {
+      "op": "POP"
+    },
+    "1276": {
+      "op": "DUP1"
+    },
+    "1277": {
+      "op": "PUSH1",
+      "value": "0x60"
+    },
+    "1279": {
+      "op": "DUP4"
+    },
+    "1280": {
+      "op": "ADD"
+    },
+    "1281": {
+      "op": "MSTORE"
+    },
+    "1282": {
+      "op": "PUSH1",
+      "value": "0x7"
+    },
+    "1284": {
+      "op": "DUP4"
+    },
+    "1285": {
+      "op": "ADD"
+    },
+    "1286": {
+      "op": "DUP2"
+    },
+    "1287": {
+      "op": "DUP4"
     },
     "1288": {
       "op": "ADD"
@@ -5431,334 +5508,490 @@
       "op": "DUP2"
     },
     "1290": {
-      "op": "DUP2"
+      "op": "SLOAD"
     },
     "1291": {
-      "op": "XOR"
+      "op": "DUP1"
     },
     "1292": {
-      "op": "PUSH2",
-      "value": "0x4FA"
+      "op": "DUP3"
     },
-    "1295": {
-      "op": "JUMPI"
+    "1293": {
+      "op": "MSTORE"
+    },
+    "1294": {
+      "op": "PUSH1",
+      "value": "0x1"
     },
     "1296": {
-      "op": "JUMPDEST"
+      "op": "DUP4"
     },
     "1297": {
-      "op": "POP"
+      "op": "ADD"
     },
     "1298": {
-      "op": "POP"
-    },
-    "1299": {
-      "op": "POP"
-    },
-    "1300": {
-      "op": "POP"
-    },
-    "1301": {
-      "op": "POP"
-    },
-    "1302": {
-      "op": "DUP1"
-    },
-    "1303": {
-      "op": "MLOAD"
-    },
-    "1304": {
-      "op": "DUP1"
-    },
-    "1305": {
       "op": "PUSH1",
       "value": "0x20"
     },
-    "1307": {
+    "1300": {
       "op": "DUP4"
     },
-    "1308": {
+    "1301": {
       "op": "ADD"
     },
-    "1309": {
-      "op": "ADD"
-    },
-    "1310": {
-      "op": "PUSH1",
-      "value": "0x1F"
-    },
-    "1312": {
-      "op": "DUP3"
-    },
-    "1313": {
+    "1302": {
       "op": "PUSH1",
       "value": "0x0"
     },
+    "1304": {
+      "op": "DUP4"
+    },
+    "1305": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "1307": {
+      "op": "ADD"
+    },
+    "1308": {
+      "op": "PUSH1",
+      "value": "0x5"
+    },
+    "1310": {
+      "op": "SHR"
+    },
+    "1311": {
+      "op": "PUSH1",
+      "value": "0x4"
+    },
+    "1313": {
+      "op": "DUP2"
+    },
+    "1314": {
+      "op": "GT"
+    },
     "1315": {
-      "op": "SUB"
-    },
-    "1316": {
-      "op": "AND"
-    },
-    "1317": {
-      "op": "CALLDATASIZE"
+      "op": "PUSH2",
+      "value": "0x5DA"
     },
     "1318": {
-      "op": "DUP3"
+      "op": "JUMPI"
     },
     "1319": {
-      "op": "CALLDATACOPY"
+      "op": "DUP1"
     },
     "1320": {
-      "op": "POP"
+      "op": "ISZERO"
     },
     "1321": {
-      "op": "POP"
-    },
-    "1322": {
-      "op": "PUSH1",
-      "value": "0x1F"
+      "op": "PUSH2",
+      "value": "0x544"
     },
     "1324": {
-      "op": "NOT"
+      "op": "JUMPI"
     },
     "1325": {
-      "op": "PUSH1",
-      "value": "0x1F"
+      "op": "SWAP1"
+    },
+    "1326": {
+      "op": "JUMPDEST"
     },
     "1327": {
-      "op": "DUP3"
+      "op": "DUP1"
     },
     "1328": {
-      "op": "MLOAD"
+      "op": "DUP5"
     },
     "1329": {
-      "op": "PUSH1",
-      "value": "0x20"
+      "op": "ADD"
+    },
+    "1330": {
+      "op": "SLOAD"
     },
     "1331": {
-      "op": "ADD"
+      "op": "DUP2"
     },
     "1332": {
-      "op": "ADD"
-    },
-    "1333": {
-      "op": "AND"
+      "op": "PUSH1",
+      "value": "0x5"
     },
     "1334": {
-      "op": "SWAP1"
+      "op": "SHL"
     },
     "1335": {
-      "op": "POP"
+      "op": "DUP5"
     },
     "1336": {
-      "op": "SWAP1"
+      "op": "ADD"
     },
     "1337": {
-      "op": "POP"
+      "op": "MSTORE"
     },
     "1338": {
-      "op": "DUP2"
-    },
-    "1339": {
-      "op": "ADD"
+      "op": "PUSH1",
+      "value": "0x1"
     },
     "1340": {
-      "op": "SWAP1"
-    },
-    "1341": {
-      "op": "POP"
-    },
-    "1342": {
-      "op": "SWAP1"
-    },
-    "1343": {
-      "op": "POP"
-    },
-    "1344": {
-      "op": "SWAP1"
-    },
-    "1345": {
-      "op": "POP"
-    },
-    "1346": {
-      "op": "DUP2"
-    },
-    "1347": {
       "op": "ADD"
     },
+    "1341": {
+      "op": "DUP2"
+    },
+    "1342": {
+      "op": "DUP2"
+    },
+    "1343": {
+      "op": "XOR"
+    },
+    "1344": {
+      "op": "PUSH2",
+      "value": "0x52E"
+    },
+    "1347": {
+      "op": "JUMPI"
+    },
     "1348": {
-      "op": "SWAP1"
+      "op": "JUMPDEST"
     },
     "1349": {
       "op": "POP"
     },
     "1350": {
-      "op": "PUSH1",
-      "value": "0x40"
+      "op": "POP"
+    },
+    "1351": {
+      "op": "POP"
     },
     "1352": {
-      "op": "RETURN"
+      "op": "POP"
     },
     "1353": {
-      "op": "JUMPDEST"
+      "op": "POP"
     },
     "1354": {
-      "op": "PUSH4",
-      "value": "0x4621616"
+      "op": "DUP1"
     },
-    "1359": {
-      "op": "DUP2"
+    "1355": {
+      "op": "MLOAD"
     },
-    "1360": {
-      "op": "XOR"
+    "1356": {
+      "op": "DUP1"
     },
-    "1361": {
-      "op": "PUSH2",
-      "value": "0x56D"
-    },
-    "1364": {
-      "op": "JUMPI"
-    },
-    "1365": {
-      "op": "PUSH1",
-      "value": "0x4"
-    },
-    "1367": {
-      "op": "CALLDATASIZE"
-    },
-    "1368": {
-      "op": "LT"
-    },
-    "1369": {
-      "op": "PUSH2",
-      "value": "0x59C"
-    },
-    "1372": {
-      "op": "JUMPI"
-    },
-    "1373": {
-      "op": "CALLVALUE"
-    },
-    "1374": {
-      "op": "PUSH2",
-      "value": "0x59C"
-    },
-    "1377": {
-      "op": "JUMPI"
-    },
-    "1378": {
-      "op": "PUSH1",
-      "value": "0x2"
-    },
-    "1380": {
-      "op": "SLOAD"
-    },
-    "1381": {
-      "op": "PUSH1",
-      "value": "0x40"
-    },
-    "1383": {
-      "op": "MSTORE"
-    },
-    "1384": {
+    "1357": {
       "op": "PUSH1",
       "value": "0x20"
     },
+    "1359": {
+      "op": "DUP4"
+    },
+    "1360": {
+      "op": "ADD"
+    },
+    "1361": {
+      "op": "ADD"
+    },
+    "1362": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "1364": {
+      "op": "DUP3"
+    },
+    "1365": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1367": {
+      "op": "SUB"
+    },
+    "1368": {
+      "op": "AND"
+    },
+    "1369": {
+      "op": "CALLDATASIZE"
+    },
+    "1370": {
+      "op": "DUP3"
+    },
+    "1371": {
+      "op": "CALLDATACOPY"
+    },
+    "1372": {
+      "op": "POP"
+    },
+    "1373": {
+      "op": "POP"
+    },
+    "1374": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "1376": {
+      "op": "NOT"
+    },
+    "1377": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "1379": {
+      "op": "DUP3"
+    },
+    "1380": {
+      "op": "MLOAD"
+    },
+    "1381": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "1383": {
+      "op": "ADD"
+    },
+    "1384": {
+      "op": "ADD"
+    },
+    "1385": {
+      "op": "AND"
+    },
     "1386": {
+      "op": "SWAP1"
+    },
+    "1387": {
+      "op": "POP"
+    },
+    "1388": {
+      "op": "SWAP1"
+    },
+    "1389": {
+      "op": "POP"
+    },
+    "1390": {
+      "op": "DUP2"
+    },
+    "1391": {
+      "op": "ADD"
+    },
+    "1392": {
+      "op": "SWAP1"
+    },
+    "1393": {
+      "op": "POP"
+    },
+    "1394": {
+      "op": "PUSH1",
+      "value": "0xC"
+    },
+    "1396": {
+      "op": "DUP4"
+    },
+    "1397": {
+      "op": "ADD"
+    },
+    "1398": {
+      "op": "SLOAD"
+    },
+    "1399": {
+      "op": "PUSH1",
+      "value": "0x80"
+    },
+    "1401": {
+      "op": "DUP4"
+    },
+    "1402": {
+      "op": "ADD"
+    },
+    "1403": {
+      "op": "MSTORE"
+    },
+    "1404": {
+      "op": "SWAP1"
+    },
+    "1405": {
+      "op": "POP"
+    },
+    "1406": {
+      "op": "SWAP1"
+    },
+    "1407": {
+      "op": "POP"
+    },
+    "1408": {
+      "op": "DUP2"
+    },
+    "1409": {
+      "op": "ADD"
+    },
+    "1410": {
+      "op": "SWAP1"
+    },
+    "1411": {
+      "op": "POP"
+    },
+    "1412": {
       "op": "PUSH1",
       "value": "0x40"
     },
-    "1388": {
+    "1414": {
       "op": "RETURN"
     },
-    "1389": {
+    "1415": {
       "op": "JUMPDEST"
     },
-    "1390": {
+    "1416": {
+      "op": "PUSH4",
+      "value": "0x4621616"
+    },
+    "1421": {
+      "op": "DUP2"
+    },
+    "1422": {
+      "op": "XOR"
+    },
+    "1423": {
+      "op": "PUSH2",
+      "value": "0x5AB"
+    },
+    "1426": {
+      "op": "JUMPI"
+    },
+    "1427": {
+      "op": "PUSH1",
+      "value": "0x4"
+    },
+    "1429": {
+      "op": "CALLDATASIZE"
+    },
+    "1430": {
+      "op": "LT"
+    },
+    "1431": {
+      "op": "PUSH2",
+      "value": "0x5DA"
+    },
+    "1434": {
+      "op": "JUMPI"
+    },
+    "1435": {
+      "op": "CALLVALUE"
+    },
+    "1436": {
+      "op": "PUSH2",
+      "value": "0x5DA"
+    },
+    "1439": {
+      "op": "JUMPI"
+    },
+    "1440": {
+      "op": "PUSH1",
+      "value": "0x2"
+    },
+    "1442": {
+      "op": "SLOAD"
+    },
+    "1443": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "1445": {
+      "op": "MSTORE"
+    },
+    "1446": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "1448": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "1450": {
+      "op": "RETURN"
+    },
+    "1451": {
+      "op": "JUMPDEST"
+    },
+    "1452": {
       "op": "POP"
     },
-    "1391": {
+    "1453": {
       "op": "JUMPDEST"
     },
-    "1392": {
+    "1454": {
       "fn": "BuyMeACoffee.__default__",
       "offset": [
-        714,
-        724
+        739,
+        749
       ],
       "op": "CALLER",
       "path": "0",
       "statement": 9
     },
-    "1393": {
+    "1455": {
       "fn": "BuyMeACoffee.__default__",
       "offset": [
-        702,
-        736
+        727,
+        761
       ],
       "op": "PUSH32",
       "path": "0",
       "value": "0xD4F43975FEB89F48DD30CABBB3201145BE187D1E11C8EA9FAA43EFC35282519"
     },
-    "1426": {
+    "1488": {
       "fn": "BuyMeACoffee.__default__",
       "offset": [
-        726,
-        735
+        751,
+        760
       ],
       "op": "CALLVALUE",
       "path": "0"
     },
-    "1427": {
+    "1489": {
       "op": "PUSH1",
       "value": "0x40"
     },
-    "1429": {
+    "1491": {
       "op": "MSTORE"
     },
-    "1430": {
+    "1492": {
       "op": "PUSH1",
       "value": "0x20"
     },
-    "1432": {
+    "1494": {
       "fn": "BuyMeACoffee.__default__",
       "offset": [
-        702,
-        736
+        727,
+        761
       ],
       "op": "PUSH1",
       "path": "0",
       "value": "0x40"
     },
-    "1434": {
+    "1496": {
       "fn": "BuyMeACoffee.__default__",
       "offset": [
-        702,
-        736
+        727,
+        761
       ],
       "op": "LOG2",
       "path": "0"
     },
-    "1435": {
+    "1497": {
       "op": "STOP"
     },
-    "1436": {
+    "1498": {
       "op": "JUMPDEST"
     },
-    "1437": {
+    "1499": {
       "op": "PUSH1",
       "value": "0x0"
     },
-    "1439": {
+    "1501": {
       "op": "DUP1"
     },
-    "1440": {
+    "1502": {
       "op": "REVERT"
     }
   },
-  "sha1": "e041debb418dc57f757e3aa68a570fe88dc520fa",
-  "source": "# @version ^0.3.7\n\n# Events\nevent NewMemo:\n    sender: indexed(address)\n    time: uint256\n    name: String[100]\n    message: String[100]\n\nevent Payment:\n    sender: indexed(address)\n    amount: uint256\n\n# Structs\nstruct Memo:\n    sender: address\n    time: uint256\n    name: String[100]\n    message: String[100]\n\n# Storage variables\nowner: address\nmemos: public(HashMap[uint256, Memo])\nlast_memo_index: public(uint256)\n\n@external\ndef __init__():\n    \"\"\"\n    @notice Contract constructor\n    \"\"\"\n    self.owner = msg.sender\n    self.last_memo_index = 0\n\n@payable    \n@external\ndef __default__():\n    \"\"\"\n    @notice Function called when contract receives eth with no or unknown function call\n    \"\"\"\n    log Payment(msg.sender, msg.value)\n\n@view\n@external\ndef get_memos(_memo_index: uint256) -> Memo:\n    \"\"\"\n    @notice Find a specific memo\n    @param _memo_index index of the memo\n    @return memo struct\n    \"\"\"\n    return self.memos[_memo_index]\n\n@payable\n@external\ndef buy_coffee(_name: String[100], _message: String[100]):\n    \n    # Must accept more than 0 ETH for a coffee.\n    assert msg.value > 0, \"Can't buy coffee for free!\"\n\n    # Add the memo to storage\n    self.memos[self.last_memo_index] = Memo({\n        sender: msg.sender,\n        time: block.timestamp,\n        name: _name,\n        message: _message\n    })\n    self.last_memo_index += 1\n\n    # Log the event\n    log NewMemo(msg.sender, block.timestamp, _name, _message)\n\n@external\ndef withdraw_tips():\n    \"\"\"\n    @notice Withdraw the contract's balance to an address\n    \"\"\"\n    assert self.balance > 0, \"Empty balance\"\n    send(self.owner, self.balance)\n    \n",
+  "sha1": "8270171221f0d92107cc9b0f2e01b928606d8a97",
+  "source": "# @version ^0.3.7\n\n# Events\nevent NewMemo:\n    sender: indexed(address)\n    time: uint256\n    name: String[100]\n    message: String[100]\n\nevent Payment:\n    sender: indexed(address)\n    amount: uint256\n\n# Structs\nstruct Memo:\n    sender: address\n    time: uint256\n    name: String[100]\n    message: String[100]\n    tip: uint256\n\n# Storage variables\nowner: public(address)\nmemos: public(HashMap[uint256, Memo])\nlast_memo_index: public(uint256)\n\n@external\ndef __init__():\n    \"\"\"\n    @notice Contract constructor\n    \"\"\"\n    self.owner = msg.sender\n    self.last_memo_index = 0\n\n@payable    \n@external\ndef __default__():\n    \"\"\"\n    @notice Function called when contract receives eth with no or unknown function call\n    \"\"\"\n    log Payment(msg.sender, msg.value)\n\n@view\n@external\ndef get_memos(_memo_index: uint256) -> Memo:\n    \"\"\"\n    @notice Find a specific memo\n    @param _memo_index index of the memo\n    @return memo struct\n    \"\"\"\n    return self.memos[_memo_index]\n\n@payable\n@external\ndef buy_coffee(_name: String[100], _message: String[100]):\n    \n    # Must accept more than 0 ETH for a coffee.\n    assert msg.value > 0, \"Can't buy coffee for free!\"\n\n    # Add the memo to storage\n    self.memos[self.last_memo_index] = Memo({\n        sender: msg.sender,\n        time: block.timestamp,\n        name: _name,\n        message: _message,\n        tip: msg.value\n    })\n    self.last_memo_index += 1\n\n    # Log the event\n    log NewMemo(msg.sender, block.timestamp, _name, _message)\n\n@external\ndef withdraw_tips():\n    \"\"\"\n    @notice Withdraw the contract's balance to an address\n    \"\"\"\n    assert self.balance > 0, \"Empty balance\"\n    send(self.owner, self.balance)\n    \n",
   "sourceMap": "",
   "sourcePath": "contracts/contracts/BuyMeACoffee.vy",
   "type": "contract"
