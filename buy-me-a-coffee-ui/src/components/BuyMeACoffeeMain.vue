@@ -88,7 +88,7 @@ export default {
             method: 'eth_requestAccounts'
           });
 
-          this.accountAddress = accounts[0];
+          this.accountAddress = ethers.utils.getAddress(accounts[0]);
           console.log(this.accountAddress);
           await this.getContractOwner();
         } else {
