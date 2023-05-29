@@ -9,16 +9,17 @@ import BuyMeACoffeeMain from './components/BuyMeACoffeeMain.vue'
 </script>
 
 <style>
-body {
-  margin: 0px;
-}
-
 #app {
+  text-align: center;
+  color: var(--ep-text-color-primary);
   position: relative;
-  width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.main-container {
+  height: calc(100vh - var(--ep-menu-item-height) - 3px);
 }
 </style>
