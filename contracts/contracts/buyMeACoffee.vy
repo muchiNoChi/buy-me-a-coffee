@@ -21,8 +21,11 @@ struct Memo:
 
 # Storage variables
 owner: public(address)
-memos: public(HashMap[uint256, Memo])
 last_memo_index: public(uint256)
+memos_array: public(DynArray[Memo, MAX_MEMOS_ARRAY_LENGTH])
+
+# Constants
+MAX_MEMOS_ARRAY_LENGTH: constant(uint256) = 1000000000
 
 @external
 def __init__():
@@ -40,15 +43,10 @@ def __default__():
     """
     log Payment(msg.sender, msg.value)
 
-@view
 @external
-def get_memos(_memo_index: uint256) -> Memo:
-    """
-    @notice Find a specific memo
-    @param _memo_index index of the memo
-    @return memo struct
-    """
-    return self.memos[_memo_index]
+@view
+def get_memos_array() -> DynArray[Memo, MAX_MEMOS_ARRAY_LENGTH]:
+    return self.memos_array
 
 @payable
 @external
@@ -57,15 +55,13 @@ def buy_coffee(_name: String[100], _message: String[100]):
     # Must accept more than 0 ETH for a coffee.
     assert msg.value > 0, "Can't buy coffee for free!"
 
-    # Add the memo to storage
-    self.memos[self.last_memo_index] = Memo({
+    self.memos_array.append(Memo({
         sender: msg.sender,
         time: block.timestamp,
         name: _name,
         message: _message,
         tip: msg.value
-    })
-    self.last_memo_index += 1
+    }))
 
     # Log the event
     log NewMemo(msg.sender, block.timestamp, _name, _message)
@@ -77,4 +73,3 @@ def withdraw_tips():
     """
     assert self.balance > 0, "Empty balance"
     send(self.owner, self.balance)
-    
