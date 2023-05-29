@@ -62,6 +62,10 @@ export default {
     }
   },
 
+  async created() {
+
+  },
+
   computed: {
     buyMeACoffeeContract() {
       if (!this.accountAddress) return null;
@@ -71,10 +75,8 @@ export default {
     },
 
     canWithdraw() {
-      if (!this.buyMeACoffeeContract) return false;
-      const creator = this.buyMeACoffeeContract.owner;
-      console.log(`contract creator is ${creator}`)
-      return creator === this.accountAddress; // only creator can withdraw tips
+      if (!this.contractOwnerAddress) return false;
+      return this.contractOwnerAddress === this.accountAddress; // only creator can withdraw tips
     },
   },
 
@@ -88,6 +90,7 @@ export default {
 
           this.accountAddress = accounts[0];
           console.log(this.accountAddress);
+          await this.getContractOwner();
         } else {
           console.log('Metamask is not installed, consider installing it first.');
         }
@@ -122,6 +125,12 @@ export default {
       } catch (err) {
         console.error(err);
       }
+    },
+
+    async getContractOwner() {
+      console.log(this.buyMeACoffeeContract);
+      this.contractOwnerAddress = await this.buyMeACoffeeContract.owner();
+      console.log(`contract creator is ${this.contractOwnerAddress}`);
     },
 
     async withdrawTips() {
